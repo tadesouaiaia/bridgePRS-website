@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tade Souaiaia" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Background - BridgePRS</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Background";
+        var mkdocs_page_input_path = "guide_background.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]--> 
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-113286405-1", "auto");
+        ga('send', 'pageview');
+      </script>
+    
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> BridgePRS
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Requirements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_prep/">System</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_software/">Software</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_mac/">Mac Specific</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Tutorial</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_data/">Toy Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_demo/">Demo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_result/">Results</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Background</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#single-population-analysis">Single Population Analysis</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cross-population-analysis">Cross Population Analysis</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_input/">Input Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_challenges/">Use Cases</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_subprograms/">Subprograms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_output/">Output Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_args/">All Arguments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_customization/">Customization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_shell/">Using Bash</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc_faq/">Frequently Asked Questions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc_log/">Update Log</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">BridgePRS</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Guide</li>
+      <li class="breadcrumb-item active">Background</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tadesouaiaia/BridgePRS-Guide/edit/master/docs/guide_background.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><img alt="Screenshot" src="../img/slim/guide_logo1.png" /></p>
+<p>BridgePRS is a trans-ancestry PRS software which improves polygenic risk score analysis in diverse populations.</p>
+<ol>
+<li>Calculating PRS using Ridge Regression</li>
+<li>Porting a PRS model from one population to another</li>
+<li>Using European data as a prior to improve PRS in diverse populations</li>
+<li>Results plotted in several formats</li>
+</ol>
+<h1 id="background">Background</h1>
+<p>You will need to have basic understanding of Genome Wide Association Studies (GWAS) and polygenic scoring (PRS) to be able to use BridgePRS. 
+If you are unfamiliar with GWAS, you can consider reading <a href="https://www.ncbi.nlm.nih.gov/pubmed/29484742">this paper</a>.  If you have familiarity 
+but need a crash refresher then reading the following section will be helpful. </p>
+<h2 id="single-population-analysis">Single Population Analysis</h2>
+<p><strong>GWAS</strong> </p>
+<ul>
+<li>Genome wide association studies (GWAS) involve analyzing the genomes of a larger group of individuals.  This involves looking screening 
+millions of genetic variants (SNP) for association with a particular trait.  </li>
+<li>For a binary trait (like blue or brown eyes) this involves comparing the frequency of genetic variations in each group to produce an odds-ratio (measure of association) and a p-value to measure the 
+signficance of the realtionship at each SNP. </li>
+<li>
+<p>For continuous measures (like height) this results in an effect size (measure of continuous association) and p-value that measure the significance of our relationship.   </p>
+</li>
+<li>
+<p>GWAS results can be summarized in a sumstats file which looks like this: </p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">SNP</th>
+<th style="text-align: center;">BP</th>
+<th style="text-align: center;">REF</th>
+<th style="text-align: center;">ALT</th>
+<th style="text-align: center;">BETA</th>
+<th style="text-align: center;">PV</th>
+<th style="text-align: center;">NOTES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">rs3094315</td>
+<td style="text-align: center;">10523</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">1.491</td>
+<td style="text-align: center;">0.0029</td>
+<td style="text-align: center;">Positive (<span class="arithmatex">\(&gt;1\)</span>) Trait Association</td>
+</tr>
+<tr>
+<td style="text-align: center;">rs3131972</td>
+<td style="text-align: center;">91345</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">0.817</td>
+<td style="text-align: center;">0.0008</td>
+<td style="text-align: center;">Negative (<span class="arithmatex">\(&lt;1\)</span>) Trait Association</td>
+</tr>
+<tr>
+<td style="text-align: center;">rs3131971</td>
+<td style="text-align: center;">23040</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">1.001</td>
+<td style="text-align: center;">0.5332</td>
+<td style="text-align: center;">Insignificant (<span class="arithmatex">\(PV&gt;0.05\)</span>) Association</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PRS</strong></p>
+<ul>
+<li>Creating individual polygenic scores involves combine information across many genetic variants.  A score is calculated summing the genetic association values (beta-weights) 
+for each allele in an individual.  This means that variants with stronger associations have a larger impact on the overall score.  </li>
+<li>Usually, variant selection and assignment of SNP weights are determined using a very large "test dataset" of individual genotypes and phenotypes and 
+then validated on an out of sample dataset of genotypes and phenotypes. </li>
+<li>The correlation between the out of sample inidividual phenotypes and their predicted values (PRS scores) can be measured (<span class="arithmatex">\(R^2\)</span>) to assess how predictive the PRS model is. </li>
+</ul>
+<h2 id="cross-population-analysis">Cross Population Analysis</h2>
+<p><strong>The PRS Portability Problem</strong></p>
+<ul>
+<li>Often when PRS results from a large test population (usually of European ancestry) are validated to an out of sample population of different ancestry the PRS model is not predictive.  </li>
+<li>Unfortunately, there is not enough data in the non-european population to produce a reliabile "test dataset" so researchers have to either accept either: <ul>
+<li>An underpowered PRS model made using only the non-european population. </li>
+<li>A large PRS model based on European test data that doesn't perform well. </li>
+</ul>
+</li>
+</ul>
+<p><strong>The BridgePRS Solution</strong></p>
+<ul>
+<li>BridgePRS solves this problem by first running producing three different PRS-models. <ul>
+<li>PRS ran using only the target (Non-European) dataset  </li>
+<li>PRS ran using SNP-weights calculated from the European Model </li>
+<li>PRS ran using a prior effect-size distribution from the European Model  </li>
+</ul>
+</li>
+<li>Then BridgePRS combines these results to produce a weighted PRS solution. </li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../quikstart_result/" class="btn btn-neutral float-left" title="Results"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../guide_input/" class="btn btn-neutral float-right" title="Input Data">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tadesouaiaia/BridgePRS-Guide" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../quikstart_result/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../guide_input/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      <script src="../javascripts/details.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

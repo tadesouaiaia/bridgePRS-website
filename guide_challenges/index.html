@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tade Souaiaia" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Use Cases - BridgePRS</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Use Cases";
+        var mkdocs_page_input_path = "guide_challenges.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]--> 
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-113286405-1", "auto");
+        ga('send', 'pageview');
+      </script>
+    
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> BridgePRS
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Requirements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_prep/">System</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_software/">Software</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_mac/">Mac Specific</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Tutorial</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_data/">Toy Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_demo/">Demo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_result/">Results</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_background/">Background</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_input/">Input Data</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Use Cases</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_subprograms/">Subprograms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_output/">Output Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_args/">All Arguments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_customization/">Customization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_shell/">Using Bash</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc_faq/">Frequently Asked Questions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc_log/">Update Log</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">BridgePRS</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Guide</li>
+      <li class="breadcrumb-item active">Use Cases</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tadesouaiaia/BridgePRS-Guide/edit/master/docs/guide_challenges.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><img alt="Screenshot" src="../img/slim/guide_logo3.png" /></p>
+<h2 id="training">Training</h2>
+<p>In the two <a href="../quikstart_data/">toy-data examples</a> the target population was a non-specific African (<strong>AFR</strong>) population 
+and the model population  was European (<strong>EUR</strong>).  In these examples each population had a corresponding:  </p>
+<ul>
+<li>LD Reference Panel (Used for Clumping) </li>
+<li>GWAS Summary Stat File  </li>
+<li>Genotype/Phenotype Data </li>
+</ul>
+<p>This example may be unrealistic given real-world constraints and the realities of data sharing. 
+Here we will consider will consider using BridgePRS in more realistic scenarios.  In each of these 
+challeges the task is to create valid configuration given the described scenario. </p>
+<h2 id="challenge-1">Challenge 1:</h2>
+<p><strong>I have access to genotype/phenotype data (&lt;1000 samples, continuous phenotype) from a diverse population in Central Africa (1,2). 
+I would like ot run PRS as accurately as possible, but my dataset is not large enough to conduct GWAS, however, I do have access to a moderately 
+sized GWAS in a related West African population (3) and access to large-scale GWAS data from a European population (4).  I also have 
+access to the 1000G reference panels, how can I analyze my data?</strong></p>
+<p><strong>Available Data:</strong> </p>
+<ol>
+<li>caf/genotypes/caf_genotype.bed, caf_genotype.bim, caf_genotype.fam </li>
+<li>caf/phenotypes/caf_test.dat, ukb/phenotypes/caf_validation.dat </li>
+<li>yoruba/sumstats/yoruba.chr1.glm.gz,...,yoruba.chr22.glm.gz </li>
+<li>ukb/sumstats/ukb.sumstats.gz </li>
+<li>1000G Reference Panel </li>
+</ol>
+<p>Can you fill out the configuration files to carry this out? </p>
+<div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Target Config File</label><div class="tabbed-content">
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>POP<span style="color: #666666">=</span>
+LDPOP<span style="color: #666666">=</span>
+SUMSTATS_PREFIX<span style="color: #666666">=</span>
+GENOTYPE_PREFIX<span style="color: #666666">=</span>
+PHENOTYPE_FILE<span style="color: #666666">=</span>
+VALIDATION_FILE<span style="color: #666666">=</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">[Answer]</label><div class="tabbed-content">
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>POP<span style="color: #666666">=</span>CAF
+LDPOP<span style="color: #666666">=</span>AFR<span style="color: #bbbbbb"> </span>
+SUMSTATS_PREFIX<span style="color: #666666">=</span>yoruba<span style="color: #666666">/</span>sumstats<span style="color: #666666">/</span>yoruba.chr<span style="color: #bbbbbb"> </span>
+SUMSTATS_SUFFIX<span style="color: #666666">=</span>.glm.gz<span style="color: #bbbbbb"> </span>
+GENOTYPE_PREFIX<span style="color: #666666">=</span>caf<span style="color: #666666">/</span>genotypes<span style="color: #666666">/</span>caf_genotype<span style="color: #bbbbbb"> </span>
+PHENOTYPE_FILE<span style="color: #666666">=</span>caf<span style="color: #666666">/</span>phenotypes<span style="color: #666666">/</span>caf_test.dat<span style="color: #bbbbbb">  </span>
+VALIDATION_FILE<span style="color: #666666">=</span>caf<span style="color: #666666">/</span>phenotypes<span style="color: #666666">/</span>caf_validation.dat<span style="color: #bbbbbb"> </span>
+</code></pre></div>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Model Config FIle</label><div class="tabbed-content">
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>POP<span style="color: #666666">=</span>
+LDPOP<span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>
+SUMSTATS_PREFIX<span style="color: #666666">=</span>
+GENOTYPE_PREFIX<span style="color: #666666">=</span>
+PHENOTYPE_FILES<span style="color: #666666">=</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Answer</label><div class="tabbed-content">
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>POP<span style="color: #666666">=</span>EUR
+LDPOP<span style="color: #666666">=</span>EUR
+SUMSTATS_PREFIX<span style="color: #666666">=</span>ukb<span style="color: #666666">/</span>sumstats<span style="color: #666666">/</span>ukb.sumstats
+GENOTYPE_PREFIX<span style="color: #666666">=</span>caf<span style="color: #666666">/</span>genotypes<span style="color: #666666">/</span>caf_genotype<span style="color: #bbbbbb"> </span>
+PHENOTYPE_FILE<span style="color: #666666">=</span>caf<span style="color: #666666">/</span>phenotypes<span style="color: #666666">/</span>caf_test.dat<span style="color: #bbbbbb">  </span>
+VALIDATION_FILE<span style="color: #666666">=</span>caf<span style="color: #666666">/</span>phenotypes<span style="color: #666666">/</span>caf_validation.dat<span style="color: #bbbbbb"> </span>
+</code></pre></div>
+</div>
+</div>
+<h2 id="challenge-2">Challenge 2:</h2>
+<p>**I have access to GWAS data (1) and  genotype/phenotype (2,3) data (&gt;2000 samples, binary phenotype) from a moderate sized population in Eastern Europe. 
+I have reason to believe that this population has unique LD structure and would like to incorporate this into my model.<br />
+I also have GWAS (4) and genotype/phenotype data from the UKB biobank (5,6) that I wish to use to improve my results, how should I do this? </p>
+<ol>
+<li>ukr/sumstats/ukr.sumstats.out </li>
+<li>ukr/genotypes/chr1.bed,bim,fam...chr22.bed,bin,fam, </li>
+<li>ukr/phenotypes/ukr_test.dat, ukr/phenotypes/ukr_validation.dat </li>
+<li>ukb/sumstats/ukb.sumstats.gz </li>
+<li>ukb/genotypes/chr1.bed,bim,fam...chr22.bed,bin,fam</li>
+<li>ukb/phenotypes/ukb_test.dat, ukb/phenotypes/ukb_validation.dat </li>
+</ol>
+<div class="tabbed-set" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Target Config File</label><div class="tabbed-content">
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>POP<span style="color: #666666">=</span>
+LDPOP<span style="color: #666666">=</span>
+SUMSTATS_PREFIX<span style="color: #666666">=</span>
+GENOTYPE_PREFIX<span style="color: #666666">=</span>
+PHENOTYPE_FILE<span style="color: #666666">=</span>
+VALIDATION_FILE<span style="color: #666666">=</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">[Answer]</label><div class="tabbed-content">
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>POP<span style="color: #666666">=</span>ukr
+LDPOP<span style="color: #666666">=</span>ukr<span style="color: #666666">*</span>
+SUMSTATS_PREFIX<span style="color: #666666">=</span>ukr<span style="color: #666666">/</span>sumstats<span style="color: #666666">/</span>ukr.sumstats<span style="color: #bbbbbb">  </span>
+GENOTYPE_PREFIX<span style="color: #666666">=</span>ukr<span style="color: #666666">/</span>phenotypes<span style="color: #666666">/</span>chr
+PHENOTYPE_FILE<span style="color: #666666">=</span>ukr<span style="color: #666666">/</span>phenotypes<span style="color: #666666">/</span>ukr_test.dat<span style="color: #bbbbbb"> </span>
+VALIDATION_FILE<span style="color: #666666">=</span>ukr<span style="color: #666666">/</span>phenotypes<span style="color: #666666">/</span>ukr_validation.dat
+</code></pre></div>
+</div>
+<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Model Config FIle</label><div class="tabbed-content">
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>POP<span style="color: #666666">=</span>
+LDPOP<span style="color: #666666">=</span>
+SUMSTATS_PREFIX<span style="color: #666666">=</span>
+GENOTYPE_PREFIX<span style="color: #666666">=</span>
+PHENOTYPE_FILE<span style="color: #666666">=</span>
+VALIDATION_FILE<span style="color: #666666">=</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><label for="__tabbed_2_4">Answer</label><div class="tabbed-content">
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>POP<span style="color: #666666">=</span>UKB
+LDPOP<span style="color: #666666">=</span>EUR<span style="color: #bbbbbb"> </span>
+SUMSTATS_PREFIX<span style="color: #666666">=</span>ukb<span style="color: #666666">/</span>sumstats<span style="color: #666666">/</span>ukb.sumstats
+GENOTYPE_PREFIX<span style="color: #666666">=</span>ukb<span style="color: #666666">/</span>genotypes<span style="color: #666666">/</span>chr
+PHENOTYPE_FILE<span style="color: #666666">=</span>ukb<span style="color: #666666">/</span>phenotypes<span style="color: #666666">/</span>ukb_test.dat<span style="color: #bbbbbb"> </span>
+VALIDATION_FILE<span style="color: #666666">=</span>ukb<span style="color: #666666">/</span>phenotypes<span style="color: #666666">/</span>ukb_validation.dat<span style="color: #bbbbbb"> </span>
+</code></pre></div>
+</div>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../guide_input/" class="btn btn-neutral float-left" title="Input Data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../guide_subprograms/" class="btn btn-neutral float-right" title="Subprograms">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tadesouaiaia/BridgePRS-Guide" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../guide_input/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../guide_subprograms/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      <script src="../javascripts/details.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

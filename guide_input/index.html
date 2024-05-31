@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tade Souaiaia" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Input Data - BridgePRS</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Input Data";
+        var mkdocs_page_input_path = "guide_input.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]--> 
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-113286405-1", "auto");
+        ga('send', 'pageview');
+      </script>
+    
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> BridgePRS
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Requirements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_prep/">System</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_software/">Software</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_mac/">Mac Specific</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Tutorial</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_data/">Toy Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_demo/">Demo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_result/">Results</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_background/">Background</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Input Data</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#ld-reference-data-1000-genomes">LD Reference Data: 1000 Genomes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#targetbase-population-data">Target/Base Population Data:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#file-specifications">File Specifications</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-sumstats-data">1) Sumstats Data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-genotype-files">2) Genotype Files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-phenotype-files">3) Phenotype Files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-qc-snp-list">4) QC SNP List</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_challenges/">Use Cases</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_subprograms/">Subprograms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_output/">Output Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_args/">All Arguments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_customization/">Customization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_shell/">Using Bash</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc_faq/">Frequently Asked Questions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc_log/">Update Log</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">BridgePRS</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Guide</li>
+      <li class="breadcrumb-item active">Input Data</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tadesouaiaia/BridgePRS-Guide/edit/master/docs/guide_input.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><img alt="Screenshot" src="../img/slim/guide_logo2.png" /> </p>
+<h1 id="input-data">Input Data</h1>
+<h2 id="ld-reference-data-1000-genomes">LD Reference Data: 1000 Genomes</h2>
+<p>BridgePRS estimates SNP-specific LD in the clumping step from an population target data in PLINK binary format.  By default, the main 
+BridgePRS includes a sample LD reference panel (<strong>BRIDGEDIR/data/1000G_sample</strong>) for population super-groups <strong>AFR</strong> and <strong>EUR</strong> that is 
+suitable for the <a href="../quikstart_data/">quick start tutorial</a>. </p>
+<p>A folder containing the full 1000 Genomes LD reference panel for populations <strong>AFR</strong>, <strong>EUR</strong>, <strong>EAS</strong>, <strong>SAS</strong>, and <strong>AMR</strong> can be downloaded 
+<a href="https://drive.google.com/file/d/1djAEwRiQsh4veinSLHO3laGjNF95vvN9/view?usp=drive_link">here</a>
+and unzipped into <strong>BRIDGEDIR/data/1000G_ref</strong> to enable full usage of BridgePRS. </p>
+<p>To run BridgePRS using a custom LD reference please see <a href="../guide_customization/">customization</a>. </p>
+<h2 id="targetbase-population-data">Target/Base Population Data:</h2>
+<p>For the target and base populations bridgePRS requires that following files be supplied on the command 
+line or in a configuation file: </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Command Line flag</th>
+<th style="text-align: center;">Target Default</th>
+<th style="text-align: center;">Base Default</th>
+<th style="text-align: center;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Pop Name</td>
+<td style="text-align: center;">--pop</td>
+<td style="text-align: center;">None (Required)</td>
+<td style="text-align: center;">Required</td>
+<td style="text-align: center;">Target/Base Population Name</td>
+</tr>
+<tr>
+<td style="text-align: center;">LD-Ref Pop</td>
+<td style="text-align: center;">--ld_pop</td>
+<td style="text-align: center;">Pop Name</td>
+<td style="text-align: center;">Pop Name</td>
+<td style="text-align: center;">LD Ref Pop (AFR,EUR,EAS,AMR,SAS)</td>
+</tr>
+<tr>
+<td style="text-align: center;">Sumstats</td>
+<td style="text-align: center;">--sumstats_prefix</td>
+<td style="text-align: center;">None (Required)</td>
+<td style="text-align: center;">Required</td>
+<td style="text-align: center;">GWAS Summary Stats (Text Format)</td>
+</tr>
+<tr>
+<td style="text-align: center;">Genotypes</td>
+<td style="text-align: center;">--genotype_prefix</td>
+<td style="text-align: center;">None (Required)</td>
+<td style="text-align: center;">Target Genotypes</td>
+<td style="text-align: center;">Individual Level Genotypes (Plink Format)</td>
+</tr>
+<tr>
+<td style="text-align: center;">Phenotype File</td>
+<td style="text-align: center;">--phenotype_file</td>
+<td style="text-align: center;">None (Required)</td>
+<td style="text-align: center;">Target Phenotypes</td>
+<td style="text-align: center;">Individual Level Phenotypes (Text File)</td>
+</tr>
+<tr>
+<td style="text-align: center;">Validation File</td>
+<td style="text-align: center;">--validation_file</td>
+<td style="text-align: center;">Half of Phenotype File</td>
+<td style="text-align: center;">None</td>
+<td style="text-align: center;">Individual Level Phenotypes for Validation</td>
+</tr>
+<tr>
+<td style="text-align: center;">QC-snp List</td>
+<td style="text-align: center;">--snp_file</td>
+<td style="text-align: center;">All Snps</td>
+<td style="text-align: center;">All Snps</td>
+<td style="text-align: center;">List QCed SNP ids</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Creating a Configuration File</p>
+<p>The following command will validate the command line data and create a target configuration file 
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>./bridgePRS check pop -o out --pop AFR --sumstats_prefix data/pop_africa/sumstats/afr.chr  
+                                       --genotype_prefix data/pop_africa/genotypes/afr_genotypes 
+                                       --phenotype_file data/pop_africa/phenotypes/afr_test.dat
+</code></pre></div>
+To create a target and base configuation file you can use the following command: 
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>./bridgePRS check pops -o out --pop AFR EUR --sumstats_prefix data/pop_africa/sumstats/afr.chr data/pop_europe/sumstats/eur.chr 
+                                            --genotype_prefix data/pop_africa/genotypes/afr_genotypes
+                                            --phenotype_file data/pop_africa/phenotypes/afr_pheno.dat
+</code></pre></div></p>
+</div>
+<p>This command will create target and base configuration files that can be observed below: </p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">cat out/save/target.AFR.config</label><div class="tabbed-content">
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>POP<span style="color: #666666">=</span>AFR
+LDPOP<span style="color: #666666">=</span>AFR
+SUMSTATS_PREFIX<span style="color: #666666">=$</span>BRIDGEDIR<span style="color: #666666">/</span>data<span style="color: #666666">/</span>pop_africa<span style="color: #666666">/</span>sumstats<span style="color: #666666">/</span>afr.chr
+SUMSTATS_SUFFIX<span style="color: #666666">=</span>.glm.linear.gz
+SNP_FILE<span style="color: #666666">=$</span>BRIDGEDIR<span style="color: #666666">/</span>out<span style="color: #666666">/</span>save<span style="color: #666666">/</span>snps.AFR.txt
+GENOTYPE_PREFIX<span style="color: #666666">=$</span>BRIDGEDIR<span style="color: #666666">/</span>data<span style="color: #666666">/</span>pop_africa<span style="color: #666666">/</span>genotypes<span style="color: #666666">/</span>afr_genotypes
+PHENOTYPE_FILE<span style="color: #666666">=$</span>BRIDGEDIR<span style="color: #666666">/</span>out<span style="color: #666666">/</span>save<span style="color: #666666">/</span>AFR.test_phenos.dat
+VALIDATION_FILE<span style="color: #666666">=$</span>BRIDGEDIR<span style="color: #666666">/</span>out<span style="color: #666666">/</span>save<span style="color: #666666">/</span>AFR.valid_phenos.dat
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">cat out/save/base.EUR.config</label><div class="tabbed-content">
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>POP<span style="color: #666666">=</span>EUR
+LDPOP<span style="color: #666666">=</span>EUR
+SUMSTATS_PREFIX<span style="color: #666666">=$</span>BRIDGEDIR<span style="color: #666666">/</span>data<span style="color: #666666">/</span>pop_europe<span style="color: #666666">/</span>sumstats<span style="color: #666666">/</span>eur.chr
+SUMSTATS_SUFFIX<span style="color: #666666">=</span>.glm.linear.gz
+SNP_FILE<span style="color: #666666">=</span>out<span style="color: #666666">/</span>save<span style="color: #666666">/</span>snps.EUR.txt
+GENOTYPE_PREFIX<span style="color: #666666">=$</span>BRIDGEDIR<span style="color: #666666">/</span>data<span style="color: #666666">/</span>pop_africa<span style="color: #666666">/</span>genotypes<span style="color: #666666">/</span>afr_genotypes
+PHENOTYPE_FILE<span style="color: #666666">=$</span>BRIDGEDIR<span style="color: #666666">/</span>data<span style="color: #666666">/</span>pop_africa<span style="color: #666666">/</span>phenotypes<span style="color: #666666">/</span>afr_pheno.dat
+</code></pre></div>
+</div>
+</div>
+<h2 id="file-specifications">File Specifications</h2>
+<h3 id="1-sumstats-data">1) Sumstats Data</h3>
+<p>GWAS summary statistics are provided using a prefix to one or many (per chromosome) files with the <code>--sumstats_prefix</code> argument and the 
+<code>--sumstats_suffix</code> argument when nevecessary.  GWAS summary statistics must be provided as a whitespace delimited file containing 
+the results of an association study for a given phenotype.  BridgePRS has no problem reading in a gzipped base file 
+(need to have a <strong>.gz</strong> suffix) or splitting the file by chromosome if necessary.  An example of a sumstats file with default column headers is shown: </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Default Headers</th>
+<th style="text-align: center;">#CHR</th>
+<th style="text-align: center;">ID</th>
+<th style="text-align: center;">REF</th>
+<th style="text-align: center;">A1</th>
+<th style="text-align: center;">A1_FREQ</th>
+<th style="text-align: center;">OBS_CT</th>
+<th style="text-align: center;">BETA</th>
+<th style="text-align: center;">SE</th>
+<th style="text-align: center;">T_STAT</th>
+<th style="text-align: center;">P</th>
+<th style="text-align: center;">ERRCODE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Argument</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">--ssf-snpid</td>
+<td style="text-align: center;">--ssf-ref</td>
+<td style="text-align: center;">--ssf-alt</td>
+<td style="text-align: center;">--ssf-maf</td>
+<td style="text-align: center;">--sdf-n</td>
+<td style="text-align: center;">--ssf-beta</td>
+<td style="text-align: center;">--ssf-se</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">--ssf-p</td>
+<td style="text-align: center;">.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Data</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">rs12184325</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">0.0257573</td>
+<td style="text-align: center;">4853</td>
+<td style="text-align: center;">0.820864</td>
+<td style="text-align: center;">0.413692</td>
+<td style="text-align: center;">1.98424</td>
+<td style="text-align: center;">0.0472871</td>
+<td style="text-align: center;">.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Data</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">rs4970382</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">0.483495</td>
+<td style="text-align: center;">4847</td>
+<td style="text-align: center;">0.0011142</td>
+<td style="text-align: center;">0.128347</td>
+<td style="text-align: center;">0.00868116</td>
+<td style="text-align: center;">0.993074</td>
+<td style="text-align: center;">.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Data</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">rs2710890</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">G</td>
+<td style="text-align: center;">0.424387</td>
+<td style="text-align: center;">4814</td>
+<td style="text-align: center;">0.108094</td>
+<td style="text-align: center;">0.132225</td>
+<td style="text-align: center;">0.817497</td>
+<td style="text-align: center;">0.413687</td>
+<td style="text-align: center;">.</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>--ssf</strong> arguments can be used to specify column headers for different files. </p>
+<h3 id="2-genotype-files">2) Genotype Files</h3>
+<p>Genotype files must be in Plink Format.  </p>
+<h3 id="3-phenotype-files">3) Phenotype Files</h3>
+<p>Phenotype files can be provided to BridgePRS using the <code>--phenotype_files</code> flag. 
+This must be a tab / space delimited file and missing data <strong>must</strong> be represented by either <code>NA</code> or <code>-9</code> (only for binary traits).
+The first two column of the phenotype file should be the FID and the IID, and the rest can be phenotypes/covariates:  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">FID</th>
+<th style="text-align: center;">IID</th>
+<th style="text-align: center;">y</th>
+<th style="text-align: center;">y.binary</th>
+<th style="text-align: center;">PC1</th>
+<th style="text-align: center;">PC2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">afr1_1</td>
+<td style="text-align: center;">afr2_1</td>
+<td style="text-align: center;">24.4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0.53</td>
+<td style="text-align: center;">0.950</td>
+</tr>
+<tr>
+<td style="text-align: center;">afr1_2</td>
+<td style="text-align: center;">afr2_2</td>
+<td style="text-align: center;">4.10</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0.59</td>
+<td style="text-align: center;">0.450</td>
+</tr>
+<tr>
+<td style="text-align: center;">afr1_3</td>
+<td style="text-align: center;">afr2_3</td>
+<td style="text-align: center;">37.2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0.73</td>
+<td style="text-align: center;">-0.13</td>
+</tr>
+<tr>
+<td style="text-align: center;">afr1_4</td>
+<td style="text-align: center;">afr2_4</td>
+<td style="text-align: center;">5.40</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0.44</td>
+<td style="text-align: center;">-0.55</td>
+</tr>
+</tbody>
+</table>
+<p>The phenotype of interest can be specified with the <code>--phenotype</code> flag and the covariates can be given as a comma separated list 
+after the <code>--covariates</code> flag: </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>```
+./bridgePRS check data -o out --pop AFR --phenotype y --covariates PC1,PC2 
+                       --phenotype_file data/pop_africa/phenotypes/afr_pheno.dat 
+```
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The column name(s) should not contain <em>space</em> nor <em>comma</em></p>
+</div>
+<h3 id="4-qc-snp-list">4) QC SNP List</h3>
+<p>To select only SNPS that have passed QC, you can include a single column text file using the  <code>--snp_file</code> flag. </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../guide_background/" class="btn btn-neutral float-left" title="Background"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../guide_challenges/" class="btn btn-neutral float-right" title="Use Cases">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tadesouaiaia/BridgePRS-Guide" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../guide_background/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../guide_challenges/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      <script src="../javascripts/details.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

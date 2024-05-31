@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" /><meta name="author" content="Tade Souaiaia" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>BridgePRS</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link href="css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Home";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]--> 
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-113286405-1", "auto");
+        ga('send', 'pageview');
+      </script>
+    
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> BridgePRS
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Requirements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="req_prep/">System</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="req_software/">Software</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="req_mac/">Mac Specific</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Tutorial</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="quikstart_data/">Toy Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="quikstart_demo/">Demo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="quikstart_result/">Results</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="guide_background/">Background</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="guide_input/">Input Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="guide_challenges/">Use Cases</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="guide_subprograms/">Subprograms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="guide_output/">Output Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="guide_args/">All Arguments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="guide_customization/">Customization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="guide_shell/">Using Bash</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="misc_faq/">Frequently Asked Questions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="misc_log/">Update Log</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">BridgePRS</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Home</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tadesouaiaia/BridgePRS-Guide/edit/master/docs/index.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><img alt="Screenshot" src="img/fat_logo.png" /> </p>
+<p>BridgePRS is a Bayesian-ridge (Bridge) method that "bridges" the PRS between two populations of different ancestry, developed to 
+tackle the "PRS Portability Problem".  The PRS portability problem causes lower PRS accuracy in target
+populations which were not included in the GWAS summary statistics base populations used to estimate the PRS. This is because of differences in linkage disequilibrium
+(LD), differences in allele frequency driven by genetic drift and
+natural selection, and gene–environment interactions affecting causal
+effect sizes between the base and target populations.</p>
+<h1 id="package-downloads">Package Downloads</h1>
+<table>
+<thead>
+<tr>
+<th>Operating System</th>
+<th style="text-align: center;">Link</th>
+<th style="text-align: center;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linux  64-bit</td>
+<td style="text-align: center;"><a href="https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip">v1.0.2</a></td>
+<td style="text-align: center;">Updated 1-20-2024</td>
+</tr>
+<tr>
+<td>Mac  64-bit</td>
+<td style="text-align: center;"><a href="https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip">v1.0.2</a></td>
+<td style="text-align: center;">Updated 1-20-2024</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td style="text-align: center;">NA</td>
+<td style="text-align: center;">Not Available</td>
+</tr>
+<tr>
+<td>1000G Ref Panel</td>
+<td style="text-align: center;"><a href="https://drive.google.com/file/d/1djAEwRiQsh4veinSLHO3laGjNF95vvN9/view?usp=drive_link">1000G_ref.tar.gz</a></td>
+<td style="text-align: center;">Optional (Unzip into data directory to use)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Latest Updates</p>
+<h1 id="2023-09-15-v017">2023-09-15 (v0.1.7)</h1>
+<ul>
+<li>We have added sample thousand genomes data. </li>
+<li>update log can be found <a href="misc_log/">here</a></li>
+</ul>
+</div>
+<h1 id="overview">Overview</h1>
+<ul>
+<li>BridgePRS is a software package written in R (main) and Python (wrapper) that depends on <a href="https://www.cog-genomics.org/software">Plink.</a> 
+  For more information on installing dependencies, please refer to <a href="req_software/">Requirements</a>. </li>
+<li>To get BridgePRS running using toy data see our <a href="quikstart_data/">Quick Start Tutorial.</a>.</li>
+<li>Following the Quick Start, the full guide provides more <a href="guide_challenges/">realistic examples</a> to help you get started with your own data. </li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Citation: Our Manuscript is published in Nature Genetics</p>
+<p>Please cite our <a href="https://www.nature.com/articles/s41588-023-01583-9">paper</a>: </p>
+<p>Hoggart C, Choi SW, García-González J, Souaiaia T, Preuss M, O'Reilly P. BridgePRS leverages shared genetic effects across ancestries to increase polygenic risk score portability. Nat Genet 56, 180–186 (2024).
+https://doi.org/10.1038/s41588-023-01583-9</p>
+</div>
+<h2 id="contact">Contact</h2>
+<p>For questions about the methodology, this website, or our manuscript please contact <a href="http://www.pauloreilly.info/">Dr Clive Hoggart</a>, 
+<a href="http://www.pauloreilly.info/">Dr Tade Souaiaia</a>, or <a href="http://www.pauloreilly.info/">Dr Paul O'Reilly</a>.  For source code and coding 
+issues please visit the bridgePRS github <a href="https://github.com/clivehoggart/BridgePRS">here</a>. </p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>We would like to thank Brian Fulton-Howard for his feedback and help with testing. </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="req_prep/" class="btn btn-neutral float-right" title="System">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tadesouaiaia/BridgePRS-Guide" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+      <span><a href="req_prep/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      <script src="javascripts/details.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.5.3
+Build Date UTC : 2024-05-31 03:26:04.757168+00:00
+-->

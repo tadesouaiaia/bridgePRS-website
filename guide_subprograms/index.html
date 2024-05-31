@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tade Souaiaia" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Subprograms - BridgePRS</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Subprograms";
+        var mkdocs_page_input_path = "guide_subprograms.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]--> 
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-113286405-1", "auto");
+        ga('send', 'pageview');
+      </script>
+    
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> BridgePRS
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Requirements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_prep/">System</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_software/">Software</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_mac/">Mac Specific</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Tutorial</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_data/">Toy Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_demo/">Demo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_result/">Results</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_background/">Background</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_input/">Input Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_challenges/">Use Cases</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Subprograms</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#prs-single">prs-single</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#build-model">build-model</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#prs-port">prs-port</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#prs-prior">prs-prior</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#analyze">analyze</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_output/">Output Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_args/">All Arguments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_customization/">Customization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_shell/">Using Bash</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc_faq/">Frequently Asked Questions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc_log/">Update Log</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">BridgePRS</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Guide</li>
+      <li class="breadcrumb-item active">Subprograms</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tadesouaiaia/BridgePRS-Guide/edit/master/docs/guide_subprograms.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><img alt="Screenshot" src="../img/slim/guide_logo4.png" /> </p>
+<h1 id="subprograms">Subprograms</h1>
+<p>BridgePRS consists of five related multi-function subprograms: 78</p>
+<p>1) <strong>BridgePRS prs-single</strong><br />
+2) <strong>BridgePRS build-model</strong><br />
+3) <strong>BridgePRS prs-port</strong>  <br />
+4) <strong>BridgePRS prs-prior</strong> <br />
+5) <strong>BridgePRS analyze combine</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Subprogram</th>
+<th style="text-align: center;">Input</th>
+<th style="text-align: center;">Subcommands</th>
+<th style="text-align: center;">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>prs-single</strong></td>
+<td style="text-align: center;">Target Pop Data</td>
+<td style="text-align: center;"><strong>run</strong>,clump,beta,predict,quantify</td>
+<td style="text-align: center;">prs-result</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>build-model</strong></td>
+<td style="text-align: center;">Model Pop Data</td>
+<td style="text-align: center;">**run**clump,beta,predict,prior</td>
+<td style="text-align: center;">model-params</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>prs-port</strong></td>
+<td style="text-align: center;">Target Pop + Model Result</td>
+<td style="text-align: center;"><strong>run</strong>,predict,quantify</td>
+<td style="text-align: center;">prs-port-result</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>prs-prior</strong></td>
+<td style="text-align: center;">Target Pop Data + Model Result</td>
+<td style="text-align: center;"><strong>run</strong>,clump,beta,test,predict</td>
+<td style="text-align: center;">prs-prior-result</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>analyze</strong></td>
+<td style="text-align: center;">PRS Result Files</td>
+<td style="text-align: center;">**run**result,combine</td>
+<td style="text-align: center;">single-plot,weighted prs-result,weighted prs plot</td>
+</tr>
+</tbody>
+</table>
+<p>These programs can be called consecutively using the easyrun master-program 
+which will create the following directory structure: </p>
+<h2 id="prs-single">prs-single</h2>
+<p>The subprogram (<strong>prs-single</strong>) and subcommand (<strong>run</strong>) (<code>./bridgePRS prs-single run</code>) requires that the 
+following target population data be provided on the command line or inside of a configuration file: </p>
+<ol>
+<li><strong>--pop:</strong> The name of your target population </li>
+<li><strong>--ldpop:</strong> The ld reference name, if different from target population name </li>
+<li><strong>--sumstats_prefix:</strong> Sumstats data </li>
+<li><strong>--genotype_prefix:</strong> Target Genotype Data </li>
+<li><strong>--phenotype_file:</strong> Target Phenotype File </li>
+</ol>
+<p>This subprogram performs single population <strong>RidgePRS</strong>. </p>
+<h2 id="build-model">build-model</h2>
+<p>The subprogram is run on the base population (where the GWAS is larger). </p>
+<ol>
+<li><strong>--pop:</strong> The name of your target population </li>
+<li><strong>--ldpop:</strong> The ld reference name, if different from target population name </li>
+<li><strong>--sumstats_prefix:</strong> Base sumstats data </li>
+<li><strong>--genotype_prefix:</strong> Base Genotype Data (If available) </li>
+<li><strong>--phenotype_file:</strong> Base Phenotype File  (If available) </li>
+</ol>
+<p>This program performs <strong>RidgePRS</strong> on the base population and then provides 
+a prior distribution for each SNP weight that can be passed onto the next programs. </p>
+<h2 id="prs-port">prs-port</h2>
+<p>The subprogram uses the model result and the target population data to "port" the SNP 
+weights from the base population to make estimates in the target population.  </p>
+<h2 id="prs-prior">prs-prior</h2>
+<p>The subprogram uses the model result and the target population data and uses the 
+the SNP weights from the base population to estimate a prior distribution to 
+make estimates in the target population.  </p>
+<h2 id="analyze">analyze</h2>
+<p>The analyze subprogram is used to either make a plot from a single result (above) or 
+to combine the results of all three. </p>
+<p><img alt="Screenshot" src="../img/pipeline.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../guide_challenges/" class="btn btn-neutral float-left" title="Use Cases"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../guide_output/" class="btn btn-neutral float-right" title="Output Data">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tadesouaiaia/BridgePRS-Guide" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../guide_challenges/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../guide_output/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      <script src="../javascripts/details.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
