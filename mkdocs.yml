@@ -1,5 +1,6 @@
 site_name: BridgePRS 
 repo_url: https://github.com/tadesouaiaia/BridgePRS-website
+edit_url:  edit/main/docs/
 site_author:  Tade Souaiaia 
 nav:
     - Home: index.md
