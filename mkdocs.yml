@@ -1,0 +1,61 @@
+site_name: BridgePRS 
+repo_url: https://github.com/tadesouaiaia/BridgePRS-website
+site_author:  Tade Souaiaia 
+nav:
+    - Home: index.md
+    
+    - Requirements:
+        - System:              req_prep.md 
+        - Software:            req_software.md 
+        - Mac Specific:        req_mac.md
+    - Quick Start Tutorial:
+        - Toy Data:           quikstart_data.md 
+        - Demo:               quikstart_demo.md 
+        - Results:      quikstart_result.md 
+
+    - Guide:
+        - Background:           guide_background.md
+        - Input Data:           guide_input.md
+        - Use Cases:            guide_challenges.md 
+        - Subprograms:          guide_subprograms.md
+        - Output Data:          guide_output.md 
+        - All Arguments:        guide_args.md
+        - Customization:        guide_customization.md 
+        - Using Bash:           guide_shell.md 
+
+    - Misc:
+        - Frequently Asked Questions: misc_faq.md
+        - Update Log:                 misc_log.md
+
+
+
+theme:
+    name: readthedocs
+    highlightjs: false
+
+markdown_extensions:
+    - admonition
+    - attr_list
+    - pymdownx.details
+    - pymdownx.tabbed
+    - pymdownx.superfences
+    - pymdownx.highlight:
+        use_pygments: true
+        noclasses: true
+    - pymdownx.arithmatex:
+        generic: True
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+
+extra_css:
+  - css/extra.css
+
+google_analytics:
+    - 'UA-113286405-1'
+    - auto
+
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+  - javascripts/details.js
+
