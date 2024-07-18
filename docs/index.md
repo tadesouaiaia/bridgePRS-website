@@ -12,12 +12,13 @@
 [//]: # (![Screenshot](img/bridge_logo3.png) 
 
 
-BridgePRS is a Bayesian-ridge (Bridge) method that "bridges" the PRS between two populations of different ancestry, developed to 
-tackle the "PRS Portability Problem".  The PRS portability problem causes lower PRS accuracy in target
-populations which were not included in the GWAS summary statistics base populations used to estimate the PRS. This is because of differences in linkage disequilibrium
-(LD), differences in allele frequency driven by genetic drift and
-natural selection, and gene–environment interactions affecting causal
-effect sizes between the base and target populations.
+BridgePRS is a **B**ayesian method that utilises **ridge** regression
+developed to tackle the "**PRS** Portability Problem".  The PRS
+portability problem causes lower PRS accuracy in target populations
+which were not included in the GWAS base populations used to estimate
+the PRS. This is because of differences in linkage disequilibrium
+(LD), allele frequency and gene–environment interactions affecting
+causal effect sizes between the base and target populations.
 
 
 # Package Downloads 
@@ -39,7 +40,10 @@ effect sizes between the base and target populations.
 
 # Overview 
 
-- BridgePRS is a software package written in R (main) and Python (wrapper) that depends on [Plink.](https://www.cog-genomics.org/software) 
+- BridgePRS is written in R with a Python
+  wrapper. [Plink.](https://www.cog-genomics.org/software) is used in
+  the first stage of the modelling for clumping and thresholding (all
+  markers within clumps are retained for analysis).
   For more information on installing dependencies, please refer to [Requirements](req_software.md). 
 - To get BridgePRS running using toy data see our [Quick Start Tutorial.](quikstart_data.md).
 - Following the Quick Start, the full guide provides more [realistic examples](guide_challenges.md) to help you get started with your own data. 
@@ -59,9 +63,12 @@ effect sizes between the base and target populations.
 
 
 ## Contact 
-For questions about the methodology, this website, or our manuscript please contact [Dr Clive Hoggart](http://www.pauloreilly.info/), 
-[Dr Tade Souaiaia](http://www.pauloreilly.info/), or [Dr Paul O'Reilly](http://www.pauloreilly.info/).  For source code and coding 
-issues please visit the bridgePRS github [here](https://github.com/clivehoggart/BridgePRS). 
+For questions about the methodology, this website, or our manuscript
+please contact [Dr Clive Hoggart](http://www.pauloreilly.info/), [Dr
+Tade Souaiaia](http://www.pauloreilly.info/), or [Dr Paul
+O'Reilly](http://www.pauloreilly.info/).  For source code and coding
+issues please visit the bridgePRS github
+[here](https://github.com/clivehoggart/BridgePRS).
 
 
 ## Acknowledgements

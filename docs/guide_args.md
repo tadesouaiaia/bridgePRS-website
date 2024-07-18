@@ -13,6 +13,9 @@ This page contains all command available in BridgePRS.
 
 - `--sumstats_prefix`  Path to sumstats data 
 
+- `--sumstats_suffix`
+     Sumstats Suffix        
+
 - `--phenotype_files`
      phenotype test and validation data    
 
@@ -80,42 +83,36 @@ This page contains all command available in BridgePRS.
 
 
 - `--phenotype`  Phenotype File Field: phenotype 
-- `--covariates` Phenotype File Field: covariates      
+- `--covariates` Phenotype File Field: comma separated list of covariates      
 
 
 ### Sumstats Files 
 
 
 
-- `--ssf-alt`
-     Sumstats Field: alt allele      
-
-- `--ssf-beta`
-     Sumstats Field: beta       
-
-- `--ssf-maf`
-     Sumstats Field: MAF       
-
-- `--ssf-p`
-     Sumstats field: P-value       
+- `--ssf-snpid`
+     Sumstats field: snp ID       
 
 - `--ssf-ref`
      Sumstats Field: reference allele      
 
+- `--ssf-alt`
+     Sumstats Field: alt allele      
+
+- `--ssf-maf`
+     Sumstats Field: MAF       
+
+- `--ssf-beta`
+     Sumstats Field: linear regression effect or log odds       
+
 - `--ssf-se`
      Sumstats field: standard error      
 
-- `--ssf-snpid`
-     Sumstats field: snpID       
+- `--ssf-p`
+     Sumstats field: P-value       
 
 - `--ssf-n`
      Sumstats Field: Sample Size      
-
-- `--sumstat_prefix`
-     path to sumstats file prefixes     
-
-- `--sumstats_suffix`
-     Sumstats Suffix        
 
 
 

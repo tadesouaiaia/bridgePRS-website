@@ -2,8 +2,9 @@
 
 ## Input Data 
 
-This demo runs using the following population config files **data/pop_africa/afr.config** and **data/pop_europe/eur.config** that 
-declare rudimentary options and point to the relative paths for all required population data. 
+This demo runs using the following population config files
+**data/pop_africa/afr.config** and **data/pop_europe/eur.config** that
+list the paths for all required population data. 
 
 ## Run The Demo: 
 
@@ -32,9 +33,11 @@ process using a binary phenotype:
 ## Demo Results:
 
 
-If bridgePRS runs successfully on the toy data, please go to the next page for information on interpretation of the results. 
-Before running bridgePRS with larger real data, please consider reading our [most common use cases examples](guide_challenges.md) 
-to understand how best to use bridgePRS in realistic scenarios. 
+If BridgePRS runs successfully on the toy data, please go to the next
+page for information on interpretation of the results.  Before running
+BridgePRS with larger real data, please consider reading our [most
+common use case examples](guide_challenges.md) to understand how best
+to use BridgePRS in realistic scenarios.
 
     
 ![Screenshot](img/combo1.png)

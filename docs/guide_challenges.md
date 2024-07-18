@@ -3,16 +3,17 @@
 
 ## Training
 
-In the two [toy-data examples](quikstart_data.md) the target population was a non-specific African (**AFR**) population 
-and the model population  was European (**EUR**).  In these examples each population had a corresponding:  
+In the two [toy-data examples](quikstart_data.md) the target population was African (**AFR**)
+and the base population  was European (**EUR**).  In these examples each population had a corresponding:  
 
-- LD Reference Panel (Used for Clumping) 
+- LD Reference Panel
 - GWAS Summary Stat File  
-- Genotype/Phenotype Data 
+- Individual levels genotype data in plink format
+- Phenotype data 
 
-This example may be unrealistic given real-world constraints and the realities of data sharing. 
-Here we will consider will consider using BridgePRS in more realistic scenarios.  In each of these 
-challeges the task is to create valid configuration given the described scenario. 
+Here we consider using BridgePRS in other scenarios with less
+available data.  In each of these challeges the task is to create
+valid configuration files given the described scenario.
 
 ## Challenge 1: 
 

@@ -3,8 +3,10 @@
 ## Preparation 
 
 
-After [downloading](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) and unzipping BridgePRS 
-into a suitable directory on your machine you will observe that a folder with the following contents: 
+After
+[downloading](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip)
+and unzipping BridgePRS a directory with the following contents will
+be created:
     
      bridgePRS              <--- program executable 
      data/                  <--- input data               

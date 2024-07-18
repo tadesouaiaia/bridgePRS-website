@@ -2,6 +2,4 @@
 
 # Using BridgePRS without Python
 
-
-![Screenshot](img/construction1.png) 
-
+[See](https://github.com/clivehoggart/BridgePRS)

@@ -37,8 +37,8 @@ to the file location.
 The BridgePRS wrapper requires python3+ ([download](https://www.python.org/downloads/)) and the matplotlib 
 library ([download](https://matplotlib.org/stable/users/installing/index.html)) is required to create plots (options). 
 
-If Python3+ is not available, BridgePRS can be ran using shell scripts, as described in the README file.   
-If Python3+ is available, all other dependencies can be ran using the BridgePRS 
+## Bash
+BridgePRS can also be run using a shell script as described [here](https://github.com/clivehoggart/BridgePRS).
 
 
 !!! Note "BridgePRS check requirements" 
