@@ -52,20 +52,29 @@ signficance of the realtionship at each SNP.
 
 **The PRS Portability Problem**
 
-- Often when PRS results from a large test population (usually of European ancestry) are validated to an out of sample population of different ancestry the PRS model is not predictive.  
-- Unfortunately, there is not enough data in the non-european population to produce a reliabile "test dataset" so researchers have to either accept either: 
-    - An underpowered PRS model made using only the non-european population. 
-    - A large PRS model based on European test data that doesn't perform well. 
+- Often when a PRS trained using data from one population,
+  e.g. European, is applied to a population of different ancestry,
+  e.g. African, the PRS model is less predictive.
+- Often there is insufficient data in the non-European populations to
+  estimate good ancestry specific PRS using this data alone. Using
+  single ancestry PRS methods researchers are left with two choices:
+    - An underpowered PRS model estimated using only data the target
+      non-European population.
+    - A PRS estimated using a well powered GWAS from another population
 
 
 
 **The BridgePRS Solution**
 
-- BridgePRS solves this problem by first running producing three different PRS-models. 
-    - PRS ran using only the target (Non-European) dataset  
-    - PRS ran using SNP-weights calculated from the European Model 
-    - PRS ran using a prior effect-size distribution from the European Model  
-- Then BridgePRS combines these results to produce a weighted PRS solution. 
+- BridgePRS solves this problem by combining GWAS summary statistics
+  from two populations, typically a large well powered GWAS from a
+  "base" population, e.g. European, and a smaller GWAS from the target
+  population, eg African. This is implemented by estimating a PRS in
+  the target population sing a prior effect-size distribution
+  estimated from the base GWAS summary statistics. To capture ancestry
+  specific effects in the target population a BridgePRS also estimates
+  a PRS using only the target population.
+- BridgePRS combines these models to produce a single weighted PRS solution. 
 
 
 
