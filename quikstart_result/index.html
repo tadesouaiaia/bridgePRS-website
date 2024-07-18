@@ -113,15 +113,19 @@
             <div class="section" itemprop="articleBody">
               
                 <p><img alt="Screenshot" src="../img/slim/quikstart_logo3.png" /></p>
-<h1 id="interpreting-results">Interpreting Results</h1>
-<p>The easyrun command used in the previous step sequentially runs five different <a href="../guide_subprograms/">subprograms</a> in 
-output directory supplied on the command line (eg. <strong>out1</strong> and <strong>out2</strong>): </p>
+<h1 id="interpreting-results">Interpreting results</h1>
+<p>The easyrun command used in the previous step runs the following
+<a href="../guide_subprograms/">subprograms</a>:</p>
 <ol>
-<li><code>prs-single (stage 1):</code> <a href="../guide_subprograms/#prs-single">Run PRS using the target population only (AFR).</a> </li>
-<li><code>build-model:</code>     <a href="../guide_subprograms/#build-model">Estimate SNP weights &amp; prior params from model pop (EUR).</a></li>
-<li><code>prs-port (stage 1.5):</code>     <a href="../guide_subprograms/#prs-port">Run target-PRS using the model snp weights.</a> </li>
-<li><code>prs-prior (stage 2):</code>   <a href="../guide_subprograms/#prs-prior">Run target-PRS using model prior distributions.</a>  </li>
-<li><code>analyze</code>          <a href="../guide_subprograms/#prs-prior">Combine results to produce a weighted target PRS result.</a> </li>
+<li><code>prs-single (stage 1):</code> <a href="../guide_subprograms/#build-single">Applied to the base population
+   (Eur). Used to define prior for target population PRS.</a></li>
+<li><code>prs-prior (stage 2):</code> <a href="../guide_subprograms/#prs-prior">Applied to the target population (AFR)
+   PRS using prior estimated from base population (Eur).</a>  </li>
+<li><code>prs-single (stage 1):</code> <a href="../guide_subprograms/#prs-single">Applied to the target population (Afr).
+   PRS estimated using target population data only.</a> </li>
+<li><code>analyse</code> <a href="../guide_subprograms/#prs-prior">Combine Afr stage 1 and 2 results to produce a weighted
+   target PRS result.</a></li>
+<li><code>prs-port:</code>     <a href="../guide_subprograms/#prs-port">Base population PRS applied to target population.</a> </li>
 </ol>
 <p>And produces output in the following five subdirectories: </p>
 <ol>
@@ -131,8 +135,6 @@ output directory supplied on the command line (eg. <strong>out1</strong> and <st
 <li><strong>prs-prior_AFR/quantify/:</strong>  Weights, predictions, and performance metrics. </li>
 <li><strong>prs-combined_AFR/:</strong>        Analysis that combined the previous four steps. </li>
 </ol>
-<p>The directory structure created by this command is shown below: </p>
-<p><img alt="Screenshot" src="../img/pipeline.png" /></p>
               
             </div>
           </div><footer>

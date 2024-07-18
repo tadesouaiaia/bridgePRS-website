@@ -114,16 +114,17 @@
               
                 <p><img alt="Screenshot" src="../img/slim/guide_logo3.png" /></p>
 <h2 id="training">Training</h2>
-<p>In the two <a href="../quikstart_data/">toy-data examples</a> the target population was a non-specific African (<strong>AFR</strong>) population 
-and the model population  was European (<strong>EUR</strong>).  In these examples each population had a corresponding:  </p>
+<p>In the two <a href="../quikstart_data/">toy-data examples</a> the target population was African (<strong>AFR</strong>)
+and the base population  was European (<strong>EUR</strong>).  In these examples each population had a corresponding:  </p>
 <ul>
-<li>LD Reference Panel (Used for Clumping) </li>
+<li>LD Reference Panel</li>
 <li>GWAS Summary Stat File  </li>
-<li>Genotype/Phenotype Data </li>
+<li>Individual levels genotype data in plink format</li>
+<li>Phenotype data </li>
 </ul>
-<p>This example may be unrealistic given real-world constraints and the realities of data sharing. 
-Here we will consider will consider using BridgePRS in more realistic scenarios.  In each of these 
-challeges the task is to create valid configuration given the described scenario. </p>
+<p>Here we consider using BridgePRS in other scenarios with less
+available data.  In each of these challeges the task is to create
+valid configuration files given the described scenario.</p>
 <h2 id="challenge-1">Challenge 1:</h2>
 <p><strong>I have access to genotype/phenotype data (&lt;1000 samples, continuous phenotype) from a diverse population in Central Africa (1,2). 
 I would like ot run PRS as accurately as possible, but my dataset is not large enough to conduct GWAS, however, I do have access to a moderately 

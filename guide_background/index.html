@@ -63,8 +63,6 @@
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Background</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#single-population-analysis">Single Population Analysis</a>
-    </li>
     <li class="toctree-l2"><a class="reference internal" href="#cross-population-analysis">Cross Population Analysis</a>
     </li>
     </ul>
@@ -117,19 +115,14 @@
             <div class="section" itemprop="articleBody">
               
                 <p><img alt="Screenshot" src="../img/slim/guide_logo1.png" /></p>
-<p>BridgePRS is a trans-ancestry PRS software which improves polygenic risk score analysis in diverse populations.</p>
-<ol>
-<li>Calculating PRS using Ridge Regression</li>
-<li>Porting a PRS model from one population to another</li>
-<li>Using European data as a prior to improve PRS in diverse populations</li>
-<li>Results plotted in several formats</li>
-</ol>
+<p>BridgePRS is a trans-ancestry PRS software which improves polygenic
+risk score analysis in under-represented target populations by
+combining summary statistics from under-represented target populations
+(e.g. Africans) with those from a powerful GWAS (e.g. Europeans).</p>
 <h1 id="background">Background</h1>
-<p>You will need to have basic understanding of Genome Wide Association Studies (GWAS) and polygenic scoring (PRS) to be able to use BridgePRS. 
-If you are unfamiliar with GWAS, you can consider reading <a href="https://www.ncbi.nlm.nih.gov/pubmed/29484742">this paper</a>.  If you have familiarity 
-but need a crash refresher then reading the following section will be helpful. </p>
-<h2 id="single-population-analysis">Single Population Analysis</h2>
-<p><strong>GWAS</strong> </p>
+<p>PRS require as input summary statistics from genome wide association
+studies. If you are unfamiliar with GWAS or need a refresher consider reading
+<a href="https://www.ncbi.nlm.nih.gov/pubmed/29484742">this paper</a>.</p>
 <ul>
 <li>Genome wide association studies (GWAS) involve analyzing the genomes of a larger group of individuals.  This involves looking screening 
 millions of genetic variants (SNP) for association with a particular trait.  </li>
@@ -184,33 +177,50 @@ signficance of the realtionship at each SNP. </li>
 </tr>
 </tbody>
 </table>
-<p><strong>PRS</strong></p>
+<p><strong>PRS basics</strong></p>
 <ul>
-<li>Creating individual polygenic scores involves combine information across many genetic variants.  A score is calculated summing the genetic association values (beta-weights) 
-for each allele in an individual.  This means that variants with stronger associations have a larger impact on the overall score.  </li>
-<li>Usually, variant selection and assignment of SNP weights are determined using a very large "test dataset" of individual genotypes and phenotypes and 
-then validated on an out of sample dataset of genotypes and phenotypes. </li>
-<li>The correlation between the out of sample inidividual phenotypes and their predicted values (PRS scores) can be measured (<span class="arithmatex">\(R^2\)</span>) to assess how predictive the PRS model is. </li>
+<li>Creating individual polygenic scores involves combine information
+  across many genetic variants.  A score is calculated by summing the
+  genetic association values (beta-weights) for each allele in an
+  individual, therefore, variants with stronger associations have
+  a larger impact on the overall score.</li>
+<li>PRS software use different statistical methods to select variants
+  and estimate their effect sizes beta for use in the PRS.</li>
+<li>BridgePRS, like many other PRS methods, require genotype and
+  phenotype data from  individuals (several hundred samples) in
+  addition to GWAS summary statistics to estimate the PRS. </li>
+<li>The predictive power of PRS is assessed in genotype and phenotype
+  data from unseen samples. BridgePRS reports PRS accuracy by the
+  residual variance explained <span class="arithmatex">\(R^2\)</span> (accounting for the variance
+  explained by the non-genetic covariates included in the model). For
+  binary traits Nagelkerke <span class="arithmatex">\(R^2\)</span> is used.</li>
 </ul>
 <h2 id="cross-population-analysis">Cross Population Analysis</h2>
 <p><strong>The PRS Portability Problem</strong></p>
 <ul>
-<li>Often when PRS results from a large test population (usually of European ancestry) are validated to an out of sample population of different ancestry the PRS model is not predictive.  </li>
-<li>Unfortunately, there is not enough data in the non-european population to produce a reliabile "test dataset" so researchers have to either accept either: <ul>
-<li>An underpowered PRS model made using only the non-european population. </li>
-<li>A large PRS model based on European test data that doesn't perform well. </li>
+<li>Often when a PRS trained using data from one population,
+  e.g. European, is applied to a population of different ancestry,
+  e.g. African, the PRS model is less predictive.</li>
+<li>Often there is insufficient data in the non-European populations to
+  estimate good ancestry specific PRS using this data alone. Using
+  single ancestry PRS methods researchers are left with two choices:<ul>
+<li>An underpowered PRS model estimated using only data the target
+  non-European population.</li>
+<li>A PRS estimated using a well powered GWAS from another population</li>
 </ul>
 </li>
 </ul>
 <p><strong>The BridgePRS Solution</strong></p>
 <ul>
-<li>BridgePRS solves this problem by first running producing three different PRS-models. <ul>
-<li>PRS ran using only the target (Non-European) dataset  </li>
-<li>PRS ran using SNP-weights calculated from the European Model </li>
-<li>PRS ran using a prior effect-size distribution from the European Model  </li>
-</ul>
-</li>
-<li>Then BridgePRS combines these results to produce a weighted PRS solution. </li>
+<li>BridgePRS solves this problem by combining GWAS summary statistics
+  from two populations, typically a large well powered GWAS from a
+  "base" population, e.g. European, and a smaller GWAS from the target
+  population, eg African. This is implemented by estimating a PRS in
+  the target population sing a prior effect-size distribution
+  estimated from the base GWAS summary statistics. To capture ancestry
+  specific effects in the target population a BridgePRS also estimates
+  a PRS using only the target population.</li>
+<li>BridgePRS combines these models to produce a single weighted PRS solution. </li>
 </ul>
               
             </div>
