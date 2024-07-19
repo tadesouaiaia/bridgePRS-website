@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tade Souaiaia" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Subprograms - BridgePRS</title>
+    <title>Pipeline - BridgePRS</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link href="../css/extra.css" rel="stylesheet" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Subprograms";
-        var mkdocs_page_input_path = "guide_subprograms.md";
+        var mkdocs_page_name = "Pipeline";
+        var mkdocs_page_input_path = "guide_pipeline.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -43,7 +43,7 @@
               </ul>
               <p class="caption"><span class="caption-text">Requirements</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../req_prep/">System</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_system/">System</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../req_software/">Software</a>
                   </li>
@@ -65,23 +65,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../guide_input/">Input Data</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../guide_challenges/">Use Cases</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Subprograms</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Pipeline</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#prs-single">prs-single</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#build-model">build-model</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#prs-port">prs-port</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#prs-prior">prs-prior</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#analyze">analyze</a>
-    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../guide_output/">Output Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_usecases/">Use Cases</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../guide_args/">All Arguments</a>
                   </li>
@@ -112,9 +102,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Guide</li>
-      <li class="breadcrumb-item active">Subprograms</li>
+      <li class="breadcrumb-item active">Pipeline</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/tadesouaiaia/BridgePRS-website/edit/master/docs/guide_subprograms.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/tadesouaiaia/BridgePRS-website/edit/master/docs/guide_pipeline.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -123,8 +113,22 @@
             <div class="section" itemprop="articleBody">
               
                 <p><img alt="Screenshot" src="../img/slim/guide_logo4.png" /> </p>
+<h1 id="main-program">Main Program</h1>
+<p>The BridgePRS Pipeline can be invoked with the following command: </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>BridgePRS easyrun go
+</code></pre></div>
+<p>The pipeline requires the following input from both the target and base populations: </p>
+<ol>
+<li><strong>--pop:</strong> The population name</li>
+<li><strong>--ldpop:</strong> The ld reference population, if different from population name</li>
+<li><strong>--sumstats_prefix:</strong> Sumstats data </li>
+<li><strong>--genotype_prefix:</strong> Target Genotype Data </li>
+<li><strong>--phenotype_file:</strong> Target Phenotype File </li>
+</ol>
+<p>This information can be provided on the command line or using config files. The pipeline 
+runs multiple subprograms that are described below. </p>
 <h1 id="subprograms">Subprograms</h1>
-<p>BridgePRS consists of five related multi-function subprograms: 78</p>
+<p>BridgePRS consists of five related multi-function subprograms: </p>
 <p>1) <strong>BridgePRS prs-single</strong><br />
 2) <strong>BridgePRS build-model</strong><br />
 3) <strong>BridgePRS prs-port</strong>  <br />
@@ -188,8 +192,8 @@ following target population data be provided on the command line or inside of a 
 <h2 id="build-model">build-model</h2>
 <p>The subprogram is run on the base population (where the GWAS is larger). </p>
 <ol>
-<li><strong>--pop:</strong> The name of your target population </li>
-<li><strong>--ldpop:</strong> The ld reference name, if different from target population name </li>
+<li><strong>--pop:</strong> The name of your base population </li>
+<li><strong>--ldpop:</strong> The ld reference name, if different from base population name </li>
 <li><strong>--sumstats_prefix:</strong> Base sumstats data </li>
 <li><strong>--genotype_prefix:</strong> Base Genotype Data (If available) </li>
 <li><strong>--phenotype_file:</strong> Base Phenotype File  (If available) </li>
@@ -211,7 +215,7 @@ to combine the results of all three. </p>
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../guide_challenges/" class="btn btn-neutral float-left" title="Use Cases"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../guide_input/" class="btn btn-neutral float-left" title="Input Data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../guide_output/" class="btn btn-neutral float-right" title="Output Data">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -239,7 +243,7 @@ to combine the results of all three. </p>
         </span>
     
     
-      <span><a href="../guide_challenges/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../guide_input/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../guide_output/" style="color: #fcfcfc">Next &raquo;</a></span>
