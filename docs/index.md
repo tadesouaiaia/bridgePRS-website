@@ -46,8 +46,7 @@ causal effect sizes between the base and target populations.
   markers within clumps are retained for analysis).
   For more information on installing dependencies, please refer to [Requirements](req_software.md). 
 - To get BridgePRS running using toy data see our [Quick Start Tutorial.](quikstart_data.md).
-- Following the Quick Start, the full guide provides more [realistic examples](guide_challenges.md) to help you get started with your own data. 
-
+- Following the Quick Start, the full guide provides more [realistic examples](guide_usecases.md) to help you get started with your own data. 
 
 
 

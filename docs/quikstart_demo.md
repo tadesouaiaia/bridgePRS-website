@@ -36,7 +36,7 @@ process using a binary phenotype:
 If BridgePRS runs successfully on the toy data, please go to the next
 page for information on interpretation of the results.  Before running
 BridgePRS with larger real data, please consider reading our [most
-common use case examples](guide_challenges.md) to understand how best
+common use case examples](guide_usecases.md) to understand how best
 to use BridgePRS in realistic scenarios.
 
     
