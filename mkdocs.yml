@@ -1,25 +1,24 @@
 site_name: BridgePRS 
 repo_url: https://github.com/tadesouaiaia/BridgePRS-website
-edit_url:  edit/main/docs/
 site_author:  Tade Souaiaia 
 nav:
     - Home: index.md
     
     - Requirements:
-        - System:              req_prep.md 
+        - System:              req_system.md 
         - Software:            req_software.md 
         - Mac Specific:        req_mac.md
     - Quick Start Tutorial:
         - Toy Data:           quikstart_data.md 
         - Demo:               quikstart_demo.md 
-        - Results:      quikstart_result.md 
+        - Results:            quikstart_result.md 
 
     - Guide:
         - Background:           guide_background.md
         - Input Data:           guide_input.md
-        - Use Cases:            guide_challenges.md 
-        - Subprograms:          guide_subprograms.md
+        - Pipeline:             guide_pipeline.md  
         - Output Data:          guide_output.md 
+        - Use Cases:            guide_usecases.md 
         - All Arguments:        guide_args.md
         - Customization:        guide_customization.md 
         - Using Bash:           guide_shell.md 
@@ -52,9 +51,6 @@ markdown_extensions:
 extra_css:
   - css/extra.css
 
-google_analytics:
-    - 'UA-113286405-1'
-    - auto
 
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'

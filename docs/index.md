@@ -12,7 +12,7 @@
 [//]: # (![Screenshot](img/bridge_logo3.png) 
 
 
-BridgePRS is a **B**ayesian method that utilises **ridge** regression
+BridgePRS is a **Bayesian** method that utilises **ridge** regression
 developed to tackle the "**PRS** Portability Problem".  The PRS
 portability problem causes lower PRS accuracy in target populations
 which were not included in the GWAS base populations used to estimate

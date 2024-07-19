@@ -1,10 +1,29 @@
 ![Screenshot](img/slim/guide_logo4.png) 
 
 
+# Main Program  
+
+The BridgePRS Pipeline can be invoked with the following command: 
+
+    BridgePRS easyrun go
+
+The pipeline requires the following input from both the target and base populations: 
+
+1. **--pop:** The population name
+2. **--ldpop:** The ld reference population, if different from population name
+3. **--sumstats_prefix:** Sumstats data 
+4. **--genotype_prefix:** Target Genotype Data 
+5. **--phenotype_file:** Target Phenotype File 
+
+This information can be provided on the command line or using config files. The pipeline 
+runs multiple subprograms that are described below. 
+
+
+
 
 # Subprograms 
 
-BridgePRS consists of five related multi-function subprograms: 78
+BridgePRS consists of five related multi-function subprograms: 
 
 1) **BridgePRS prs-single**  
 2) **BridgePRS build-model**  
@@ -50,8 +69,8 @@ This subprogram performs single population **RidgePRS**.
 
 The subprogram is run on the base population (where the GWAS is larger). 
 
-1. **--pop:** The name of your target population 
-2. **--ldpop:** The ld reference name, if different from target population name 
+1. **--pop:** The name of your base population 
+2. **--ldpop:** The ld reference name, if different from base population name 
 3. **--sumstats_prefix:** Base sumstats data 
 4. **--genotype_prefix:** Base Genotype Data (If available) 
 5. **--phenotype_file:** Base Phenotype File  (If available) 
