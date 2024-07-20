@@ -15,19 +15,80 @@
 BridgePRS is a **Bayesian** method that utilises **ridge** regression
 developed to tackle the "**PRS** Portability Problem".  The PRS
 portability problem causes lower PRS accuracy in target populations
-which were not included in the GWAS base populations used to estimate
-the PRS. This is because of differences in linkage disequilibrium
+not included in the GWAS base used to estimate the PRS. This is due to differences in linkage disequilibrium
 (LD), allele frequency and gene–environment interactions affecting
 causal effect sizes between the base and target populations.
 
 
-# Package Downloads 
+<!--
 | Operating System | Link | Notes | 
 | -----------------|:----------:|:----:| 
-| Linux  64-bit | [v1.0.2](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) | Updated 1-20-2024 |  
-| Mac  64-bit   | [v1.0.2](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) | Updated 1-20-2024 | 
+| Linux  64-bit | [v1.0.2](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) | Updated 7-12-2024 |  
+| Mac  64-bit   | [v1.0.2](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) | Updated 6-27-2024 | 
+| Windows       | NA     | Not Available | 
+
+
+# Reference Panels 
+| Source | Link | Notes | 
+| -----------------|:----------:|:----:| 
+| HapMap | [v1.0.2](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) | Updated 7-12-2024 |  
+| 1000G_   | [v1.0.2](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) | Updated 6-27-2024 | 
 | Windows       | NA     | Not Available | 
 | 1000G Ref Panel | [1000G_ref.tar.gz](https://drive.google.com/file/d/1djAEwRiQsh4veinSLHO3laGjNF95vvN9/view?usp=drive_link) | Optional (Unzip into data directory to use) |    
+| 1000G Ref Panel | [1000G_ref.tar.gz](https://drive.google.com/file/d/1djAEwRiQsh4veinSLHO3laGjNF95vvN9/view?usp=drive_link) | Optional (Unzip into data directory to use) |    
+-->
+
+
+
+
+
+
+
+# Download Links 
+
+
+|BridgePRS Packages |Reference Panels|
+|--|--|
+|<table> <tr><th> OS </th><th> Link </th><th> Last Update  </th></tr>  <tr><td> Linux 64-Bit </td><td> [v1.0.3](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) </td><td> 7-12-2024 </td></tr>  </th></tr>  <tr><td> Mac 64-Bit </td><td> [v1.0.3](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) </td><td> 6-16-2024 </td></tr> </th></tr>  <tr><td> Windows </td><td> NA </td><td> Not Available </td></tr> </table> | <table> <tr><th> Download Link  </th><th> Size </th><th> More Information </th></tr><tr><td> [HapMap Panel](https://drive.google.com/file/d/1NElCu-QYS4qniZ6og5ar7eXjiQVWPTmh/view?usp=drive_link) </td><td> <1GB </td><td> [International HapMap Project](https://www.genome.gov/10001688/international-hapmap-project) </td></tr>  </th></tr>  <tr><td> [1000 Genomes Panel (MAF>5%)](https://drive.google.com/file/d/1nzsXnQa3Zdl0PpJGOADs8EqAPSOdYnKY/view?usp=drive_link) </td><td> 8GB </td><td> [International Genome Sample Resource](https://www.internationalgenome.org/) </td></tr> </th></tr>  </td><td> [1000 Genomes Panel (MAF>1%)](https://drive.google.com/file/d/16IpkBXnuy9xgwxFPglJTDzyGjmUqha6q/view?usp=drive_link) </td><td> 14GB </td><td> [International Genome Sample Resource](https://www.internationalgenome.org/) </td></tr> </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+|BridgePRS Package |Reference Panels|
+|--|--|
+|<table> <tr><th> OS </th><th> Link </th><th> Last Update  </th></tr>  <tr><td> Linux 64-Bit 
+</td><td> [v1.0.3](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) 
+</td><td> 7-12-2024 </td></tr>  </th></tr>  <tr><td> Mac 64-Bit 
+</td><td> [v1.0.3](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) 
+</td><td> 6-16-2024 
+</td></tr> </th></tr>  <tr><td> Windows </td><td> NA </td><td> Not Available </td></tr> </table>       
+| <table> <tr><th>Source</th><th>Link  </th><th> Notes </th></tr><tr><td> HapMap </td><td> [v1.0.3](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) 
+</td><td> Cool </td></tr>  </th></tr>  <tr><td> 1k Genomes </td><td> [v1.0.3](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) 
+</td><td> Cool </td></tr> </th></tr>  <tr><td> Windows </td><td> [v1.0.03](www.google.com) 
+</td><td> Cool </td></tr> </table>     
+-->
+
+
+
+
+
+
+
+
+
+
+
 
 
 
