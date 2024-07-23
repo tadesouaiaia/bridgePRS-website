@@ -15,9 +15,10 @@
 BridgePRS is a **Bayesian** method that utilises **ridge** regression
 developed to tackle the "**PRS** Portability Problem".  The PRS
 portability problem causes lower PRS accuracy in target populations
-not included in the GWAS base used to estimate the PRS. This is due to differences in linkage disequilibrium
-(LD), allele frequency and gene–environment interactions affecting
-causal effect sizes between the base and target populations.
+not included in the GWAS base used to estimate the PRS. This is due to
+differences in linkage disequilibrium (LD), allele frequency and
+gene–environment interactions affecting causal effect sizes between
+the base and target populations.
 
 
 <!--
@@ -26,7 +27,6 @@ causal effect sizes between the base and target populations.
 | Linux  64-bit | [v1.0.2](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) | Updated 7-12-2024 |  
 | Mac  64-bit   | [v1.0.2](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) | Updated 6-27-2024 | 
 | Windows       | NA     | Not Available | 
-
 
 # Reference Panels 
 | Source | Link | Notes | 
@@ -53,17 +53,6 @@ causal effect sizes between the base and target populations.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 <!--
 |BridgePRS Package |Reference Panels|
 |--|--|
@@ -78,18 +67,6 @@ causal effect sizes between the base and target populations.
 </td><td> Cool </td></tr> </th></tr>  <tr><td> Windows </td><td> [v1.0.03](www.google.com) 
 </td><td> Cool </td></tr> </table>     
 -->
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

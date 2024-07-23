@@ -6,17 +6,17 @@
 
 BridgePRS requires genotype data in PLINK binary format from samples
 representative of the base and target populations to estimate
-LD. Folders containing the 1000 Genomes LD reference panel for
-**AFR**, **EUR**, **EAS**, **SAS**, and **AMR** populations can be
-downloaded
-[here](https://drive.google.com/file/d/1djAEwRiQsh4veinSLHO3laGjNF95vvN9/view?usp=drive_link)
-and unzipped into **BRIDGEDIR/data/1000G_ref**. Three folders with
-differeent SNP sets are available: (1) HapMap variants, (2) all 1000G
-variants with MAF>5% in any of the five 1000G super-populations and
-(3) all 1000G variants with MAF>1% in any of the five 1000G
-super-population
+LD. Links to 1000 Genomes data in plink format, covering **AFR**,
+**EUR**, **EAS**, **SAS**, and **AMR** populations are below. Three
+panels with differeent SNP sets are available: (1) HapMap variants,
+(2) all 1000G variants with MAF>5% in any of the five 1000G
+super-populations and (3) all 1000G variants with MAF>1% in any of the
+five 1000G super-population
 
-To run BridgePRS using a custom LD reference please see [customization](guide_customization.md). 
+ **BRIDGEDIR/data/1000G_ref**
+
+To run BridgePRS using a custom LD reference please see
+[customization](guide_customization.md).
 
 As part of the toy data the BridgePRS download includes a sample LD
 reference panel (**BRIDGEDIR/data/1000G_sample**) for population
@@ -28,8 +28,8 @@ super-groups **AFR** and **EUR** with a small subset of SNPs, see
 ## Target/Base Population Data: 
 
 
-For the target and base populations bridgePRS requires that following files be supplied on the command 
-line or in a configuation file: 
+For the target and base populations BridgePRS requires that the following
+files are supplied on the command line or in a configuation file:
 
 
 |Name|Command Line flag|Target Default|Base Default|Description|
