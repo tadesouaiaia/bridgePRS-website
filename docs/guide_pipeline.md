@@ -53,13 +53,13 @@ the four models.
 # Subprograms 
 
 1) **BridgePRS prs-single** -- Stage 1 analysis to estimate models M2
-and M3
-2) **BridgePRS build-model** -- Stage 1 analysis for input into Stage 2
+and M3  
+2) **BridgePRS build-model** -- Stage 1 analysis for input into Stage 2  
 3) **BridgePRS prs-prior** -- Stage 2 analysis to estimate models M1
-and M3
+and M3  
 4) **BridgePRS analyse combine** -- Estimates models M1, M2, M3 and
-weighted model
-5) **BridgePRS prs-port** -- Estimates target PRS without target GWAS
+weighted model  
+5) **BridgePRS prs-port** -- Estimates target PRS without target GWAS  
 
 
 ##prs-single -- Stage 1 analysis in the NG paper

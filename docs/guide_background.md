@@ -14,20 +14,24 @@ PRS require as input summary statistics from genome wide association
 studies. If you are unfamiliar with GWAS or need a refresher consider reading
 [this paper](https://www.ncbi.nlm.nih.gov/pubmed/29484742).
 
-- Genome wide association studies (GWAS) involve analyzing the genomes of a larger group of individuals.  This involves looking screening 
+- Genome-wide association studies (GWAS) involve analyzing the genomes
+  of a large group of individuals.  This involves testing
 millions of genetic variants (SNP) for association with a particular trait.  
-- For a binary trait (like blue or brown eyes) this involves comparing the frequency of genetic variations in each group to produce an odds-ratio (measure of association) and a p-value to measure the 
-signficance of the realtionship at each SNP. 
+- For a binary trait (like blue or brown eyes) this involves comparing
+the frequency of genetic variations in each group to produce an
+odds-ratio (measure of association) and a p-value to measure the
+signficance of the realtionship at each SNP.
 - For continuous measures (like height) this results in an effect size (measure of continuous association) and p-value that measure the significance of our relationship.   
 
-- GWAS results can be summarized in a sumstats file which looks like this: 
+- GWAS results can be summarized in a sumstats file which looks like
+  this:
 
 
-|SNP|BP|REF|ALT|BETA|PV|NOTES
+|SNP|BP|REF|ALT|BETA|PV|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|rs3094315|10523|A|G|1.491|0.0029|Positive ($>1$) Trait Association|
-|rs3131972|91345|A|G|0.817|0.0008|Negative ($<1$) Trait Association|
-|rs3131971|23040|T|C|1.001|0.5332|Insignificant ($PV>0.05$) Association|
+|rs3094315|10523|A|G|0.394|0.0029|
+|rs3131972|91345|A|G|-0.202|0.0008|
+|rs3131971|23040|T|C|0.012|0.5332|
 
 **PRS basics**
 
