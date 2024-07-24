@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link href="../css/extra.css" rel="stylesheet" />
+        <link href="../css/style.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -117,17 +118,17 @@
                 <p><img alt="Screenshot" src="../img/slim/guide_logo7.png" /> </p>
 <h1 id="input-data">Input Data</h1>
 <h2 id="ld-reference-data-custom-data">LD Reference Data: Custom Data</h2>
-<p>BridgePRS estimates SNP-specific LD in the clumping step from multi-population target data in PLINK binary format. </p>
-<p>BridgePRS includes sample thousand genome data (<strong>BRIDGEDIR/data/kg_sample</strong>) for super-groups (AFR and EUR).  A 
-full dataset and corresponding population-id lists (<strong>AFR.ids.txt</strong>, <strong>EUR.ids.txt</strong>, <strong>EAS.ids.txt</strong>, <strong>SAS.ids.txt</strong>) can be 
-downloaded <a href="https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip">here</a> and unzipped into <strong>BRIDGEDIR/data/kg_ref</strong> to enable 
-full use of BridgePRS for the above populations (AFR, EUR, EAS, SAS). </p>
-<p>To pass user supplied LD reference data, for a custom population named <strong>POP</strong>, please create folder (named <strong>pop_ld</strong>) which includes: </p>
+<p>BridgePRS estimates SNP-specific LD in the clumping step from
+multi-population target data in PLINK binary format.</p>
+<p>To pass user supplied LD reference data, for a custom population named
+<strong>POP</strong>, please create folder (named <strong>pop_ld</strong>) which includes:</p>
 <ul>
-<li>A <strong>.bed</strong>, <strong>.bim</strong>, and <strong>.fam</strong> file for each chromosome with format "chr"[1-22]".ext"</li>
+<li>A <strong>.bed</strong>, <strong>.bim</strong>, and <strong>.fam</strong> file for each chromosome with
+  format "chr"[1-22]".ext"</li>
 <li><strong>POP.ids.txt</strong>, a txt file that lists all the sample IDs for your population</li>
 </ul>
-<p>Then use the command line argument <code>--ld_path</code> to point to the location of this folder on your computer. </p>
+<p>Then use the command line argument <code>--ld_path</code> to point to the
+location of this folder on your computer.</p>
               
             </div>
           </div><footer>
