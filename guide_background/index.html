@@ -125,59 +125,26 @@ combining summary statistics from under-represented target populations
 studies. If you are unfamiliar with GWAS or need a refresher consider reading
 <a href="https://www.ncbi.nlm.nih.gov/pubmed/29484742">this paper</a>.</p>
 <ul>
-<li>Genome wide association studies (GWAS) involve analyzing the genomes of a larger group of individuals.  This involves looking screening 
+<li>Genome-wide association studies (GWAS) involve analyzing the genomes
+  of a large group of individuals.  This involves testing
 millions of genetic variants (SNP) for association with a particular trait.  </li>
-<li>For a binary trait (like blue or brown eyes) this involves comparing the frequency of genetic variations in each group to produce an odds-ratio (measure of association) and a p-value to measure the 
-signficance of the realtionship at each SNP. </li>
+<li>For a binary trait (like blue or brown eyes) this involves comparing
+the frequency of genetic variations in each group to produce an
+odds-ratio (measure of association) and a p-value to measure the
+signficance of the realtionship at each SNP.</li>
 <li>
 <p>For continuous measures (like height) this results in an effect size (measure of continuous association) and p-value that measure the significance of our relationship.   </p>
 </li>
 <li>
-<p>GWAS results can be summarized in a sumstats file which looks like this: </p>
+<p>GWAS results can be summarized in a sumstats file which looks like
+  this:</p>
 </li>
 </ul>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">SNP</th>
-<th style="text-align: center;">BP</th>
-<th style="text-align: center;">REF</th>
-<th style="text-align: center;">ALT</th>
-<th style="text-align: center;">BETA</th>
-<th style="text-align: center;">PV</th>
-<th style="text-align: center;">NOTES</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">rs3094315</td>
-<td style="text-align: center;">10523</td>
-<td style="text-align: center;">A</td>
-<td style="text-align: center;">G</td>
-<td style="text-align: center;">1.491</td>
-<td style="text-align: center;">0.0029</td>
-<td style="text-align: center;">Positive (<span class="arithmatex">\(&gt;1\)</span>) Trait Association</td>
-</tr>
-<tr>
-<td style="text-align: center;">rs3131972</td>
-<td style="text-align: center;">91345</td>
-<td style="text-align: center;">A</td>
-<td style="text-align: center;">G</td>
-<td style="text-align: center;">0.817</td>
-<td style="text-align: center;">0.0008</td>
-<td style="text-align: center;">Negative (<span class="arithmatex">\(&lt;1\)</span>) Trait Association</td>
-</tr>
-<tr>
-<td style="text-align: center;">rs3131971</td>
-<td style="text-align: center;">23040</td>
-<td style="text-align: center;">T</td>
-<td style="text-align: center;">C</td>
-<td style="text-align: center;">1.001</td>
-<td style="text-align: center;">0.5332</td>
-<td style="text-align: center;">Insignificant (<span class="arithmatex">\(PV&gt;0.05\)</span>) Association</td>
-</tr>
-</tbody>
-</table>
+<p>|SNP|BP|REF|ALT|BETA|PV|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|rs3094315|10523|A|G|0.394|0.0029|
+|rs3131972|91345|A|G|-0.202|0.0008|
+|rs3131971|23040|T|C|0.012|0.5332|</p>
 <p><strong>PRS basics</strong></p>
 <ul>
 <li>Creating individual polygenic scores involves combine information
