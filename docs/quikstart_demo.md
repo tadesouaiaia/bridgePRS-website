@@ -3,7 +3,7 @@
 ## Input Data 
 
 This demo runs using the following population config files
-**data/pop_africa/afr.config** and **data/pop_europe/eur.config** that
+**data/pop_AFR/afr.config** and **data/pop_EUR/eur.config** that
 list the paths for all required population data. 
 
 ## Run The Demo: 
