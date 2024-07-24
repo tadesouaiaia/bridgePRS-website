@@ -48,8 +48,10 @@ markdown_extensions:
         smart_enable: all
     - pymdownx.caret
 
+
 extra_css:
   - css/extra.css
+  - css/style.css
 
 
 extra_javascript:
