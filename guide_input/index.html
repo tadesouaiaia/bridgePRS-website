@@ -66,7 +66,7 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Input Data</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#ld-reference-data-1000-genomes">LD Reference Data: 1000 Genomes</a>
+    <li class="toctree-l2"><a class="reference internal" href="#ld-reference-panel-ld_path">LD Reference Panel (--ld_path)</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#targetbase-population-data">Target/Base Population Data:</a>
     </li>
@@ -131,32 +131,25 @@
               
                 <p><img alt="Screenshot" src="../img/slim/guide_logo2.png" /> </p>
 <h1 id="input-data">Input Data</h1>
-<h2 id="ld-reference-data-1000-genomes">LD Reference Data: 1000 Genomes</h2>
-<p>BridgePRS requires genotype data in PLINK binary format from samples
-representative of the base and target populations to estimate
-LD. Links to 1000 Genomes data in plink format, covering <strong>AFR</strong>,
-<strong>EUR</strong>, <strong>EAS</strong>, <strong>SAS</strong>, and <strong>AMR</strong> populations are below. Three
-panels with differeent SNP sets are available: (1) HapMap variants,
-(2) all 1000G variants with MAF&gt;5% in any of the five 1000G
-super-populations and (3) all 1000G variants with MAF&gt;1% in any of the
-five 1000G super-population</p>
-<p><strong>BRIDGEDIR/data/1000G_ref</strong></p>
-<p>To run BridgePRS using a custom LD reference please see
-<a href="../guide_customization/">customization</a>.</p>
-<p>As part of the toy data the BridgePRS download includes a sample LD
-reference panel (<strong>BRIDGEDIR/data/1000G_sample</strong>) for population
-super-groups <strong>AFR</strong> and <strong>EUR</strong> with a small subset of SNPs, see
-<a href="../quikstart_data/">quick start tutorial</a>.</p>
+<h2 id="ld-reference-panel-ld_path">LD Reference Panel (--ld_path)</h2>
+<p>BridgePRS requires representative genotype data in PLINK binary 
+format to estimate LD.  A miniature LD reference panel (<strong>data/1000G_sample</strong>), 
+suitable for the <a href="../quikstart_data/">quick start tutorial</a> is included 
+in the BridgePRS download. Three full-size 1000 Genomes panels 
+covering <strong>AFR</strong>, <strong>EUR</strong>, <strong>EAS</strong>, <strong>SAS</strong>, and <strong>AMR</strong> super-populations with 
+different SNP sets are available for download: (1) <a href="https://drive.google.com/file/d/1EGFap5wjKxIT42SWHKr9MUOzVnK9CVew/view?usp=drive_link">All HapMap Variants</a>,
+(2) <a href="https://drive.google.com/file/d/1rmxKcTGF8XTYU0E7jAIkKsCeedGMNwDE/view?usp=drive_link">All 1000G variants with MAF&gt;5% in any of the five 1000G super-populations</a>, 
+(3) <a href="https://drive.google.com/file/d/1RuC8J_qJLDSLnQ4uOGuxx9uGSWg5fxKn/view?usp=drive_link">All 1000G variants with MAF&gt;1% in any of the five 1000G super-populations</a>.</p>
+<p>If you wish to run bridgePRS using a custom LD reference panel please see <a href="../guide_customization/">customization</a>.</p>
 <h2 id="targetbase-population-data">Target/Base Population Data:</h2>
-<p>For the target and base populations BridgePRS requires that the following
-files are supplied on the command line or in a configuation file:</p>
+<p>For the target and base populations BridgePRS requires that the following inputs be supplied 
+on the command line or in a configuration file. 
+files/names are supplied on the command line or in a configuation file:</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: center;">Name</th>
-<th style="text-align: center;">Command Line flag</th>
-<th style="text-align: center;">Target Default</th>
-<th style="text-align: center;">Base Default</th>
+<th style="text-align: center;">Command Line flag(s)</th>
 <th style="text-align: center;">Description</th>
 </tr>
 </thead>
@@ -164,50 +157,46 @@ files are supplied on the command line or in a configuation file:</p>
 <tr>
 <td style="text-align: center;">Pop Name</td>
 <td style="text-align: center;">--pop</td>
-<td style="text-align: center;">None (Required)</td>
-<td style="text-align: center;">Required</td>
-<td style="text-align: center;">Target/Base Population Name</td>
+<td style="text-align: center;">Population Name (Required)</td>
 </tr>
 <tr>
-<td style="text-align: center;">LD-Ref Pop</td>
-<td style="text-align: center;">--ld_pop</td>
-<td style="text-align: center;">Pop Name</td>
-<td style="text-align: center;">Pop Name</td>
-<td style="text-align: center;">LD Ref Pop (AFR,EUR,EAS,AMR,SAS)</td>
+<td style="text-align: center;">LD Pop</td>
+<td style="text-align: center;">--ldpop</td>
+<td style="text-align: center;">LD Reference Population (Required if different from above)</td>
 </tr>
 <tr>
-<td style="text-align: center;">Sumstats</td>
-<td style="text-align: center;">--sumstats_prefix</td>
-<td style="text-align: center;">None (Required)</td>
-<td style="text-align: center;">Required</td>
+<td style="text-align: center;">LD Panel</td>
+<td style="text-align: center;">--ld_path</td>
+<td style="text-align: center;">Path to LD Reference Panel</td>
+</tr>
+<tr>
+<td style="text-align: center;">(a) Sumstat File</td>
+<td style="text-align: center;">--sumstats_file</td>
 <td style="text-align: center;">GWAS Summary Stats (Text Format)</td>
 </tr>
 <tr>
-<td style="text-align: center;">Genotypes</td>
+<td style="text-align: center;">(b) Sumstat Filess</td>
+<td style="text-align: center;">--sumstats_prefix</td>
+<td style="text-align: center;">GWAS Summary Stats Multiple File(s)</td>
+</tr>
+<tr>
+<td style="text-align: center;">Genotype Files</td>
 <td style="text-align: center;">--genotype_prefix</td>
-<td style="text-align: center;">None (Required)</td>
-<td style="text-align: center;">Target Genotypes</td>
-<td style="text-align: center;">Individual Level Genotypes (Plink Format)</td>
+<td style="text-align: center;">Individual Level Genotype Files (Plink Format)</td>
 </tr>
 <tr>
 <td style="text-align: center;">Phenotype File</td>
 <td style="text-align: center;">--phenotype_file</td>
-<td style="text-align: center;">None (Required)</td>
-<td style="text-align: center;">Target Phenotypes</td>
 <td style="text-align: center;">Individual Level Phenotypes (Text File)</td>
 </tr>
 <tr>
 <td style="text-align: center;">Validation File</td>
 <td style="text-align: center;">--validation_file</td>
-<td style="text-align: center;">Half of Phenotype File</td>
-<td style="text-align: center;">None</td>
 <td style="text-align: center;">Individual Level Phenotypes for Validation</td>
 </tr>
 <tr>
 <td style="text-align: center;">QC-snp List</td>
 <td style="text-align: center;">--snp_file</td>
-<td style="text-align: center;">All Snps</td>
-<td style="text-align: center;">All Snps</td>
 <td style="text-align: center;">List QCed SNP ids</td>
 </tr>
 </tbody>
@@ -268,7 +257,6 @@ the results of an association study for a given phenotype.  BridgePRS has no pro
 <th style="text-align: center;">SE</th>
 <th style="text-align: center;">T_STAT</th>
 <th style="text-align: center;">P</th>
-<th style="text-align: center;">ERRCODE</th>
 </tr>
 </thead>
 <tbody>
@@ -279,17 +267,16 @@ the results of an association study for a given phenotype.  BridgePRS has no pro
 <td style="text-align: center;">--ssf-ref</td>
 <td style="text-align: center;">--ssf-alt</td>
 <td style="text-align: center;">--ssf-maf</td>
-<td style="text-align: center;">--sdf-n</td>
+<td style="text-align: center;">--ssf-n</td>
 <td style="text-align: center;">--ssf-beta</td>
 <td style="text-align: center;">--ssf-se</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">--ssf-p</td>
-<td style="text-align: center;">.</td>
 </tr>
 <tr>
 <td style="text-align: center;">Data</td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">rs12184325</td>
+<td style="text-align: center;">rs121</td>
 <td style="text-align: center;">T</td>
 <td style="text-align: center;">G</td>
 <td style="text-align: center;">0.0257573</td>
@@ -298,12 +285,11 @@ the results of an association study for a given phenotype.  BridgePRS has no pro
 <td style="text-align: center;">0.413692</td>
 <td style="text-align: center;">1.98424</td>
 <td style="text-align: center;">0.0472871</td>
-<td style="text-align: center;">.</td>
 </tr>
 <tr>
 <td style="text-align: center;">Data</td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">rs4970382</td>
+<td style="text-align: center;">rs497</td>
 <td style="text-align: center;">C</td>
 <td style="text-align: center;">A</td>
 <td style="text-align: center;">0.483495</td>
@@ -312,12 +298,11 @@ the results of an association study for a given phenotype.  BridgePRS has no pro
 <td style="text-align: center;">0.128347</td>
 <td style="text-align: center;">0.00868116</td>
 <td style="text-align: center;">0.993074</td>
-<td style="text-align: center;">.</td>
 </tr>
 <tr>
 <td style="text-align: center;">Data</td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">rs2710890</td>
+<td style="text-align: center;">rs271</td>
 <td style="text-align: center;">G</td>
 <td style="text-align: center;">G</td>
 <td style="text-align: center;">0.424387</td>
@@ -326,7 +311,6 @@ the results of an association study for a given phenotype.  BridgePRS has no pro
 <td style="text-align: center;">0.132225</td>
 <td style="text-align: center;">0.817497</td>
 <td style="text-align: center;">0.413687</td>
-<td style="text-align: center;">.</td>
 </tr>
 </tbody>
 </table>
