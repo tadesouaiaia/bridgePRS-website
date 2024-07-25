@@ -2,45 +2,39 @@
 # Input Data
 
 
-## LD Reference Data: 1000 Genomes 
+## LD Reference Panel (--ld_path) 
 
-BridgePRS requires genotype data in PLINK binary format from samples
-representative of the base and target populations to estimate
-LD. Links to 1000 Genomes data in plink format, covering **AFR**,
-**EUR**, **EAS**, **SAS**, and **AMR** populations are below. Three
-panels with differeent SNP sets are available: (1) HapMap variants,
-(2) all 1000G variants with MAF>5% in any of the five 1000G
-super-populations and (3) all 1000G variants with MAF>1% in any of the
-five 1000G super-population
+BridgePRS requires representative genotype data in PLINK binary 
+format to estimate LD.  A miniature LD reference panel (**data/1000G_sample**), 
+suitable for the [quick start tutorial](quikstart_data.md) is included 
+in the BridgePRS download. Three full-size 1000 Genomes panels 
+covering **AFR**, **EUR**, **EAS**, **SAS**, and **AMR** super-populations with 
+different SNP sets are available for download: (1) [All HapMap Variants](https://drive.google.com/file/d/1EGFap5wjKxIT42SWHKr9MUOzVnK9CVew/view?usp=drive_link),
+(2) [All 1000G variants with MAF>5% in any of the five 1000G super-populations](https://drive.google.com/file/d/1rmxKcTGF8XTYU0E7jAIkKsCeedGMNwDE/view?usp=drive_link), 
+(3) [All 1000G variants with MAF>1% in any of the five 1000G super-populations](https://drive.google.com/file/d/1RuC8J_qJLDSLnQ4uOGuxx9uGSWg5fxKn/view?usp=drive_link).
 
- **BRIDGEDIR/data/1000G_ref**
-
-To run BridgePRS using a custom LD reference please see
-[customization](guide_customization.md).
-
-As part of the toy data the BridgePRS download includes a sample LD
-reference panel (**BRIDGEDIR/data/1000G_sample**) for population
-super-groups **AFR** and **EUR** with a small subset of SNPs, see
-[quick start tutorial](quikstart_data.md).
-
-
+If you wish to run bridgePRS using a custom LD reference panel please see [customization](guide_customization.md).
 
 ## Target/Base Population Data: 
 
 
-For the target and base populations BridgePRS requires that the following
-files are supplied on the command line or in a configuation file:
+For the target and base populations BridgePRS requires that the following inputs be supplied 
+on the command line or in a configuration file. 
+files/names are supplied on the command line or in a configuation file:
+
+|Name|Command Line flag(s)|Description|
+|:-:|:-:|:-:|
+|Pop Name          |--pop                      |Population Name (Required)|
+|LD Pop            |--ldpop                    |LD Reference Population (Required if different from above)|
+|LD Panel            |--ld_path                   |Path to LD Reference Panel | 
+|(a) Sumstat File  |--sumstats_file            | GWAS Summary Stats (Text Format)|
+|(b) Sumstat Filess  |--sumstats_prefix          |GWAS Summary Stats Multiple File(s)|
+|Genotype Files |--genotype_prefix                   |Individual Level Genotype Files (Plink Format)|
+|Phenotype File |--phenotype_file                    |Individual Level Phenotypes (Text File)|
+|Validation File|--validation_file                   |Individual Level Phenotypes for Validation|
+|QC-snp List    |--snp_file                          |List QCed SNP ids| 
 
 
-|Name|Command Line flag|Target Default|Base Default|Description|
-|:-:|:-:|:-:|:-:|:-:|
-|Pop Name       |--pop                               |None (Required)       | Required |Target/Base Population Name|
-|LD-Ref Pop     |--ld_pop                            |Pop Name              |Pop Name| LD Ref Pop (AFR,EUR,EAS,AMR,SAS) |
-|Sumstats       |--sumstats_prefix                   |None (Required)       |Required| GWAS Summary Stats (Text Format)|
-|Genotypes      |--genotype_prefix                   |None (Required)       |Target Genotypes| Individual Level Genotypes (Plink Format)|
-|Phenotype File |--phenotype_file                    |None (Required)       |Target Phenotypes| Individual Level Phenotypes (Text File)|
-|Validation File|--validation_file                   |Half of Phenotype File  |None | Individual Level Phenotypes for Validation|
-|QC-snp List    |--snp_file                          |All Snps                |All Snps| List QCed SNP ids| 
 
 !!! tip "Creating a Configuration File"
     The following command will validate the command line data and create a target configuration file 
@@ -104,14 +98,18 @@ the results of an association study for a given phenotype.  BridgePRS has no pro
 (need to have a **.gz** suffix) or splitting the file by chromosome if necessary.  An example of a sumstats file with default column headers is shown: 
 
 
-Default Headers|#CHR|ID|REF|A1|A1_FREQ|OBS_CT|BETA|SE|T_STAT|P|ERRCODE|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-Argument||--ssf-snpid|--ssf-ref|--ssf-alt|--ssf-maf|--sdf-n|--ssf-beta|--ssf-se||--ssf-p|.|
-Data|1|rs12184325|T|G|0.0257573|4853|0.820864|0.413692|1.98424|0.0472871|.|
-Data|1|rs4970382|C|A|0.483495|4847|0.0011142|0.128347|0.00868116|0.993074|.|
-Data|1|rs2710890|G|G|0.424387|4814|0.108094|0.132225|0.817497|0.413687|.|
+Default Headers|#CHR|ID|REF|A1|A1_FREQ|OBS_CT|BETA|SE|T_STAT|P|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+Argument||--ssf-snpid|--ssf-ref|--ssf-alt|--ssf-maf|--ssf-n|--ssf-beta|--ssf-se||--ssf-p|
+Data|1|rs121|T|G|0.0257573|4853|0.820864|0.413692|1.98424|0.0472871|
+Data|1|rs497|C|A|0.483495|4847|0.0011142|0.128347|0.00868116|0.993074|
+Data|1|rs271|G|G|0.424387|4814|0.108094|0.132225|0.817497|0.413687|
 
 The **--ssf** arguments can be used to specify column headers for different files. 
+
+
+
+
 
 
 ### 2) Genotype Files
