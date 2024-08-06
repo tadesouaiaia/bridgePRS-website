@@ -118,14 +118,15 @@
                 <p><img alt="Screenshot" src="../img/slim/guide_logo7.png" /> </p>
 <h1 id="input-data">Input Data</h1>
 <h2 id="ld-reference-data-custom-data">LD Reference Data: Custom Data</h2>
-<p>BridgePRS estimates SNP-specific LD in the clumping step from
-multi-population target data in PLINK binary format.</p>
-<p>To pass user supplied LD reference data, for a custom population named
-<strong>POP</strong>, please create folder (named <strong>pop_ld</strong>) which includes:</p>
+<p>BridgePRS requires genotype data in PLINK binary format from samples
+representative of the base and target population GWASs.</p>
+<p>To pass user supplied LD reference data for a population named
+<strong>POP</strong>, create folder a (named <strong>POP_ld</strong>) which includes:</p>
 <ul>
 <li>A <strong>.bed</strong>, <strong>.bim</strong>, and <strong>.fam</strong> file for each chromosome with
   format "chr"[1-22]".ext"</li>
-<li><strong>POP.ids.txt</strong>, a txt file that lists all the sample IDs for your population</li>
+<li><strong>POP_ids.txt</strong>, a txt file that lists the sample IDs for your
+  population(s)</li>
 </ul>
 <p>Then use the command line argument <code>--ld_path</code> to point to the
 location of this folder on your computer.</p>

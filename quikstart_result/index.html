@@ -115,30 +115,14 @@
               
                 <p><img alt="Screenshot" src="../img/slim/quikstart_logo3.png" /></p>
 <h1 id="interpreting-results">Interpreting results</h1>
-<p>The easyrun command used in the previous step runs the following
-<a href="../guide_pipeline/">subprograms</a>:</p>
+<p>The easyrun command used in the previous step runs the entire bridgePRS multi-ancestry 
+pipeline and produces output in the following five subdirectories:  </p>
 <ol>
-<li><code>prs-single (stage 1):</code> <a href="../guide_pipeline/#build-single">Applied to the base population
-   (Eur). Used to define prior for target population PRS.</a></li>
-<li><code>prs-prior (stage 2):</code> <a href="../guide_pipeline/#prs-prior">Applied to the target population (AFR)
-   PRS using prior estimated from base population (Eur).</a>  </li>
-<li><code>prs-single (stage 1):</code> <a href="../guide_pipeline/#prs-single">Applied to the target population (Afr).
-   PRS estimated using target population data only.</a> </li>
-<li><code>analyse</code> <a href="../guide_pipeline/#prs-prior">Combine Afr stage 1 and 2 results to produce a weighted
-   target PRS result.</a></li>
-<li><code>prs-port:</code>     <a href="../guide_pipeline/#prs-port">Base population PRS applied to target population.</a> </li>
-</ol>
-<p>And produces output in the following five subdirectories: </p>
-<ol>
-<li><strong>prs-single_AFR/quantify/:</strong> Weights, predictions, and performance metrics. </li>
-<li><strong>model_EUR/prior:</strong>          Model weights and priors. </li>
-<li><strong>prs-prior_AFR/quantify/:</strong>  Weights, predictions, and performance metrics. </li>
-<li>
-<p><strong>prs-combined_AFR/:</strong>        Analysis that combined the previous three steps. </p>
-</li>
-<li>
-<p><strong>prs-port_AFR/quantify/:</strong>   Weights, predictions, and performance metrics. </p>
-</li>
+<li><code>prs-single_AFR/quantify:</code> Weights, predictions, and performance metrics. </li>
+<li><code>model_EUR/prior:</code>          Model weights and priors. </li>
+<li><code>prs-prior_AFR/quantify/:</code>  Weights, predictions, and performance metrics. </li>
+<li><code>prs-combined_AFR/:</code>        Analysis that combined the previous three steps. </li>
+<li><code>prs-port_AFR/quantify/:</code>   Weights, predictions, and performance metrics. </li>
 </ol>
               
             </div>
