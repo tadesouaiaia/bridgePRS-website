@@ -50,11 +50,13 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Mac Specific</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-default-settings">1- Default Settings</a>
+    <li class="toctree-l2"><a class="reference internal" href="#changing-system-permissions">Changing System Permissions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#0-shortcut-fix">0- Shortcut Fix</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-allowing-exceptions">2- Allowing Exceptions</a>
+        </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-downstream-bridgeprs-errors">3- Downstream BridgePRS Errors</a>
+    <li class="toctree-l2"><a class="reference internal" href="#1-change-system-settings-allow-exceptions">1- Change System Settings (Allow Exceptions)</a>
     </li>
     </ul>
                   </li>
@@ -124,38 +126,47 @@
 <p><img alt="Screenshot" src="../img/mac_plink.png" /></p>
 <p>If you see this error, <strong>Do not click: Move To Trash</strong>. </p>
 <p>Instead click on the top right hand corner of the box, or stop running BridgePRS and follow these instructions 
-to give your system permission to call plink from BridgePRS:  </p>
-<h2 id="1-default-settings">1- Default Settings</h2>
-<p>By default macOS allows you to open apps from the official Mac App Store only, If you have this set as your default 
-you can change this if you: </p>
-<ol>
-<li>Open System Preferences.</li>
-<li>Go to the Security &amp; Privacy tab.</li>
-<li>Click on the lock and enter your password.</li>
-<li>Change settings to include identified developers (see below): </li>
-</ol>
-<p><img alt="Screenshot" src="../img/mac_plink2.png" /></p>
-<h2 id="2-allowing-exceptions">2- Allowing Exceptions</h2>
-<p>Expanding permissions to include "identified developers" is required but not sufficient.  To obtain 
-further permission to run <strong>Plink</strong> or any other unapproved program you can:  </p>
-<ol>
-<li>Open System Preferences.</li>
-<li>Go to Security &amp; Privacy and select the General tab.</li>
-<li>If this has happened within the hour, this page will give you an override button to open <strong>Open Anyway</strong>. </li>
-<li>Enter you password as above and click this button.</li>
-<li>You will be asked to once more which will create an exception allowing you to run Plink in the future. </li>
-</ol>
-<p><img alt="Screenshot" src="../img/mac_plink3.jpg" /></p>
-<h2 id="3-downstream-bridgeprs-errors">3- Downstream BridgePRS Errors</h2>
-<p>If you have moved plink to the trash you will have to recover it, additionally the empty 
-files created by a failed attempt to run Plink can cause problems if BridgePRS tries to recover your progress. </p>
-<div class="admonition tip">
+to give your system permission to call plink from BridgePRS.  After doing so you should be aware that if you 
+have moved plink to the trash that you will have to recover it and place it in it's original directory ("src/Python/Xtra"). 
+Additionally, empty files created by a failed attempt to run plink can cause problems if BridgePRS tries to recover your progress. </p>
+<div class="admonition help">
 <p class="admonition-title">Restarting a bridgePRS run</p>
 <p>You can avoid this problem by manually deleting your output directory and starting over, or by using the restart flag: 
-    <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>$./bridgePRS easyrun go -o out1 --pop_configs data/afr.config data/eur.config --phenotype y --restart
+    <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>$./bridgePRS pipeline go -o out1 --config_files data/afr.config data/eur.config --phenotype y --restart
 </code></pre></div>
 This will force bridgePRS to restart every subprogram from the beginning.     </p>
 </div>
+<h2 id="changing-system-permissions">Changing System Permissions</h2>
+<h3 id="0-shortcut-fix">0- Shortcut Fix</h3>
+<div class="admonition warning">
+<p class="admonition-title">Shortcut: Users report that this shortcut can also be used to change program permissions:</p>
+<ol>
+<li>User finder navigate to the file in question. </li>
+<li>Right click on the icon and select <strong>open</strong>. </li>
+<li>A warning will pop-up.  Click open and this program can be run in the future. 
+<img alt="Screenshot" src="../img/mac_ex.png" /></li>
+</ol>
+</div>
+<h2 id="1-change-system-settings-allow-exceptions">1- Change System Settings (Allow Exceptions)</h2>
+<p>By default macOS allows you to open apps from the official Mac App Store only, If you have this set as your default 
+you can change this by first: </p>
+<ol>
+<li>Opening System Preferences.</li>
+<li>Going to the Security &amp; Privacy tab.</li>
+<li>Clicking on the lock and entering your password.</li>
+<li>Changing settings to include identified developers (see below): </li>
+</ol>
+<p><img alt="Screenshot" src="../img/mac_plink2.png" /></p>
+<p>After expanding permissions to include "identified developers" you can obtain 
+further permission to run <strong>Plink</strong> or any other unapproved program by:  </p>
+<ol>
+<li>Opening System Preferences.</li>
+<li>Going to Security &amp; Privacy and selecting the General tab.</li>
+<li>If it happened recently, this page will give you an override button to <strong>Open Anyway</strong>. </li>
+<li>Enter your password as above and click this button.</li>
+<li>You will be asked to once more which will create an exception allowing you to run Plink in the future. </li>
+</ol>
+<p><img alt="Screenshot" src="../img/mac_plink3.jpg" /></p>
               
             </div>
           </div><footer>
