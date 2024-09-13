@@ -13,7 +13,7 @@ To run BridgePRS using a continuous phenotype:
 !!! tips "Easyrun Command: Continuous Trait (y)" 
      Run BridgePRS on the toy phenotype "y" with the following command: 
         ```
-        ./bridgePRS easyrun go -o out1 --config_files data/afr.config data/eur.config --phenotype y 
+        ./bridgePRS pipeline go -o out1 --config_files data/afr.config data/eur.config --phenotype y 
         ```
 
 
@@ -27,7 +27,7 @@ process using a binary phenotype:
 !!! tips "Easyrun Command" 
     Run BridgePRS on the toy binary phenotype "y.binary" with the following command: 
         ```
-        ./bridgePRS easyrun go -o out2 --config_files data/afr.config data/eur.config --phenotype y.binary
+        ./bridgePRS pipeline go -o out2 --config_files data/afr.config data/eur.config --phenotype y.binary
         ```
 
 ## Demo Results:

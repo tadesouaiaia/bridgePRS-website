@@ -19,7 +19,7 @@ valid configuration files given the described scenario.
 
 I have access to genotype/phenotype data (<1000 samples, continuous phenotype) from a diverse population in Central Africa (1,2). 
 I would like ot run PRS as accurately as possible, but my dataset is not large enough to conduct GWAS, however, I do have access to a moderately 
-sized GWAS in a related West African population (3) and access to large-scale GWAS data from a European population (4).  I also have 
+sized (25,000 samples) GWAS in a related West African population (3) and access to large-scale (500k) GWAS data from a European population (4).  I also have 
 access to the 1000G reference panels, how can I analyze my data?
  
 **Available Data:** 
@@ -37,7 +37,10 @@ Can you fill out the configuration files to carry this out?
     ```R
     POP=
     LDPOP=
+    LD_PATH=
     SUMSTATS_PREFIX=
+    SUMSTATS_SUFFIX=
+    SUMSTATS_SIZE=
     GENOTYPE_PREFIX=
     PHENOTYPE_FILE=
     VALIDATION_FILE=
@@ -48,8 +51,10 @@ Can you fill out the configuration files to carry this out?
     ```R
     POP=CAF
     LDPOP=AFR 
+    LD_PATH=data/1000G_SAMPLE
     SUMSTATS_PREFIX=yoruba/sumstats/yoruba.chr 
     SUMSTATS_SUFFIX=.glm.gz 
+    SUMSTATS_SIZE=25000
     GENOTYPE_PREFIX=caf/genotypes/caf_genotype 
     PHENOTYPE_FILE=caf/phenotypes/caf_test.dat  
     VALIDATION_FILE=caf/phenotypes/caf_validation.dat 
@@ -59,8 +64,11 @@ Can you fill out the configuration files to carry this out?
 
     ```R
     POP=
-    LDPOP= 
-    SUMSTATS_PREFIX=
+    LDPOP=
+    LDPATH= 
+    SUMSTATS_FILE=
+    SUMSTATS_SUFFIX=
+    SUMSTATS_SIZE=
     GENOTYPE_PREFIX=
     PHENOTYPE_FILES=
     ```
@@ -70,7 +78,9 @@ Can you fill out the configuration files to carry this out?
     ```R
     POP=EUR
     LDPOP=EUR
-    SUMSTATS_PREFIX=ukb/sumstats/ukb.sumstats
+    LD_PATH=data/1000G_SAMPLE
+    SUMSTATS_FILE=ukb/sumstats/ukb.sumstats.gz 
+    SUMSTATS_SIZE=500000
     GENOTYPE_PREFIX=caf/genotypes/caf_genotype 
     PHENOTYPE_FILE=caf/phenotypes/caf_test.dat  
     VALIDATION_FILE=caf/phenotypes/caf_validation.dat 
@@ -103,6 +113,7 @@ I also have GWAS (4) and genotype/phenotype data from the UKB biobank
     ```R
     POP=
     LDPOP=
+    LDPATH=
     SUMSTATS_PREFIX=
     GENOTYPE_PREFIX=
     PHENOTYPE_FILE=
@@ -114,7 +125,9 @@ I also have GWAS (4) and genotype/phenotype data from the UKB biobank
     ```R
     POP=ukr
     LDPOP=ukr*
+    LDPATH=CUSTOM
     SUMSTATS_PREFIX=ukr/sumstats/ukr.sumstats  
+    SUMSTATS_SIZE=2000 
     GENOTYPE_PREFIX=ukr/phenotypes/chr
     PHENOTYPE_FILE=ukr/phenotypes/ukr_test.dat 
     VALIDATION_FILE=ukr/phenotypes/ukr_validation.dat
@@ -136,7 +149,9 @@ I also have GWAS (4) and genotype/phenotype data from the UKB biobank
     ```R
     POP=UKB
     LDPOP=EUR 
+    LDPATH=1000G
     SUMSTATS_PREFIX=ukb/sumstats/ukb.sumstats
+    SUMSTATS_SIZE=500000
     GENOTYPE_PREFIX=ukb/genotypes/chr
     PHENOTYPE_FILE=ukb/phenotypes/ukb_test.dat 
     VALIDATION_FILE=ukb/phenotypes/ukb_validation.dat 

@@ -2,7 +2,7 @@
 # Input Data
 
 
-## LD Reference Panel (--ld_path) 
+## The LD Reference Panel  
 
 BridgePRS requires representative genotype data in PLINK binary 
 format to estimate LD.  A miniature LD reference panel (**data/1000G_sample**), 
@@ -15,77 +15,114 @@ different SNP sets are available for download: (1) [All HapMap Variants](https:/
 
 If you wish to run bridgePRS using a custom LD reference panel please see [customization](guide_customization.md).
 
-## Target/Base Population Data: 
+## Config Files: Target/Base Population Data: 
 
 
-For the target and base populations BridgePRS requires that the following inputs be supplied 
-on the command line or in a configuration file. 
-files/names are supplied on the command line or in a configuation file:
+For the target and base populations BridgePRS requires inputs be supplied in population configuration files.  The following options are required in the target configuration file: 
 
-|Name|Command Line flag(s)|Description|
+|Input|Variable Name|Notes|
 |:-:|:-:|:-:|
-|Pop Name          |--pop                      |Population Name (Required)|
-|LD Pop            |--ldpop                    |LD Reference Population (Required if different from above)|
-|LD Panel            |--ld_path                   |Path to LD Reference Panel | 
-|(a) Sumstat File  |--sumstats_file            | GWAS Summary Stats (Text Format)|
-|(b) Sumstat Filess  |--sumstats_prefix          |GWAS Summary Stats Multiple File(s)|
-|Genotype Files |--genotype_prefix                   |Individual Level Genotype Files (Plink Format)|
-|Phenotype File |--phenotype_file                    |Individual Level Phenotypes (Text File)|
-|Validation File|--validation_file                   |Individual Level Phenotypes for Validation|
-|QC-snp List    |--snp_file                          |List QCed SNP ids| 
+|Population Name    |POP                  || 
+|LD Population        |LDPOP                 || 
+|LD Panel           |LD_PATH=             || 
+|(a) Sumstats  File   |SUMSTATS_FILE      | a or b is required| 
+|(b1) Sumstats Prefix |SUMSTATS_PREFIX      | a or b is required| 
+|(b2) Sumstats Suffix |SUMSTATS_SUFFIX      | a or b is required| 
+|Sumstats Size |SUMSTATS_SIZE              | GWAS Sample Size (Required for multi-ancestry)| 
+|Genotype Prefix     |GENOTYPE_PREFIX      | Plink Format is Required| 
+|Phenotype File     |PHENOTYPE_FILE=       | Individual Level Phenotypes| 
 
+The following optional inputs can also be supplied: 
+
+|Input|Variable Name|Notes|
+|:-:|:-:|:-:|
+|Phenotype Validation File    |VALIDATION_FILE  | Individual Level Phenotypes for Validation|
+|QC-SNP List        |SNP_FILE       |List QCed SNP ids| 
+|Max Clump Size | MAX_CLUMP_SIZE| Maximum clump size (for speed)| 
+|Clump Specific SNP File | thinned_snp_file | A list of snps to use for excessively large clumps| 
+|Covariates | COVARIATES | Entered Comma Separated, eg: COVARIATES=PC1,PC2,PC3| 
+
+Sumstats format is not standardized, bridgePRS requires text files with at least five columns the denote 
+the snp-id (rsid), reference allele, alternate allele, p-value, and weight (beta or log odds).  The file specifc 
+column headers can be supplied as an ordered 5mer (a) or on individual lines in the sumstats file:  
+
+|Input|Variable Name|Example|
+|:-:|:-:|:-:|
+|Sumstats Fields    |SUMSTATS_FIELDS   | DEFAULT: SUMSTATS_FIELDS=ID,REF,A1,P,BETA| 
+|b1) SNP Field     |SSF-SNPID   | Sumstats Field Name for SNP-ID | 
+|b2) Field     |SSF-REF    | Sumstats Field Name for Ref Base |
+|b3) Alt Field     |SSF-ALT    | Sumstats Field Name for Alt Base |
+|b4) Pval Field     |SSF-P    | Sumstats Field Name for Pvalue | 
+|b5) Beta Field     |SSF-BETA   | Sumstats Field Name for Beta | 
+
+
+---
+
+
+## Creating a Config File: 
 
 
 !!! tip "Creating a Configuration File"
     The following command will validate the command line data and create a target configuration file 
     ```
-    ./bridgePRS check pop -o out --pop AFR --sumstats_prefix data/pop_africa/sumstats/afr.chr  
-                                           --genotype_prefix data/pop_africa/genotypes/afr_genotypes 
-                                           --phenotype_file data/pop_africa/phenotypes/afr_test.dat
+    ./bridgePRS tools check-pop -o test --pop AFR --ld_path ./data/1000G_sample/ --sumstats_prefix ./data/pop_AFR/sumstats/AFR.chr 
+                                                                                     --sumstats_size   10000
+                                                                                     --genotype_prefix ./data/pop_AFR/genotypes/chr 
+                                                                                     --phenotype_file ./data/pop_AFR/phenotypes/AFR_test.dat
+
 
     ```
     To create a target and base configuation file you can use the following command: 
     ```
-    ./bridgePRS check pops -o out --pop AFR EUR --sumstats_prefix data/pop_africa/sumstats/afr.chr data/pop_europe/sumstats/eur.chr 
-                                                --genotype_prefix data/pop_africa/genotypes/afr_genotypes
-                                                --phenotype_file data/pop_africa/phenotypes/afr_pheno.dat
+    ./bridgePRS tools check-pops -o test --pop AFR EUR --ld_path ./data/1000G_sample/ --sumstats_prefix ./data/pop_AFR/sumstats/AFR.chr ./data/pop_EUR/sumstats/EUR.chr 
+                                                                                     --sumstats_size   10000 100000 
+                                                                                     --genotype_prefix ./data/pop_AFR/genotypes/chr 
+                                                                                     --phenotype_file ./data/pop_AFR/phenotypes/AFR_test.dat
+
 
 
     ```
     
 
-This command will create target and base configuration files that can be observed below: 
+This command will create target and base configuration files can be observed below: 
 
 
 
+## Config Files: Target/Base Population Data: 
 
-=== "cat out/save/target.AFR.config"
+=== "cat test/save/target.AFR.config"
 
     ```R
     POP=AFR
     LDPOP=AFR
-    SUMSTATS_PREFIX=$BRIDGEDIR/data/pop_africa/sumstats/afr.chr
-    SUMSTATS_SUFFIX=.glm.linear.gz
-    SNP_FILE=$BRIDGEDIR/out/save/snps.AFR.txt
-    GENOTYPE_PREFIX=$BRIDGEDIR/data/pop_africa/genotypes/afr_genotypes
-    PHENOTYPE_FILE=$BRIDGEDIR/out/save/AFR.test_phenos.dat
-    VALIDATION_FILE=$BRIDGEDIR/out/save/AFR.valid_phenos.dat
+    LD_PATH=$BRIDGEDIR/data/1000G_sample
+    SUMSTATS_PREFIX=test/save/sumstats/ss.AFR.
+    SUMSTATS_SUFFIX=.out.gz
+    SUMSTATS_FIELDS=ID,REF,A1,P,BETA
+    SUMSTATS_SIZE=10000
+    SNP_FILE=test/save/snps.afr_valid.txt
+    GENOTYPE_PREFIX=$BRIDGEDIR/data/pop_AFR/genotypes/chr
+    PHENOTYPE_FILE=tests/save/AFR.test_phenos.dat
+    VALIDATION_FILE=test/save/AFR.valid_phenos.dat
     ```
 
 === "cat out/save/base.EUR.config" 
 
     ```R
+
     POP=EUR
     LDPOP=EUR
-    SUMSTATS_PREFIX=$BRIDGEDIR/data/pop_europe/sumstats/eur.chr
-    SUMSTATS_SUFFIX=.glm.linear.gz
-    SNP_FILE=out/save/snps.EUR.txt
-    GENOTYPE_PREFIX=$BRIDGEDIR/data/pop_africa/genotypes/afr_genotypes
-    PHENOTYPE_FILE=$BRIDGEDIR/data/pop_africa/phenotypes/afr_pheno.dat
+    LD_PATH=$BRIDGEDIR/data/1000G_sample
+    SUMSTATS_PREFIX=test/save/sumstats/ss.EUR.
+    SUMSTATS_SUFFIX=.out.gz
+    SUMSTATS_FIELDS=ID,REF,A1,P,BETA
+    SUMSTATS_SIZE=100000
+    SNP_FILE=test/save/snps.afr_valid.txt
+    GENOTYPE_PREFIX=$BRIDGEDIR/data/pop_AFR/genotypes/chr
+    PHENOTYPE_FILE=$BRIDGEDIR/data/pop_AFR/phenotypes/AFR_test.dat
     ```
 
-
-
+---
 
 ## File Specifications 
 
@@ -98,12 +135,12 @@ the results of an association study for a given phenotype.  BridgePRS has no pro
 (need to have a **.gz** suffix) or splitting the file by chromosome if necessary.  An example of a sumstats file with default column headers is shown: 
 
 
-Default Headers|#CHR|ID|REF|A1|A1_FREQ|OBS_CT|BETA|SE|T_STAT|P|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-Argument||--ssf-snpid|--ssf-ref|--ssf-alt|--ssf-maf|--ssf-n|--ssf-beta|--ssf-se||--ssf-p|
-Data|1|rs121|T|G|0.0257573|4853|0.820864|0.413692|1.98424|0.0472871|
-Data|1|rs497|C|A|0.483495|4847|0.0011142|0.128347|0.00868116|0.993074|
-Data|1|rs271|G|G|0.424387|4814|0.108094|0.132225|0.817497|0.413687|
+Defaults|#CHR|ID|REF|A1|P|BETA|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+Variable||--ssf-snpid|--ssf-ref|--ssf-alt|--ssf-beta|--ssf-p|
+Data|1|rs121|T|G|0.0413692|0.9472871|
+Data|1|rs497|C|A|0.328347|-1.193074|
+Data|1|rs271|G|G|0.0132225|0.413687|
 
 The **--ssf** arguments can be used to specify column headers for different files. 
 
@@ -132,13 +169,6 @@ The first two column of the phenotype file should be the FID and the IID, and th
 The phenotype of interest can be specified with the `--phenotype` flag and the covariates can be given as a comma separated list 
 after the `--covariates` flag: 
 
-    ```
-    ./bridgePRS check data -o out --pop AFR --phenotype y --covariates PC1,PC2 
-                           --phenotype_file data/pop_africa/phenotypes/afr_pheno.dat 
-    ```
-
-!!! Warning
-    The column name(s) should not contain *space* nor *comma*
 
 
 ### 4) QC SNP List 
