@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tade Souaiaia" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Direct Downloads - BridgePRS</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+        <link href="../css/style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Direct Downloads";
+        var mkdocs_page_input_path = "misc_downloads.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]--> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> BridgePRS
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Requirements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_system/">System</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_software/">Software</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_mac/">Mac Specific</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick Start Tutorial</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_data/">Toy Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_demo/">Demo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_result/">Results</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_background/">Background</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_input/">Input Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_pipeline/">Pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_output/">Output Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_usecases/">Use Cases</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_args/">All Arguments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_customization/">Customization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_shell/">Using Bash</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../misc_faq/">Frequently Asked Questions</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Direct Downloads</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc_log/">Update Log</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">BridgePRS</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Misc</li>
+      <li class="breadcrumb-item active">Direct Downloads</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tadesouaiaia/BridgePRS-website/edit/master/docs/misc_downloads.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><img alt="Screenshot" src="../img/slim/misc_logo2.png" /></p>
+<h2 id="downloading-large-files-with-curl">Downloading Large Files with Curl</h2>
+<p>Some users who have trouble downloading large reference panels 
+due to virus scanning or other security considerations. <a href="https://curl.se/download.html">Curl</a>, 
+which comes pre-installed on most unix-based operating systems can be can be 
+used to directly download reference panels.  To do so, copy and paste the following 
+commands into a terminal window:  </p>
+<ol>
+<li>Download the HapMap Variant reference panel:
+    <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>curl --header &#39;Host: drive.usercontent.google.com&#39; --header &#39;User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&#39; --header &#39;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7&#39; --header &#39;Accept-Language: en-US,en;q=0.9&#39; --header &#39;Cookie: HSID=AoF9m_6tVeb09qDxB; SSID=AD-DXipuaombsBh0h; APISID=q36TGuYIe-cEv-fE/AV2VZf2ieU1cq1Igl; SAPISID=xMDkAfz0wKEwv8TL/A0IzvH3245W_Ao0TJ; __Secure-1PAPISID=xMDkAfz0wKEwv8TL/A0IzvH3245W_Ao0TJ; __Secure-3PAPISID=xMDkAfz0wKEwv8TL/A0IzvH3245W_Ao0TJ; S=billing-ui-v3=a9O0G9E9aDMupi7g1hLo9JY8pXcOwjYg:billing-ui-v3-efe=a9O0G9E9aDMupi7g1hLo9JY8pXcOwjYg; __Secure-ENID=23.SE=FF3F14B6WvDGdNY5IVFcjj2qMFKbGWbbjhNqiqkLxFG2oHfHtt2tnXGCjAJnTCwVqcrWEEapt_NteVQfEW9i-qtpqxLaTLsFUk0JJh5qvD4b2UEOcGaSqyltxuGQkoHrttfymgP4TMrPCfTMNt2xAzDGhFWMQ7REnQx_SPlhgAz9eJ07dMOaz6lOzNS5qkrwlQYPIUXE3AHGzg_mPEBKVtSiswkg71k8r8nnQ8Kkhdr8QlPxKEDjkocnV-hzhxClKWvI8aszkoNVLnopDdl7d-FRVb2FB3y_zLdcuty_lovUluU2qnxK67ZqLs_haSiIwupaDyLlLFvOlNgHQgUa3jQIal3QG3JAGhMOUPdNFga49A; SID=g.a000pwh4bxY6L7SRGa2NgTvkbkHqowyFc-VmrsLTBb4Bn-glvwPWmUosf97LDrHCniV3rhU9jwACgYKATASARUSFQHGX2Mi1AX2gxbq-i-IgVZBvuXcixoVAUF8yKqjQkGjJlIxv0GRnpcmeuWR0076; __Secure-1PSID=g.a000pwh4bxY6L7SRGa2NgTvkbkHqowyFc-VmrsLTBb4Bn-glvwPWZW2LCQ1nPyRoEV8PrMbcUAACgYKAU4SARUSFQHGX2MiDyMcSgv-3DYYi74i6Duf4xoVAUF8yKp2kt2FakB5-fVOlflvj18v0076; __Secure-3PSID=g.a000pwh4bxY6L7SRGa2NgTvkbkHqowyFc-VmrsLTBb4Bn-glvwPW_Mr9JgT-NhNItkIbcdUF8wACgYKAdcSARUSFQHGX2MiiAFSVmBNls1NPOhNHjBLrxoVAUF8yKr_B6OKBO5LEiZlqI8FhMdS0076; OSID=g.a000pgh4b5JZdIOotyBDt4f48llvybqkk49ek_LxWzjMUSyoX4tybN3JFc2uTfjP5DXeFzS7AQACgYKAbUSARUSFQHGX2MiiUeSGldKclTsgKYQ8hrK8BoVAUF8yKpfq61K8N8xSZ8IiJ-Fqsji0076; __Secure-OSID=g.a000pgh4b5JZdIOotyBDt4f48llvybqkk49ek_LxWzjMUSyoX4tyK6Ij1mUddYQFg7JOy35pXAACgYKAe4SARUSFQHGX2Mine7zuzmciEmpjJ00r_eMpRoVAUF8yKowhBBZbgC77Arqx6wbfA870076; AEC=AZ6Zc-XlHyhyvDszKJ2zEd5oHwFuRMhi50rJ5j554OKU8f2gP8qs5Sy2zw; NID=519=YRAuI47MT-mQo1GMo8ySboib3Ggz35QGzn9I5GE9fCuRRDtAA60P8wEyp2T96V1H7EDPsq9CLXWrgr_uh9SujYeMolN6bjWX6mZDJhmmNQCNeoTZEj2_nqFXa3lKIAJtjT2zDLpkBy7fNA7Plckn9-n1_2TUJI8kwcgy2ZTvk5EFc2Mqnk4LxkzefChabQCkgdKtCr7QQeamGGKs5AdKOQOz0emHwJopegGUUJFbCMbMkjGuO52Svezn8Rj7gINZdsRzSxu75rGKK3O73lyOO2PEyvzu7Tsj3Zf9UOkzOqDwfXJ-Xyl-zO_ZSPQP3E9bOeWOZPn4L8l2JXGviLU1st-hsbLuvjnUF1luZXTKwBKN3JennoNQl0HBzZSJ5Ls5n0VNAemgMA; __Secure-1PSIDTS=sidts-CjIBQT4rXwZpOKdQy5TXWSxL4jIPtSRaJFs9sFIhmbtDRQikUZ53Jwj7fcX6lJ_B2XZAwxAA; __Secure-3PSIDTS=sidts-CjIBQT4rXwZpOKdQy5TXWSxL4jIPtSRaJFs9sFIhmbtDRQikUZ53Jwj7fcX6lJ_B2XZAwxAA; SIDCC=AKEyXzXdf_K-T2xDIIC8B3u8HwTTj1bgS7NWtuOoIbHBvKIAySJebLoDEKCFyBaeot0gCtzrdRfb; __Secure-1PSIDCC=AKEyXzUQZ3S0ZpOBXzAmVcxIzaO8flwb1r42dJRNKsb4t1-Lq-1fe9RjH8BnXDB22rBUgs4NXgM; __Secure-3PSIDCC=AKEyXzWjkZxmjK5PRQxgU3THuSE10-vsuQYsuIbbQU8j0Y7clgK3U0I7ChwHlpTJWTE3FyBXW54&#39; --header &#39;Connection: keep-alive&#39; &#39;https://drive.usercontent.google.com/download?id=1D0ZtPrvkvznKfHjlwo6BkYIvWFIRF_9g&amp;export=download&amp;authuser=0&amp;confirm=t&amp;uuid=127669d2-7954-4e1b-9d0c-d8d69b9418d8&amp;at=AENtkXb6-Rr6VvS4cAMuVrt0rLg1%3A1732553440826&#39; -L -o &#39;HapMap_Variants.tar.gz&#39;
+</code></pre></div></li>
+<li>Download the 1000 Genomes Variants (MAF &gt; 5%):
+    <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>curl --header &#39;Host: drive.usercontent.google.com&#39; --header &#39;User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&#39; --header &#39;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7&#39; --header &#39;Accept-Language: en-US,en;q=0.9&#39; --header &#39;Cookie: HSID=AoF9m_6tVeb09qDxB; SSID=AD-DXipuaombsBh0h; APISID=q36TGuYIe-cEv-fE/AV2VZf2ieU1cq1Igl; SAPISID=xMDkAfz0wKEwv8TL/A0IzvH3245W_Ao0TJ; __Secure-1PAPISID=xMDkAfz0wKEwv8TL/A0IzvH3245W_Ao0TJ; __Secure-3PAPISID=xMDkAfz0wKEwv8TL/A0IzvH3245W_Ao0TJ; S=billing-ui-v3=a9O0G9E9aDMupi7g1hLo9JY8pXcOwjYg:billing-ui-v3-efe=a9O0G9E9aDMupi7g1hLo9JY8pXcOwjYg; __Secure-ENID=23.SE=FF3F14B6WvDGdNY5IVFcjj2qMFKbGWbbjhNqiqkLxFG2oHfHtt2tnXGCjAJnTCwVqcrWEEapt_NteVQfEW9i-qtpqxLaTLsFUk0JJh5qvD4b2UEOcGaSqyltxuGQkoHrttfymgP4TMrPCfTMNt2xAzDGhFWMQ7REnQx_SPlhgAz9eJ07dMOaz6lOzNS5qkrwlQYPIUXE3AHGzg_mPEBKVtSiswkg71k8r8nnQ8Kkhdr8QlPxKEDjkocnV-hzhxClKWvI8aszkoNVLnopDdl7d-FRVb2FB3y_zLdcuty_lovUluU2qnxK67ZqLs_haSiIwupaDyLlLFvOlNgHQgUa3jQIal3QG3JAGhMOUPdNFga49A; SID=g.a000pwh4bxY6L7SRGa2NgTvkbkHqowyFc-VmrsLTBb4Bn-glvwPWmUosf97LDrHCniV3rhU9jwACgYKATASARUSFQHGX2Mi1AX2gxbq-i-IgVZBvuXcixoVAUF8yKqjQkGjJlIxv0GRnpcmeuWR0076; __Secure-1PSID=g.a000pwh4bxY6L7SRGa2NgTvkbkHqowyFc-VmrsLTBb4Bn-glvwPWZW2LCQ1nPyRoEV8PrMbcUAACgYKAU4SARUSFQHGX2MiDyMcSgv-3DYYi74i6Duf4xoVAUF8yKp2kt2FakB5-fVOlflvj18v0076; __Secure-3PSID=g.a000pwh4bxY6L7SRGa2NgTvkbkHqowyFc-VmrsLTBb4Bn-glvwPW_Mr9JgT-NhNItkIbcdUF8wACgYKAdcSARUSFQHGX2MiiAFSVmBNls1NPOhNHjBLrxoVAUF8yKr_B6OKBO5LEiZlqI8FhMdS0076; OSID=g.a000pgh4b5JZdIOotyBDt4f48llvybqkk49ek_LxWzjMUSyoX4tybN3JFc2uTfjP5DXeFzS7AQACgYKAbUSARUSFQHGX2MiiUeSGldKclTsgKYQ8hrK8BoVAUF8yKpfq61K8N8xSZ8IiJ-Fqsji0076; __Secure-OSID=g.a000pgh4b5JZdIOotyBDt4f48llvybqkk49ek_LxWzjMUSyoX4tyK6Ij1mUddYQFg7JOy35pXAACgYKAe4SARUSFQHGX2Mine7zuzmciEmpjJ00r_eMpRoVAUF8yKowhBBZbgC77Arqx6wbfA870076; AEC=AZ6Zc-XlHyhyvDszKJ2zEd5oHwFuRMhi50rJ5j554OKU8f2gP8qs5Sy2zw; NID=519=YRAuI47MT-mQo1GMo8ySboib3Ggz35QGzn9I5GE9fCuRRDtAA60P8wEyp2T96V1H7EDPsq9CLXWrgr_uh9SujYeMolN6bjWX6mZDJhmmNQCNeoTZEj2_nqFXa3lKIAJtjT2zDLpkBy7fNA7Plckn9-n1_2TUJI8kwcgy2ZTvk5EFc2Mqnk4LxkzefChabQCkgdKtCr7QQeamGGKs5AdKOQOz0emHwJopegGUUJFbCMbMkjGuO52Svezn8Rj7gINZdsRzSxu75rGKK3O73lyOO2PEyvzu7Tsj3Zf9UOkzOqDwfXJ-Xyl-zO_ZSPQP3E9bOeWOZPn4L8l2JXGviLU1st-hsbLuvjnUF1luZXTKwBKN3JennoNQl0HBzZSJ5Ls5n0VNAemgMA; __Secure-1PSIDTS=sidts-CjIBQT4rX9aHHfFL0QD5RBy5a2HOFYfa88q3NGcsBZD6Y95-jmz5wSzppyslHwxry8VJxRAA; __Secure-3PSIDTS=sidts-CjIBQT4rX9aHHfFL0QD5RBy5a2HOFYfa88q3NGcsBZD6Y95-jmz5wSzppyslHwxry8VJxRAA; SIDCC=AKEyXzW546Ti6p14-6zmjsZWF-Gqszb1Te985LhLWQ97A0jLjDMC-Q3ToFL9AB-a6FXdJuBLhc1z; __Secure-1PSIDCC=AKEyXzV_wMM7inJCoyXTtigBAmUBabnLS-7AJv0bS5x11saCZaGIoOmvG-jn-L7xpHOt-EeWBtI; __Secure-3PSIDCC=AKEyXzWywTxQSXpMjGbGJ90jmmWIIfVGjv1_aZEJWPgYUoE5NfN9G5Bfiik01IgMyY6n7nrPfXk&#39; --header &#39;Connection: keep-alive&#39; &#39;https://drive.usercontent.google.com/download?id=1c3BamSz1JpXr0QQIfyI_1nUfe0SRNXKa&amp;export=download&amp;authuser=0&amp;confirm=t&amp;uuid=4643f2b5-84eb-4895-aff2-dcecc725b06d&amp;at=AENtkXZsJLncBxzcgWh0_UHrl541%3A1732555871814&#39; -L -o &#39;1000G_5P.tar.gz&#39;    
+</code></pre></div></li>
+<li>Download the 1000 Genomes Variants (MAF &gt; 1%):
+    <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>curl --header &#39;Host: drive.usercontent.google.com&#39; --header &#39;User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36&#39; --header &#39;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7&#39; --header &#39;Accept-Language: en-US,en;q=0.9&#39; --header &#39;Cookie: HSID=AoF9m_6tVeb09qDxB; SSID=AD-DXipuaombsBh0h; APISID=q36TGuYIe-cEv-fE/AV2VZf2ieU1cq1Igl; SAPISID=xMDkAfz0wKEwv8TL/A0IzvH3245W_Ao0TJ; __Secure-1PAPISID=xMDkAfz0wKEwv8TL/A0IzvH3245W_Ao0TJ; __Secure-3PAPISID=xMDkAfz0wKEwv8TL/A0IzvH3245W_Ao0TJ; S=billing-ui-v3=a9O0G9E9aDMupi7g1hLo9JY8pXcOwjYg:billing-ui-v3-efe=a9O0G9E9aDMupi7g1hLo9JY8pXcOwjYg; __Secure-ENID=23.SE=FF3F14B6WvDGdNY5IVFcjj2qMFKbGWbbjhNqiqkLxFG2oHfHtt2tnXGCjAJnTCwVqcrWEEapt_NteVQfEW9i-qtpqxLaTLsFUk0JJh5qvD4b2UEOcGaSqyltxuGQkoHrttfymgP4TMrPCfTMNt2xAzDGhFWMQ7REnQx_SPlhgAz9eJ07dMOaz6lOzNS5qkrwlQYPIUXE3AHGzg_mPEBKVtSiswkg71k8r8nnQ8Kkhdr8QlPxKEDjkocnV-hzhxClKWvI8aszkoNVLnopDdl7d-FRVb2FB3y_zLdcuty_lovUluU2qnxK67ZqLs_haSiIwupaDyLlLFvOlNgHQgUa3jQIal3QG3JAGhMOUPdNFga49A; SID=g.a000pwh4bxY6L7SRGa2NgTvkbkHqowyFc-VmrsLTBb4Bn-glvwPWmUosf97LDrHCniV3rhU9jwACgYKATASARUSFQHGX2Mi1AX2gxbq-i-IgVZBvuXcixoVAUF8yKqjQkGjJlIxv0GRnpcmeuWR0076; __Secure-1PSID=g.a000pwh4bxY6L7SRGa2NgTvkbkHqowyFc-VmrsLTBb4Bn-glvwPWZW2LCQ1nPyRoEV8PrMbcUAACgYKAU4SARUSFQHGX2MiDyMcSgv-3DYYi74i6Duf4xoVAUF8yKp2kt2FakB5-fVOlflvj18v0076; __Secure-3PSID=g.a000pwh4bxY6L7SRGa2NgTvkbkHqowyFc-VmrsLTBb4Bn-glvwPW_Mr9JgT-NhNItkIbcdUF8wACgYKAdcSARUSFQHGX2MiiAFSVmBNls1NPOhNHjBLrxoVAUF8yKr_B6OKBO5LEiZlqI8FhMdS0076; OSID=g.a000pgh4b5JZdIOotyBDt4f48llvybqkk49ek_LxWzjMUSyoX4tybN3JFc2uTfjP5DXeFzS7AQACgYKAbUSARUSFQHGX2MiiUeSGldKclTsgKYQ8hrK8BoVAUF8yKpfq61K8N8xSZ8IiJ-Fqsji0076; __Secure-OSID=g.a000pgh4b5JZdIOotyBDt4f48llvybqkk49ek_LxWzjMUSyoX4tyK6Ij1mUddYQFg7JOy35pXAACgYKAe4SARUSFQHGX2Mine7zuzmciEmpjJ00r_eMpRoVAUF8yKowhBBZbgC77Arqx6wbfA870076; AEC=AZ6Zc-XlHyhyvDszKJ2zEd5oHwFuRMhi50rJ5j554OKU8f2gP8qs5Sy2zw; NID=519=YRAuI47MT-mQo1GMo8ySboib3Ggz35QGzn9I5GE9fCuRRDtAA60P8wEyp2T96V1H7EDPsq9CLXWrgr_uh9SujYeMolN6bjWX6mZDJhmmNQCNeoTZEj2_nqFXa3lKIAJtjT2zDLpkBy7fNA7Plckn9-n1_2TUJI8kwcgy2ZTvk5EFc2Mqnk4LxkzefChabQCkgdKtCr7QQeamGGKs5AdKOQOz0emHwJopegGUUJFbCMbMkjGuO52Svezn8Rj7gINZdsRzSxu75rGKK3O73lyOO2PEyvzu7Tsj3Zf9UOkzOqDwfXJ-Xyl-zO_ZSPQP3E9bOeWOZPn4L8l2JXGviLU1st-hsbLuvjnUF1luZXTKwBKN3JennoNQl0HBzZSJ5Ls5n0VNAemgMA; __Secure-1PSIDTS=sidts-CjIBQT4rX9aHHfFL0QD5RBy5a2HOFYfa88q3NGcsBZD6Y95-jmz5wSzppyslHwxry8VJxRAA; __Secure-3PSIDTS=sidts-CjIBQT4rX9aHHfFL0QD5RBy5a2HOFYfa88q3NGcsBZD6Y95-jmz5wSzppyslHwxry8VJxRAA; SIDCC=AKEyXzUiO_pLVAb23idvGPu7fHoi3Dwr0MlkRTq-3mfdJvUoJ5LnQZVsEpIqYOcDwzG_c6b58MNd; __Secure-1PSIDCC=AKEyXzXpb6cPwIVV-O6nZGS4DLJ6n2eSQ-tn7H2Tr4qzm-dPszPhrc5uMGs7gigI9ciHK1zu_sE; __Secure-3PSIDCC=AKEyXzWX3r7mum9LZCsP8e1L5-vcVusdBRGI1lbxGg5EO0_enN49Hw3LnG9RXt9SCqxno649eNY&#39; --header &#39;Connection: keep-alive&#39; &#39;https://drive.usercontent.google.com/download?id=18xgsyDymbjeSOv1QS2ULQFaru5NVjwGR&amp;export=download&amp;authuser=0&amp;confirm=t&amp;uuid=c9c72932-d3eb-469c-b7d7-5bc87e7ea9e3&amp;at=AENtkXZB1O2wYgcHdAbK8cKi3EBZ%3A1732556118270&#39; -L -o &#39;1000G_1P.tar.gz&#39;
+</code></pre></div></li>
+</ol>
+<h2 id="unzipping-large-files-on-the-command-line">Unzipping Large Files on the Command Line:</h2>
+<p>Reference panels can then be unzipped into where bridgePRS reference panels are stored using the 
+following command: </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>tar -zxvf &quot;REF_PANEL.tar.gz&quot; -C &quot;PATH-TO-BRIDGE-PRS-PANELS&quot;
+</code></pre></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../misc_faq/" class="btn btn-neutral float-left" title="Frequently Asked Questions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../misc_log/" class="btn btn-neutral float-right" title="Update Log">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tadesouaiaia/BridgePRS-website" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../misc_faq/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../misc_log/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      <script src="../javascripts/details.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
