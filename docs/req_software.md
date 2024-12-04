@@ -2,12 +2,12 @@
 
 # Requirements 
 
-BridgePRS depends on R, plink, and runs using a Python3 wrapper. 
+BridgePRS uses [`R`](https://www.r-project.org/) (\geqslant 3.6.3), `plink`, and runs using a `Python3` wrapper. 
 
 
-## R 
+## R packages
 
-BridgePRS requires the following **R** [**version 3.6.3+**] ([Download](https://www.r-project.org/)) packages:   
+BridgePRS requires the following **R** ([Download]) packages:   
 **BEDMatrix, boot, data.table, doMC, glmnet, MASS, optparse, parallel, and R.utils**
 
 !!! tips "R Packages"
