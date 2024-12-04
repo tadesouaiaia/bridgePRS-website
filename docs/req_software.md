@@ -45,15 +45,14 @@ the python library [`matplotlib`]
 BridgePRS can also be run using a shell script as described [here](https://github.com/clivehoggart/BridgePRS).
 
 
-### BridgePRS check 
+## BridgePRS check 
 Once BridgePRS has been downloaded and made executable the
 following command will check system compatibility and prompt you
 to install missing software:
+
     ```
-    > ./bridgePRS check requirements
 	
-	BridgePRS Begins at Sat Sep 30 23:45:46 2023 
-    Bridge Command-Line:  ../bridgePRS check requirements
+>  ./bridgePRS check requirements
     Checking Requirements:
                System:  platform=linux,  cores(available)=8,          cores(used)=1       (TIP: Using More Than One Core Will Improve Performace (e.g. ---cores 7))
                 Plink:  found=true,      path=/home/tade/Bin/plink
