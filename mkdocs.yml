@@ -8,8 +8,8 @@ nav:
         - System:              req_system.md 
         - Software:            req_software.md 
         - Mac Specific:        req_mac.md
-    - Quick Start Tutorial:
-        - Toy Data:           quikstart_data.md 
+
+    - Quick start tutorial:
         - Example run:        quikstart_demo.md 
         - Output directories: quikstart_result.md 
 

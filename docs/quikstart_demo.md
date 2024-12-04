@@ -1,14 +1,22 @@
 ![Screenshot](img/slim/quikstart_logo2.png)
 
-## Input Data 
+BridgePRS download comes with example toy data in the folders
+`data/pop_AFR`, `data/pop_EUR` and `data/pop_EAS`. Each directory
+contains (1) GWAS summary stats file(s), (2) genotype file(s) (plink
+format), and (3) phenotype file(s) (txt format).  For more information
+on file type requirements or how to create population configuration
+files for your own data, see [Guide: Input Data](guide_input.md).
 
-This demo runs using the following population config files
-**data/pop_AFR/afr.config** and **data/pop_EUR/eur.config** that
-list the paths for all required population data. 
+BridgePRS uses configuation files to which label the population
+analysed, list the paths for the input data and describe the column
+header of the summary statistics files. Three example configuations
+files are provided, one for each population: `data/eur.config`,
+`data/afr.config`, `data/eas.config`. These files
 
-## Run The Demo: 
 
-To run BridgePRS using a continuous phenotype: 
+## Run the demo: 
+
+To run BridgePRS with the continuous phenotype in the example data: 
 
 !!! tips "Easyrun Command: Continuous Trait (y)" 
      Run BridgePRS on the toy phenotype "y" with the following command: 
@@ -30,7 +38,7 @@ process using a binary phenotype:
         ./bridgePRS pipeline go -o out2 --config_files data/afr.config data/eur.config --phenotype y.binary
         ```
 
-## Demo Results:
+## Results:
 
 
 If BridgePRS runs successfully on the toy data, please go to the next
