@@ -3,10 +3,10 @@
 # Interpreting results 
 
 The pipeline command used on the previous page runs the entire bridgePRS multi-ancestry 
-analysis. Output is written to the following five subdirectories:  
+analysis. Output is written to the following five subdirectories:
 
-
-:------------------------ |:------------------------|
+Directory|Contents|
+:------------------------|:------------------------|
  `prs-combined_AFR/`        | Final model results |
  `prs-single_AFR/quantify:` |  Weights, predictions, and performance metrics. 
  `model_EUR/prior:`         | Model weights and priors. 
