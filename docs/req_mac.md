@@ -2,16 +2,19 @@
 
 # Mac specific issues
 
-## Plink: Developer Cannot Be Verified 
+Mac security will not initially allow plink to run and will flag this error
 
 ![Screenshot](img/mac_plink.png)
 
-If you see this error, **Do not click: Move To Trash**. 
+**Do not click: Move To Trash**. 
 
-Instead click on the top right hand corner of the box, or stop running BridgePRS and follow these instructions 
-to give your system permission to call plink from BridgePRS.  After doing so you should be aware that if you 
-have moved plink to the trash that you will have to recover it and place it in it's original directory ("src/Python/Xtra"). 
-Additionally, empty files created by a failed attempt to run plink can cause problems if BridgePRS tries to recover your progress. 
+Instead click on the top right hand corner of the box, or stop running
+BridgePRS and follow these instructions to give your system permission
+to call plink from BridgePRS.  After doing so you should be aware that
+if you have moved plink to the trash that you will have to recover it
+and place it in it's original directory ("src/Python/Xtra").
+Additionally, empty files created by a failed attempt to run plink can
+cause problems if BridgePRS tries to recover your progress.
 
 !!! help "Restarting a bridgePRS run"
     You can avoid this problem by manually deleting your output directory and starting over, or by using the restart flag: 
@@ -22,7 +25,6 @@ Additionally, empty files created by a failed attempt to run plink can cause pro
 
 
 ## Changing System Permissions 
-
 
 ### 0- Shortcut Fix 
 
