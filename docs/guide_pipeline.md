@@ -6,7 +6,7 @@
 A pipeline implementin the BridgePRS method desribed in our Nature
 Genetics paper can be run with the following command:
 
-    BridgePRS easyrun go
+    BridgePRS pipeline go
 
 The pipeline requires the following input from both the target and base populations: 
 

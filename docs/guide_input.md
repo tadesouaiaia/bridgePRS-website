@@ -21,7 +21,7 @@ If you wish to run bridgePRS using a custom LD reference panel please see [custo
 For the target and base populations BridgePRS requires inputs be supplied in population configuration files.  The following options are required in the target configuration file: 
 
 |Input|Variable Name|Notes|
-|:-:|:-:|:-:|
+|--|--|--|
 |Population Name    |POP                  || 
 |LD Population        |LDPOP                 || 
 |LD Panel           |LD_PATH=             || 
@@ -35,7 +35,7 @@ For the target and base populations BridgePRS requires inputs be supplied in pop
 The following optional inputs can also be supplied: 
 
 |Input|Variable Name|Notes|
-|:-:|:-:|:-:|
+|--|--|--|
 |Phenotype Validation File    |VALIDATION_FILE  | Individual Level Phenotypes for Validation|
 |QC-SNP List        |SNP_FILE       |List QCed SNP ids| 
 |Max Clump Size | MAX_CLUMP_SIZE| Maximum clump size (for speed)| 
@@ -47,6 +47,16 @@ the snp-id (rsid), reference allele, alternate allele, p-value, and weight (beta
 column headers can be supplied as an ordered 5mer (a) or on individual lines in the sumstats file:  
 
 |Input|Variable Name|Example|
+|--|--|--|
+|Sumstats Fields    |SUMSTATS_FIELDS   | DEFAULT: SUMSTATS_FIELDS=ID,REF,A1,P,BETA| 
+|b1) SNP Field     |SSF-SNPID   | Sumstats Field Name for SNP-ID | 
+|b2) Field     |SSF-REF    | Sumstats Field Name for Ref Base |
+|b3) Alt Field     |SSF-ALT    | Sumstats Field Name for Alt Base |
+|b4) Pval Field     |SSF-P    | Sumstats Field Name for Pvalue | 
+|b5) Beta Field     |SSF-BETA   | Sumstats Field Name for Beta | 
+
+<!--
+|Input|Variable Name|Example|
 |:-:|:-:|:-:|
 |Sumstats Fields    |SUMSTATS_FIELDS   | DEFAULT: SUMSTATS_FIELDS=ID,REF,A1,P,BETA| 
 |b1) SNP Field     |SSF-SNPID   | Sumstats Field Name for SNP-ID | 
@@ -54,6 +64,8 @@ column headers can be supplied as an ordered 5mer (a) or on individual lines in 
 |b3) Alt Field     |SSF-ALT    | Sumstats Field Name for Alt Base |
 |b4) Pval Field     |SSF-P    | Sumstats Field Name for Pvalue | 
 |b5) Beta Field     |SSF-BETA   | Sumstats Field Name for Beta | 
+-->
+
 
 
 ---

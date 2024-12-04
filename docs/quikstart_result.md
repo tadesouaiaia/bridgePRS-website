@@ -2,7 +2,7 @@
 
 # Interpreting results 
 
-The easyrun command used in the previous step runs the entire bridgePRS multi-ancestry 
+The pipeline command used in the previous step runs the entire bridgePRS multi-ancestry 
 pipeline and produces output in the following five subdirectories:  
 
 1. `prs-single_AFR/quantify:` Weights, predictions, and performance metrics. 
