@@ -2,7 +2,7 @@
 
 # Requirements 
 
-BridgePRS uses [`R`](https://www.r-project.org/) (\geqslant 3.6.3), `plink`, and runs using a `Python3` wrapper. 
+BridgePRS uses [`R`](https://www.r-project.org/) ($\geq$ 3.6.3), `plink`, and runs using a `Python3` wrapper. 
 
 
 ## R packages
