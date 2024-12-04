@@ -51,12 +51,12 @@ following command will check system compatibility and prompt you
 to install missing software:
 
 ```
-   ./bridgePRS check requirements
-    Checking Requirements:
-               System:  platform=linux,  cores(available)=8,          cores(used)=1       (TIP: Using More Than One Core Will Improve Performace (e.g. ---cores 7))
-                Plink:  found=true,      path=/home/tade/Bin/plink
-                    R:  found=true,      path=/usr/bin/R,             version=3.6.3       (packages=up to date)                                            
-              Python3:  found=true,      path=/usr/bin/python3,     matplotlib=true
+./bridgePRS check requirements
+Checking Requirements:
+System:  platform=linux,  cores(available)=8,          cores(used)=1       (TIP: Using More Than One Core Will Improve Performace (e.g. ---cores 7))
+Plink:  found=true,      path=/home/tade/Bin/plink
+R:  found=true,      path=/usr/bin/R,             version=3.6.3       (packages=up to date)                                            
+Python3:  found=true,      path=/usr/bin/python3,     matplotlib=true
     Complete
 ```
 

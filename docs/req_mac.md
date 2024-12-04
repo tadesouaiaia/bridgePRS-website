@@ -1,7 +1,8 @@
 ![Screenshot](img/slim/req_logo2.png) 
 
+# Mac specific issues
 
-# Plink: Developer Cannot Be Verified 
+## Plink: Developer Cannot Be Verified 
 
 ![Screenshot](img/mac_plink.png)
 
