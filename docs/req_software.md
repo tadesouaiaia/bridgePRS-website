@@ -51,7 +51,6 @@ following command will check system compatibility and prompt you
 to install missing software:
 
     ```
-	
 >  ./bridgePRS check requirements
     Checking Requirements:
                System:  platform=linux,  cores(available)=8,          cores(used)=1       (TIP: Using More Than One Core Will Improve Performace (e.g. ---cores 7))
