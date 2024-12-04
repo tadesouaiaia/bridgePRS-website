@@ -50,6 +50,10 @@ the base and target populations.
 |BridgePRS Packages |Reference Panels|
 |--|--|
 |<table> <tr><th> OS </th><th> Link </th><th> Last Update  </th></tr>  <tr><td> Linux 64-Bit </td><td> [v1.0.3](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) </td><td> 9-13-2024 </td></tr>  </th></tr>  <tr><td> Mac 64-Bit </td><td> [v1.0.3](https://github.com/clivehoggart/BridgePRS/archive/refs/heads/main.zip) </td><td> 9-10-2024 </td></tr> </th></tr>  <tr><td> Windows </td><td> NA </td><td> Not Available </td></tr> </table> | <table> <tr><th> Download Link  </th><th> Size </th><th> More Information </th></tr><tr><td> [HapMap Variants](https://drive.google.com/file/d/1D0ZtPrvkvznKfHjlwo6BkYIvWFIRF_9g/view?usp=drive_link) </td><td> <1GB </td><td> [International HapMap Project](https://www.genome.gov/10001688/international-hapmap-project) </td></tr>  </th></tr>  <tr><td> [1000 Genomes Variants: MAF>5%](https://drive.google.com/file/d/1c3BamSz1JpXr0QQIfyI_1nUfe0SRNXKa/view?usp=drive_link) </td><td> 8GB </td><td> [International Genome Sample Resource](https://www.internationalgenome.org/) </td></tr> </th></tr>  </td><td> [1000 Genomes variants: MAF>1%](https://drive.google.com/file/d/18xgsyDymbjeSOv1QS2ULQFaru5NVjwGR/view?usp=drive_link) </td><td> 14GB </td><td> [International Genome Sample Resource](https://www.internationalgenome.org/) </td></tr> </table>
+[**Trouble Downloading Ref Panels?**](misc_downloads.md) 
+
+
+
 
 <!--
 |BridgePRS Package |Reference Panels|
@@ -70,8 +74,9 @@ the base and target populations.
 
 
 !!! Note "Latest Updates"
-    # 2023-09-15 (v0.1.7)
-    - We have added sample thousand genomes data. 
+    # 2024-11-02 (v0.1.7)
+    - Added a [direct downloads page](misc_downloads.md) for users who have trouble downloading large reference panels.  
+    - Added sample thousand genomes data. 
     - update log can be found [here](misc_log.md)
 
 # Overview 

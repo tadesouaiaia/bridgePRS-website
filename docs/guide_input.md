@@ -9,9 +9,9 @@ format to estimate LD.  A miniature LD reference panel (**data/1000G_sample**),
 suitable for the [quick start tutorial](quikstart_data.md) is included 
 in the BridgePRS download. Three full-size 1000 Genomes panels 
 covering **AFR**, **EUR**, **EAS**, **SAS**, and **AMR** super-populations with 
-different SNP sets are available for download: (1) [All HapMap Variants](https://drive.google.com/file/d/1EGFap5wjKxIT42SWHKr9MUOzVnK9CVew/view?usp=drive_link),
-(2) [All 1000G variants with MAF>5% in any of the five 1000G super-populations](https://drive.google.com/file/d/1rmxKcTGF8XTYU0E7jAIkKsCeedGMNwDE/view?usp=drive_link), 
-(3) [All 1000G variants with MAF>1% in any of the five 1000G super-populations](https://drive.google.com/file/d/1RuC8J_qJLDSLnQ4uOGuxx9uGSWg5fxKn/view?usp=drive_link).
+different SNP sets are available for download: 
+(1) [All HapMap Variants](https://drive.google.com/file/d/1D0ZtPrvkvznKfHjlwo6BkYIvWFIRF_9g/view?usp=drive_link),(2) [All 1000G variants with MAF>5% in any of the five 1000G super-populations](https://drive.google.com/file/d/1c3BamSz1JpXr0QQIfyI_1nUfe0SRNXKa/view?usp=drive_link),(3) [All 1000G variants with MAF>1% in any of the five 1000G super-populations](https://drive.google.com/file/d/18xgsyDymbjeSOv1QS2ULQFaru5NVjwGR/view?usp=drive_link).
+
 
 If you wish to run bridgePRS using a custom LD reference panel please see [customization](guide_customization.md).
 
