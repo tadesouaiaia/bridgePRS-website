@@ -48,7 +48,8 @@ BridgePRS can also be run using a shell script as described [here](https://githu
 !!! Note "BridgePRS check requirements" 
 
 
-    Once BridgePRS has been downloaded and made executable (as described the following commandwill check system compatibility and prompt you to 
+    Once BridgePRS has been downloaded and made executable the
+    following command will check system compatibility and prompt you to 
     install missing software:  
     
     === "./bridgePRS check requirements" 
