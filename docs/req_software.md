@@ -2,12 +2,12 @@
 
 # Requirements 
 
-BridgePRS uses [`R`](https://www.r-project.org/) ($\geq$ 3.6.3), `plink`, and runs using a `Python3` wrapper. 
+BridgePRS uses [`R`](https://www.r-project.org/) ($\geq$ 3.6.3), `plink`, and runs using a `python3` wrapper. 
 
 
 ## R packages
 
-BridgePRS requires the following **R** ([Download]) packages:   
+BridgePRS requires the following `R` packages:   
 **BEDMatrix, boot, data.table, doMC, glmnet, MASS, optparse, parallel, and R.utils**
 
 !!! tips "R Packages"
@@ -19,10 +19,12 @@ BridgePRS requires the following **R** ([Download]) packages:
 
 
 ## Plink 
-BridgePRS requires a version of plink compatible with your machine. ([download](https://www.cog-genomics.org/plink/))
+Plink documentation and downlaod can be found [here](https://www.cog-genomics.org/plink/).
 
-By default BridgePRS includes versions of plink for Linux and MacOs and will attempt to locate the correct version. 
-To override this behavior and use a specific version of plink please use the flag `--plinkPath` $PLINKPATH to direct BridgePRS 
+The BridgePRS downlaod includes plink for Linux and MacOs and
+the software will attempt to locate the correct version.  To override
+this behaviour and use a specific version please use the flag
+`--plinkPath` $PLINKPATH to direct BridgePRS
 to the file location.  
 
 !!! warning "Extra MacOs Security:"   
@@ -34,8 +36,10 @@ to the file location.
 
 
 ## Python
-The BridgePRS wrapper requires python3+ ([download](https://www.python.org/downloads/)) and the matplotlib 
-library ([download](https://matplotlib.org/stable/users/installing/index.html)) is required to create plots (options). 
+Python3+ can be downloaded 
+[here](https://www.python.org/downloads/)). Optional plots are created using
+the python library [`matplotlib`]
+(https://matplotlib.org/stable/users/installing/index.html)).
 
 ## Bash
 BridgePRS can also be run using a shell script as described [here](https://github.com/clivehoggart/BridgePRS).
@@ -44,8 +48,7 @@ BridgePRS can also be run using a shell script as described [here](https://githu
 !!! Note "BridgePRS check requirements" 
 
 
-    If BridgePRS has been downloaded and made executable (as described [previousely](req_system.md)) 
-    then the following command can be used to allow bridgePRS to check system compatibility and prompt you to 
+    Once BridgePRS has been downloaded and made executable (as described the following commandwill check system compatibility and prompt you to 
     install missing software:  
     
     === "./bridgePRS check requirements" 
