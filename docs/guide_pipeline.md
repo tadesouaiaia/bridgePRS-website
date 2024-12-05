@@ -33,15 +33,15 @@ target population produces model M2. Model M3 combines PRS from both
 Stage 1 and Stage 2 analyses. The final BridgePRS model is a weighted
 sum of models M1, M2 and M3.
 
-Model M1 reflects the belief that the target population GWAS is only
-informative in conjugtion with the base population GWAS.
+Stage 2 only model (M1) reflects the belief that the target population
+GWAS is only informative in conjugtion with the base population GWAS.
 
-Model M2 reflects the belief that the target population GWAS is
-informative and the base population GWAS gives no addition
+Stage 1 only model (M2) reflects the belief that the target population
+GWAS is informative and the base population GWAS gives no addition
 information.
 
-Model M3 reflects the belief both the base and target population GWAS
-contribute independent information.
+Stage 1 and stage 2 models (M3) reflects the belief both the base and
+target population GWAS contribute independent information.
 
 Since apriori we do not know which of the three scenarios
 corresponding to models M1, M2 and M3 are true, BridgePRS weights

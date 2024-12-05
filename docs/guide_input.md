@@ -42,11 +42,10 @@ The following optional inputs can also be supplied:
 | COVARIATES | List of covariates (comma separated) to use, eg: COVARIATES=PC1,PC2,PC3| 
 
 bridgePRS requires GWAS summary statistics with SNP id (to match to LD
-reference data), reference
-allele, alternate allele, p-value, and effect size (linear regression
-coefficient or log odds). The format is not standardised and the
-columns can be supplied in any order. Column names are specified in
-one of two ways as described below:
+reference data), reference allele, alternate allele, p-value, and
+effect size (linear regression coefficient or log odds). Columns can
+be supplied in any order. Column names are specified in one of two
+ways as described below:
 
 |Variable Name|Description|
 |:--|:--|
@@ -153,10 +152,6 @@ Variable||--ssf-snpid|--ssf-ref|--ssf-alt|--ssf-p|--ssf-beta|
 Data|1|rs121|T|G|0.0413692|0.9472871|
 Data|1|rs497|C|A|0.328347|-1.193074|
 Data|1|rs271|G|G|0.0132225|0.413687|
-
-
-
-
 
 
 ### 2) Genotype Files
