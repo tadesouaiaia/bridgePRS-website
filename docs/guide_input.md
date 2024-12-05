@@ -20,40 +20,41 @@ To run bridgePRS using a custom LD reference panel see [customisation](guide_cus
 
 For the target and base populations BridgePRS requires inputs be supplied in population configuration files.  The following arguments are required in the target configuration file: 
 
-|Input|Variable Name|Notes|
-|:--|:--|:--|
-|Population Name    |POP                  || 
-|LD Population        |LDPOP                 || 
-|LD Panel           |LD_PATH=             || 
-|(a) Sumstats  File   |SUMSTATS_FILE      | a or b is required| 
-|(b1) Sumstats Prefix |SUMSTATS_PREFIX      | a or b is required| 
-|(b2) Sumstats Suffix |SUMSTATS_SUFFIX      | a or b is required| 
-|Sumstats Size |SUMSTATS_SIZE              | GWAS Sample Size (Required for multi-ancestry)| 
-|Genotype Prefix     |GENOTYPE_PREFIX      | Plink Format is Required| 
-|Phenotype File     |PHENOTYPE_FILE=       | Individual Level Phenotypes| 
+|Variable Name|Notes|
+|:--|:--|
+|POP                 | Population name label, eg. AFR | 
+|LDPOP               | Name of 1000G population used to estimate LD (AFR, AMR, EAS, EAS, SAS) | 
+|LD_PATH             | Path to LD reference data | 
+|SUMSTATS_FILE       | Sumstats filename used for genomewide summary statistics | 
+|SUMSTATS_PREFIX     | Sumstats prefix used for summary statistics split by chr, eg. `height_chr`|
+|SUMSTATS_SUFFIX     | sumstats suffix, eg `.txt.gz`, gives sumstats files `height_chr1.txt.gz -- height_chr22.txt.gz` |
+|SUMSTATS_SIZE       | GWAS sample size (required for multi-ancestry)| 
+|GENOTYPE_PREFIX     | Path and prefix to plink bed files of test and validation samples | 
+|PHENOTYPE_FILE      | File of phenotype and covariate of test data | 
 
 The following optional inputs can also be supplied: 
 
-|Input|Variable Name|Notes|
-|--|--|--|
-|Phenotype Validation File    |VALIDATION_FILE  | Individual Level Phenotypes for Validation|
-|QC-SNP List        |SNP_FILE       |List QCed SNP ids| 
-|Max Clump Size | MAX_CLUMP_SIZE| Maximum clump size (for speed)| 
-|Clump Specific SNP File | thinned_snp_file | A list of snps to use for excessively large clumps| 
-|Covariates | COVARIATES | Entered Comma Separated, eg: COVARIATES=PC1,PC2,PC3| 
+|Variable Name|Notes|
+|:--|:--|
+| VALIDATION_FILE  | File of phenotype and covariate of validation data |
+| SNP_FILE       | File listing SNP ids to use in analysis, eg. QCed SNPs | 
+| MAX_CLUMP_SIZE| Maximum number of SNPs per clump  | 
+| COVARIATES | List of covariates (comma separated) to use, eg: COVARIATES=PC1,PC2,PC3| 
 
-Sumstats format is not standardized, bridgePRS requires text files with at least five columns the denote 
-the snp-id (rsid), reference allele, alternate allele, p-value, and weight (beta or log odds).  The file specifc 
+Sumstats format is not standardized, bridgePRS requires text files
+with at least five columns the denote the snp-id (rsid), reference
+allele, alternate allele, p-value, and weight (beta or log odds).  The
+file specifc
 column headers can be supplied as an ordered 5mer (a) or on individual lines in the sumstats file:  
 
-|Input|Variable Name|Example|
-|--|--|--|
-|Sumstats Fields    |SUMSTATS_FIELDS   | DEFAULT: SUMSTATS_FIELDS=ID,REF,A1,P,BETA| 
-|b1) SNP Field     |SSF-SNPID   | Sumstats Field Name for SNP-ID | 
-|b2) Field     |SSF-REF    | Sumstats Field Name for Ref Base |
-|b3) Alt Field     |SSF-ALT    | Sumstats Field Name for Alt Base |
-|b4) Pval Field     |SSF-P    | Sumstats Field Name for Pvalue | 
-|b5) Beta Field     |SSF-BETA   | Sumstats Field Name for Beta | 
+|Variable Name|Description|
+|:--|:--|
+|SUMSTATS_FIELDS   | DEFAULT: SUMSTATS_FIELDS=ID,REF,A1,P,BETA| 
+|SSF-SNPID   | Column name of SNP ID (default ID) | 
+|SSF-REF    | Column name of Ref Base (default REF)|
+|SSF-ALT    | Column name of Alt Base (default ALT)|
+|SSF-P    | Column name of Pvalue (default P| 
+|SSF-BETA   | Sumstats Field Name for Beta (default BETA| 
 
 <!--
 |Input|Variable Name|Example|
@@ -65,8 +66,6 @@ column headers can be supplied as an ordered 5mer (a) or on individual lines in 
 |b4) Pval Field     |SSF-P    | Sumstats Field Name for Pvalue | 
 |b5) Beta Field     |SSF-BETA   | Sumstats Field Name for Beta | 
 -->
-
-
 
 ---
 
