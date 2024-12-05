@@ -3,24 +3,29 @@
 
 ## Training
 
-In the two [toy-data examples](quikstart_data.md) the target population was African (**AFR**)
-and the base population  was European (**EUR**).  In these examples each population had a corresponding:  
+In the two [toy-data examples](quikstart_data.md) the target
+population was African (**AFR**) and the base population was European
+(**EUR**).  In these examples each population had a corresponding:
 
-- LD Reference Panel
-- GWAS Summary Stat File  
-- Individual levels genotype data in plink format
+- LD reference panel
+- GWAS summary statistics file  
+- Individual levels genotype data in plink binary format
 - Phenotype data 
 
 Here we consider using BridgePRS in other scenarios with less
-available data.  In each of these challeges the task is to create
+available data.  In each of these examples the task is to create
 valid configuration files given the described scenario.
 
 ## Challenge 1: 
 
-I have access to genotype/phenotype data (<1000 samples, continuous phenotype) from a diverse population in Central Africa (1,2). 
-I would like ot run PRS as accurately as possible, but my dataset is not large enough to conduct GWAS, however, I do have access to a moderately 
-sized (25,000 samples) GWAS in a related West African population (3) and access to large-scale (500k) GWAS data from a European population (4).  I also have 
-access to the 1000G reference panels, how can I analyze my data?
+I have access to genotype/phenotype data (<1000 samples, continuous
+phenotype) from a population in Central Africa (1,2).  I would like ot
+run PRS as accurately as possible, but my dataset is not large enough
+to conduct GWAS, however, I do have access to a moderately sized
+(25,000 samples) GWAS summary statistics from a West African
+population (3) and access to summary statistics from a GWAS of a large
+(500k) European population (4).  I also have access to the 1000G
+reference panels, how can I analyze my data?
  
 **Available Data:** 
 
@@ -91,12 +96,13 @@ Can you fill out the configuration files to carry this out?
 
 ## Challenge 2: 
 
-I have access to GWAS data (1) and genotype/phenotype (2,3) data
-(>2000 samples, binary phenotype) from a moderate sized population in
-Eastern Europe.
-I have reason to believe that this population has unique LD structure and would like to incorporate this into my model.  
-I also have GWAS (4) and genotype/phenotype data from the UKB biobank
-(5,6) that I wish to use to improve my results, how should I do this?
+I have access to GWAS summary statistics (1) and genotype/phenotype
+(2,3) data (>2000 samples, binary phenotype) from a moderate sized
+population in Eastern Europe. I have reason to believe that this
+population has unique LD structure and would like to incorporate this
+into my model. I also have GWAS (4) and genotype/phenotype data from
+the UKB biobank (5,6) that I wish to use to improve my results, how
+should I do this?
 
 1. ukr/sumstats/ukr.sumstats.out 
 2. ukr/genotypes/chr1.bed,bim,fam...chr22.bed,bin,fam, 

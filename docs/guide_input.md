@@ -20,41 +20,42 @@ To run bridgePRS using a custom LD reference panel see [customisation](guide_cus
 
 For the target and base populations BridgePRS requires inputs be supplied in population configuration files.  The following arguments are required in the target configuration file: 
 
-|Variable Name|Notes|
+|Variable Name|Description|
 |:--|:--|
 |POP                 | Population name label, eg. AFR | 
 |LDPOP               | Name of 1000G population used to estimate LD (AFR, AMR, EAS, EAS, SAS) | 
 |LD_PATH             | Path to LD reference data | 
-|SUMSTATS_FILE       | Sumstats filename used for genomewide summary statistics | 
+|SUMSTATS_FILE       | Sumstats filename used for genomewide summary statistics, can be gzipped | 
 |SUMSTATS_PREFIX     | Sumstats prefix used for summary statistics split by chr, eg. `height_chr`|
 |SUMSTATS_SUFFIX     | sumstats suffix, eg `.txt.gz`, gives sumstats files `height_chr1.txt.gz -- height_chr22.txt.gz` |
 |SUMSTATS_SIZE       | GWAS sample size (required for multi-ancestry)| 
-|GENOTYPE_PREFIX     | Path and prefix to plink bed files of test and validation samples | 
-|PHENOTYPE_FILE      | File of phenotype and covariate of test data | 
+|GENOTYPE_PREFIX     | Path and prefix to plink bed files of test samples | 
+|PHENOTYPE_FILE      | Filename of phenotype(s) and covariates of test data | 
 
 The following optional inputs can also be supplied: 
 
-|Variable Name|Notes|
+|Variable Name|Description|
 |:--|:--|
-| VALIDATION_FILE  | File of phenotype and covariate of validation data |
+| VALIDATION_FILE  | Filename of phenotype(s) and covariates of validation data |
 | SNP_FILE       | File listing SNP ids to use in analysis, eg. QCed SNPs | 
 | MAX_CLUMP_SIZE| Maximum number of SNPs per clump  | 
 | COVARIATES | List of covariates (comma separated) to use, eg: COVARIATES=PC1,PC2,PC3| 
 
-Sumstats format is not standardized, bridgePRS requires text files
-with at least five columns the denote the snp-id (rsid), reference
-allele, alternate allele, p-value, and weight (beta or log odds).  The
-file specifc
-column headers can be supplied as an ordered 5mer (a) or on individual lines in the sumstats file:  
+bridgePRS requires GWAS summary statistics with SNP id (to match to LD
+reference data), reference
+allele, alternate allele, p-value, and effect size (linear regression
+coefficient or log odds). The format is not standardised and the
+columns can be supplied in any order. Column names are specified in
+one of two ways as described below:
 
 |Variable Name|Description|
 |:--|:--|
-|SUMSTATS_FIELDS   | DEFAULT: SUMSTATS_FIELDS=ID,REF,A1,P,BETA| 
-|SSF-SNPID   | Column name of SNP ID (default ID) | 
-|SSF-REF    | Column name of Ref Base (default REF)|
-|SSF-ALT    | Column name of Alt Base (default ALT)|
-|SSF-P    | Column name of Pvalue (default P| 
-|SSF-BETA   | Sumstats Field Name for Beta (default BETA| 
+|SUMSTATS_FIELDS| List of summary statistic column names in the order listed below, e.g, `SUMSTATS_FIELDS=ID,REF,A1,P,BETA`|
+|SSF-SNPID   | Column name of SNP id (default ID) | 
+|SSF-REF    | Column name of non-effect allele (default REF)|
+|SSF-ALT    | Column name of effect allele (default ALT)|
+|SSF-P    | Column name of P-value (default P)| 
+|SSF-BETA   | Column name of effect size (default BETA)| 
 
 <!--
 |Input|Variable Name|Example|
@@ -148,12 +149,10 @@ the results of an association study for a given phenotype.  BridgePRS has no pro
 
 Defaults|#CHR|ID|REF|A1|P|BETA|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-Variable||--ssf-snpid|--ssf-ref|--ssf-alt|--ssf-beta|--ssf-p|
+Variable||--ssf-snpid|--ssf-ref|--ssf-alt|--ssf-p|--ssf-beta|
 Data|1|rs121|T|G|0.0413692|0.9472871|
 Data|1|rs497|C|A|0.328347|-1.193074|
 Data|1|rs271|G|G|0.0132225|0.413687|
-
-The **--ssf** arguments can be used to specify column headers for different files. 
 
 
 
@@ -162,12 +161,14 @@ The **--ssf** arguments can be used to specify column headers for different file
 
 ### 2) Genotype Files
 
-Genotype files must be in Plink Format.  
+Genotype files must be in binary plink format (bed, bim, fam).
 
 ### 3) Phenotype Files
-Phenotype files can be provided to BridgePRS using the `--phenotype_files` flag. 
-This must be a tab / space delimited file and missing data **must** be represented by either `NA` or `-9` (only for binary traits).
-The first two column of the phenotype file should be the FID and the IID, and the rest can be phenotypes/covariates:  
+Phenotype files are provided to BridgePRS using
+`--phenotype_files` for test data and `--`.  This must be a tab / space delimited file
+and missing data **must** be represented by either `NA` or `-9` (only
+for binary traits).  The first two column of the phenotype file should
+be the FID and the IID, and the rest can be phenotypes/covariates:
 
 |FID|IID|y|y.binary|PC1|PC2|
 |:-:|:-:|:-:|:-:|:-:|:-:| 
