@@ -52,13 +52,21 @@ This page contains all command available in BridgePRS.
 ## Parameter Arguments 
 
 
-- `--fst` fst value        
+- `--fst` fst between populations analysed
+
+- `--strand_check` Logical to check whether summary statistics and reference data
+	input files are on the same strand. If true/1 only unambiguous SNPs are
+	used in analyses. If false/0 all variants with matching alleles between
+	studies are used. With both options effect and reference alleles are
+	checked and flipped where necessary. If a matching pair of alleles is not
+	found variants are removed (default 0)
 
 - `--max_clump_size`
      Max Size for Clumping      
 
 - `--thinned_snplist`
-     Thinned snp list for large clumps    
+     Thinned snp list to use for clumps that exceed
+     `--max_clump_size`, e.g. HapMap variants
 
 ## Internal File Arguments 
 
