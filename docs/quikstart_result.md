@@ -3,7 +3,8 @@
 # Interpreting results 
 
 The pipeline command used on the previous page runs the entire bridgePRS multi-ancestry 
-analysis. Final model results are written to the directory ``prs-combined_AFR-EUR/`:
+analysis. Final model results are written to the directory
+`prs-combined_AFR-EUR/`, the important files are:
 
 File|Contents|
 :------------------------|:------------------------|

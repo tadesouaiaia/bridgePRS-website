@@ -18,7 +18,7 @@ files are provided, one for each population: `data/eur.config`,
 
 ## Run the demo: 
 
-!!! Command to analyses continuous trait (y)
+To analyses the continuous trait (y)
         ```
         ./bridgePRS pipeline go -o out1 --config_files data/afr.config data/eur.config --phenotype y 
         ```
@@ -28,7 +28,7 @@ Verify that a summary figure `out1/bridgeSummary.png` shown below is
 created.  Then repeat the process using a binary phenotype:
 
 
-!!! Command to analyse binary phenotype "y.binary" 
+To analyse the binary phenotype "y.binary" 
         ```
         ./bridgePRS pipeline go -o out2 --config_files data/afr.config data/eur.config --phenotype y.binary
         ```
