@@ -24,14 +24,11 @@ To analyses the continuous trait (y)
 ```
 
 
-Verify that a summary figure `out1/bridgeSummary.png` shown below is
-created.  Then repeat the process using a binary phenotype:
-
-
-To analyse the binary phenotype "y.binary" 
-        ```
-        ./bridgePRS pipeline go -o out2 --config_files data/afr.config data/eur.config --phenotype y.binary
-        ```
+Verify that the summary figure `out1/bridgeSummary.png` shown below is
+created. To analyse the binary phenotype "y.binary" 
+```
+./bridgePRS pipeline go -o out2 --config_files data/afr.config data/eur.config --phenotype y.binary
+```
 
 ## Results:
 
