@@ -9,11 +9,10 @@ and unzipping BridgePRS a directory with the following contents will
 be created:
     
      bridgePRS              <--- program executable 
-     data/                  <--- input data folder              
+     data/                  <--- example toy data folder              
      LICENSE
      README.me 
      src/                   <--- source code folder
-     tests/                 <--- test directory folder
 
 !!! tip "Using the terminal, type the following command from within the directory:" 
     ``` 

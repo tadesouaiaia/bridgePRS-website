@@ -37,12 +37,14 @@ to the file location.
 
 ## Python
 Python3+ can be downloaded 
-[here](https://www.python.org/downloads/)). Optional plots are created using
+[here](https://www.python.org/downloads/). Optional plots are created using
 the python library [`matplotlib`]
 (https://matplotlib.org/stable/users/installing/index.html)).
 
 ## Bash
-BridgePRS can also be run using a shell script as described [here](https://github.com/clivehoggart/BridgePRS).
+BridgePRS can also be run using a shell script as described
+[here](https://github.com/clivehoggart/BridgePRS). Shell scripts that
+run the example data are provided with the download.
 
 
 ## BridgePRS check 
