@@ -10,13 +10,14 @@ nav:
         - Mac Specific:        req_mac.md
 
     - Quick start tutorial:
-        - Example run:        quikstart_demo.md 
+        - Example Run:        quikstart_demo.md 
         - Output directories: quikstart_result.md 
 
     - Guide:
         - Background:           guide_background.md
+        - Commands:             guide_commands.md 
         - Input Data:           guide_input.md
-        - Pipeline:             guide_pipeline.md  
+          #   - Pipeline:             guide_pipeline.md  
         - Output Data:          guide_output.md 
         - Use Cases:            guide_usecases.md 
         - All Arguments:        guide_args.md

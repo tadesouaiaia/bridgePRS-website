@@ -15,7 +15,7 @@ different SNP sets are available for download:
 
 To run bridgePRS using a custom LD reference panel see [customisation](guide_customization.md).
 
-## Config Files: Target/Base Population Data: 
+## Config Files 
 
 
 For the target and base populations BridgePRS requires inputs be supplied in population configuration files.  The following arguments are required in the target configuration file: 
