@@ -51,28 +51,28 @@
                   <li class="toctree-l1"><a class="reference internal" href="../req_mac/">Mac Specific</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Quick Start Tutorial</span></p>
+              <p class="caption"><span class="caption-text">Quick start tutorial</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_data/">Toy Data</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_demo/">Example Run</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_demo/">Demo</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_result/">Results</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_result/">Output directories</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Guide</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../guide_background/">Background</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_commands/">Commands</a>
+                  </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Input Data</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#the-ld-reference-panel">The LD Reference Panel</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#config-files-targetbase-population-data">Config Files: Target/Base Population Data:</a>
+    <li class="toctree-l2"><a class="reference internal" href="#config-files">Config Files</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#creating-a-config-file">Creating a Config File:</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#config-files-targetbase-population-data_1">Config Files: Target/Base Population Data:</a>
+    <li class="toctree-l2"><a class="reference internal" href="#config-files-targetbase-population-data">Config Files: Target/Base Population Data:</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#file-specifications">File Specifications</a>
         <ul>
@@ -87,8 +87,6 @@
         </ul>
     </li>
     </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../guide_pipeline/">Pipeline</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../guide_output/">Output Data</a>
                   </li>
@@ -138,69 +136,59 @@
                 <p><img alt="Screenshot" src="../img/slim/guide_logo2.png" /> </p>
 <h1 id="input-data">Input Data</h1>
 <h2 id="the-ld-reference-panel">The LD Reference Panel</h2>
-<p>BridgePRS requires representative genotype data in PLINK binary 
-format to estimate LD.  A miniature LD reference panel (<strong>data/1000G_sample</strong>), 
-suitable for the <a href="../quikstart_data/">quick start tutorial</a> is included 
-in the BridgePRS download. Three full-size 1000 Genomes panels 
+<p>BridgePRS requires representative genotype data in PLINK binary (bed)
+format to estimate LD.  A thinned LD reference panel (19734 SNPs)
+for use with the <a href="../quikstart_data/">quick start tutorial</a> is included 
+in the BridgePRS download (<strong>data/1000G_sample</strong>). Three full-size 1000 Genomes panels 
 covering <strong>AFR</strong>, <strong>EUR</strong>, <strong>EAS</strong>, <strong>SAS</strong>, and <strong>AMR</strong> super-populations with 
 different SNP sets are available for download: 
 (1) <a href="https://drive.google.com/file/d/1D0ZtPrvkvznKfHjlwo6BkYIvWFIRF_9g/view?usp=drive_link">All HapMap Variants</a>,(2) <a href="https://drive.google.com/file/d/1c3BamSz1JpXr0QQIfyI_1nUfe0SRNXKa/view?usp=drive_link">All 1000G variants with MAF&gt;5% in any of the five 1000G super-populations</a>,(3) <a href="https://drive.google.com/file/d/18xgsyDymbjeSOv1QS2ULQFaru5NVjwGR/view?usp=drive_link">All 1000G variants with MAF&gt;1% in any of the five 1000G super-populations</a>.</p>
-<p>If you wish to run bridgePRS using a custom LD reference panel please see <a href="../guide_customization/">customization</a>.</p>
-<h2 id="config-files-targetbase-population-data">Config Files: Target/Base Population Data:</h2>
-<p>For the target and base populations BridgePRS requires inputs be supplied in population configuration files.  The following options are required in the target configuration file: </p>
+<p>To run bridgePRS using a custom LD reference panel see <a href="../guide_customization/">customisation</a>.</p>
+<h2 id="config-files">Config Files</h2>
+<p>For the target and base populations BridgePRS requires inputs be supplied in population configuration files.  The following arguments are required in the target configuration file: </p>
 <table>
 <thead>
 <tr>
-<th>Input</th>
-<th>Variable Name</th>
-<th>Notes</th>
+<th style="text-align: left;">Variable Name</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Population Name</td>
-<td>POP</td>
-<td></td>
+<td style="text-align: left;">POP</td>
+<td style="text-align: left;">Population name label, eg. AFR</td>
 </tr>
 <tr>
-<td>LD Population</td>
-<td>LDPOP</td>
-<td></td>
+<td style="text-align: left;">LDPOP</td>
+<td style="text-align: left;">Name of 1000G population used to estimate LD (AFR, AMR, EAS, EAS, SAS)</td>
 </tr>
 <tr>
-<td>LD Panel</td>
-<td>LD_PATH=</td>
-<td></td>
+<td style="text-align: left;">LD_PATH</td>
+<td style="text-align: left;">Path to LD reference data</td>
 </tr>
 <tr>
-<td>(a) Sumstats  File</td>
-<td>SUMSTATS_FILE</td>
-<td>a or b is required</td>
+<td style="text-align: left;">SUMSTATS_FILE</td>
+<td style="text-align: left;">Sumstats filename used for genomewide summary statistics, can be gzipped</td>
 </tr>
 <tr>
-<td>(b1) Sumstats Prefix</td>
-<td>SUMSTATS_PREFIX</td>
-<td>a or b is required</td>
+<td style="text-align: left;">SUMSTATS_PREFIX</td>
+<td style="text-align: left;">Sumstats prefix used for summary statistics split by chr, eg. <code>height_chr</code></td>
 </tr>
 <tr>
-<td>(b2) Sumstats Suffix</td>
-<td>SUMSTATS_SUFFIX</td>
-<td>a or b is required</td>
+<td style="text-align: left;">SUMSTATS_SUFFIX</td>
+<td style="text-align: left;">sumstats suffix, eg <code>.txt.gz</code>, gives sumstats files <code>height_chr1.txt.gz -- height_chr22.txt.gz</code></td>
 </tr>
 <tr>
-<td>Sumstats Size</td>
-<td>SUMSTATS_SIZE</td>
-<td>GWAS Sample Size (Required for multi-ancestry)</td>
+<td style="text-align: left;">SUMSTATS_SIZE</td>
+<td style="text-align: left;">GWAS sample size (required for multi-ancestry)</td>
 </tr>
 <tr>
-<td>Genotype Prefix</td>
-<td>GENOTYPE_PREFIX</td>
-<td>Plink Format is Required</td>
+<td style="text-align: left;">GENOTYPE_PREFIX</td>
+<td style="text-align: left;">Path and prefix to plink bed files of test samples</td>
 </tr>
 <tr>
-<td>Phenotype File</td>
-<td>PHENOTYPE_FILE=</td>
-<td>Individual Level Phenotypes</td>
+<td style="text-align: left;">PHENOTYPE_FILE</td>
+<td style="text-align: left;">Filename of phenotype(s) and covariates of test data</td>
 </tr>
 </tbody>
 </table>
@@ -208,80 +196,65 @@ different SNP sets are available for download:
 <table>
 <thead>
 <tr>
-<th>Input</th>
-<th>Variable Name</th>
-<th>Notes</th>
+<th style="text-align: left;">Variable Name</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Phenotype Validation File</td>
-<td>VALIDATION_FILE</td>
-<td>Individual Level Phenotypes for Validation</td>
+<td style="text-align: left;">VALIDATION_FILE</td>
+<td style="text-align: left;">Filename of phenotype(s) and covariates of validation data</td>
 </tr>
 <tr>
-<td>QC-SNP List</td>
-<td>SNP_FILE</td>
-<td>List QCed SNP ids</td>
+<td style="text-align: left;">SNP_FILE</td>
+<td style="text-align: left;">File listing SNP ids to use in analysis, eg. QCed SNPs</td>
 </tr>
 <tr>
-<td>Max Clump Size</td>
-<td>MAX_CLUMP_SIZE</td>
-<td>Maximum clump size (for speed)</td>
+<td style="text-align: left;">MAX_CLUMP_SIZE</td>
+<td style="text-align: left;">Maximum number of SNPs per clump</td>
 </tr>
 <tr>
-<td>Clump Specific SNP File</td>
-<td>thinned_snp_file</td>
-<td>A list of snps to use for excessively large clumps</td>
-</tr>
-<tr>
-<td>Covariates</td>
-<td>COVARIATES</td>
-<td>Entered Comma Separated, eg: COVARIATES=PC1,PC2,PC3</td>
+<td style="text-align: left;">COVARIATES</td>
+<td style="text-align: left;">List of covariates (comma separated) to use, eg: COVARIATES=PC1,PC2,PC3</td>
 </tr>
 </tbody>
 </table>
-<p>Sumstats format is not standardized, bridgePRS requires text files with at least five columns the denote 
-the snp-id (rsid), reference allele, alternate allele, p-value, and weight (beta or log odds).  The file specifc 
-column headers can be supplied as an ordered 5mer (a) or on individual lines in the sumstats file:  </p>
+<p>bridgePRS requires GWAS summary statistics with SNP id (to match to LD
+reference data), reference allele, alternate allele, p-value, and
+effect size (linear regression coefficient or log odds). Columns can
+be supplied in any order. Column names are specified in one of two
+ways as described below:</p>
 <table>
 <thead>
 <tr>
-<th>Input</th>
-<th>Variable Name</th>
-<th>Example</th>
+<th style="text-align: left;">Variable Name</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Sumstats Fields</td>
-<td>SUMSTATS_FIELDS</td>
-<td>DEFAULT: SUMSTATS_FIELDS=ID,REF,A1,P,BETA</td>
+<td style="text-align: left;">SUMSTATS_FIELDS</td>
+<td style="text-align: left;">List of summary statistic column names in the order listed below, e.g, <code>SUMSTATS_FIELDS=ID,REF,A1,P,BETA</code></td>
 </tr>
 <tr>
-<td>b1) SNP Field</td>
-<td>SSF-SNPID</td>
-<td>Sumstats Field Name for SNP-ID</td>
+<td style="text-align: left;">SSF-SNPID</td>
+<td style="text-align: left;">Column name of SNP id (default ID)</td>
 </tr>
 <tr>
-<td>b2) Field</td>
-<td>SSF-REF</td>
-<td>Sumstats Field Name for Ref Base</td>
+<td style="text-align: left;">SSF-REF</td>
+<td style="text-align: left;">Column name of non-effect allele (default REF)</td>
 </tr>
 <tr>
-<td>b3) Alt Field</td>
-<td>SSF-ALT</td>
-<td>Sumstats Field Name for Alt Base</td>
+<td style="text-align: left;">SSF-ALT</td>
+<td style="text-align: left;">Column name of effect allele (default ALT)</td>
 </tr>
 <tr>
-<td>b4) Pval Field</td>
-<td>SSF-P</td>
-<td>Sumstats Field Name for Pvalue</td>
+<td style="text-align: left;">SSF-P</td>
+<td style="text-align: left;">Column name of P-value (default P)</td>
 </tr>
 <tr>
-<td>b5) Beta Field</td>
-<td>SSF-BETA</td>
-<td>Sumstats Field Name for Beta</td>
+<td style="text-align: left;">SSF-BETA</td>
+<td style="text-align: left;">Column name of effect size (default BETA)</td>
 </tr>
 </tbody>
 </table>
@@ -314,7 +287,7 @@ To create a target and base configuation file you can use the following command:
 </code></pre></div></p>
 </div>
 <p>This command will create target and base configuration files can be observed below: </p>
-<h2 id="config-files-targetbase-population-data_1">Config Files: Target/Base Population Data:</h2>
+<h2 id="config-files-targetbase-population-data">Config Files: Target/Base Population Data:</h2>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">cat test/save/target.AFR.config</label><div class="tabbed-content">
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>POP<span style="color: #666666">=</span>AFR
 LDPOP<span style="color: #666666">=</span>AFR
@@ -369,8 +342,8 @@ the results of an association study for a given phenotype.  BridgePRS has no pro
 <td style="text-align: center;">--ssf-snpid</td>
 <td style="text-align: center;">--ssf-ref</td>
 <td style="text-align: center;">--ssf-alt</td>
-<td style="text-align: center;">--ssf-beta</td>
 <td style="text-align: center;">--ssf-p</td>
+<td style="text-align: center;">--ssf-beta</td>
 </tr>
 <tr>
 <td style="text-align: center;">Data</td>
@@ -401,13 +374,14 @@ the results of an association study for a given phenotype.  BridgePRS has no pro
 </tr>
 </tbody>
 </table>
-<p>The <strong>--ssf</strong> arguments can be used to specify column headers for different files. </p>
 <h3 id="2-genotype-files">2) Genotype Files</h3>
-<p>Genotype files must be in Plink Format.  </p>
+<p>Genotype files must be in binary plink format (bed, bim, fam).</p>
 <h3 id="3-phenotype-files">3) Phenotype Files</h3>
-<p>Phenotype files can be provided to BridgePRS using the <code>--phenotype_files</code> flag. 
-This must be a tab / space delimited file and missing data <strong>must</strong> be represented by either <code>NA</code> or <code>-9</code> (only for binary traits).
-The first two column of the phenotype file should be the FID and the IID, and the rest can be phenotypes/covariates:  </p>
+<p>Phenotype files are provided to BridgePRS using
+<code>--phenotype_files</code> for test data and <code>--</code>.  This must be a tab / space delimited file
+and missing data <strong>must</strong> be represented by either <code>NA</code> or <code>-9</code> (only
+for binary traits).  The first two column of the phenotype file should
+be the FID and the IID, and the rest can be phenotypes/covariates:</p>
 <table>
 <thead>
 <tr>
@@ -462,8 +436,8 @@ after the <code>--covariates</code> flag: </p>
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../guide_background/" class="btn btn-neutral float-left" title="Background"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../guide_pipeline/" class="btn btn-neutral float-right" title="Pipeline">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../guide_commands/" class="btn btn-neutral float-left" title="Commands"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../guide_output/" class="btn btn-neutral float-right" title="Output Data">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -490,10 +464,10 @@ after the <code>--covariates</code> flag: </p>
         </span>
     
     
-      <span><a href="../guide_background/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../guide_commands/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../guide_pipeline/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../guide_output/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

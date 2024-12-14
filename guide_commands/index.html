@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tade Souaiaia" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Commands - BridgePRS</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+        <link href="../css/style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Commands";
+        var mkdocs_page_input_path = "guide_commands.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]--> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> BridgePRS
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Requirements</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_system/">System</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_software/">Software</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_mac/">Mac Specific</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Quick start tutorial</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_demo/">Example Run</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_result/">Output directories</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_background/">Background</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Commands</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#main-pipeline">Main Pipeline</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pipeline-subprograms">Pipeline Subprograms</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#prs-single">prs-single</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#build-model">build-model</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#prs-prior">prs-prior</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#analyse">analyse</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#prs-port">prs-port</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#axillary-tools">Axillary Tools</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#check-requirements">check-requirements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#check-pop">check-pop</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#check-pops">check-pops</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reformat-sumstats">reformat-sumstats</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_input/">Input Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_output/">Output Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_usecases/">Use Cases</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_args/">All Arguments</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_customization/">Customization</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_shell/">Using Bash</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc_faq/">Frequently Asked Questions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc_downloads/">Direct Downloads</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../misc_log/">Update Log</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">BridgePRS</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Guide</li>
+      <li class="breadcrumb-item active">Commands</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/tadesouaiaia/BridgePRS-website/edit/master/docs/guide_commands.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><img alt="Screenshot" src="../img/slim/guide_logo4.png" /> </p>
+<h1 id="commands">Commands</h1>
+<h2 id="main-pipeline">Main Pipeline</h2>
+<p>A pipeline implementin the BridgePRS method desribed in our Nature
+Genetics paper can be run with the following command:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>bridgePRS pipeline go
+</code></pre></div>
+<p>Which is typically run using two <a href="../guide_input/#config-files">population configuration files</a> and information about population distance and phenotype: </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>bridgePRS pipeline go -o out --config_files BASE.config TARGET.config --phenotype height --fst 0.1
+</code></pre></div>
+<p>To confirm that the population config files and options requested are compatible and properly formatted, the 
+following command can be used before running bridgePRS. </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>bridgePRS pipeline check
+</code></pre></div>
+<p>The BridgePRS pipeline command consists of multiple related subprograms that 
+correspond to the Stage 1 and Stage 2 analyses described in our <a href="../guide_background/">guide</a> 
+and shown in Figure 1 in our <a href="https://www.nature.com/articles/s41588-023-01583-9">Nature Genetics Paper</a>. 
+BridgePRS runs these programs serially and produces <a href="../guide_output/">output</a> for each model type in the following folders: </p>
+<ol>
+<li><strong>out/prs-single_TARGET</strong> Model 1 (single population) results.  </li>
+<li><strong>out/prs-prior_TARGET-BASE</strong> Model 2 (informed prior from base pop) result. </li>
+<li><strong>out/prs-combined_TARGET-BASE</strong> The Model 3 (M1+M2) result and a final weighted result. </li>
+</ol>
+<h2 id="pipeline-subprograms">Pipeline Subprograms</h2>
+<p>Each of pipeline subprograms can be run separately using the following commands: </p>
+<h3 id="prs-single">prs-single</h3>
+<p>Stage 1 analysis to estimate model M1 in the target population can be carried as a standalone 
+single population analysis or as part of the larger pipeline where it is used to capture target 
+population specific effects:  </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>bridgePRS prs-single run -o out --config_file TARGET.config --phenotype height
+</code></pre></div>
+<p>This subprogram will produce a result file (out/prs-single_TARGET/bridge.target.prs-single.result) that can be 
+used for later analysis. </p>
+<h3 id="build-model">build-model</h3>
+<p>Stage 1 analysis in the base population for input into Stage 2: </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>bridgePRS build-model run -o out --config_file BASE.config --phenotype height
+</code></pre></div>
+<p>This subprogram will produce a model result file (out/build-model_BASE/bridge.base.build-model.result) that 
+can be used in the next step. </p>
+<h3 id="prs-prior">prs-prior</h3>
+<p>Stage 2 analysis to estimate the informed model M2 for the target population: </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>bridgePRS prs-prior run -o out --model_file out/build-model_BASE/brige.base.build-model.result  --config_file TARGET.config --phenotype height
+</code></pre></div>
+<p>This subprogram will produce a result file (out/prs-prior_TARGET-BASE/bridge.target-base.prs-prior.result) that can be 
+used for later analysis. </p>
+<h3 id="analyse">analyse</h3>
+<p>The Stage 1 and Stage 2 analysis can be analyzed and combined with the following command: </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>bridgePRS analyze combine -o out --result_files  out/prs-single_TARGET/bridge.target.prs-single.result out/prs-prior_TARGET-BASE/bridge.target-base.prs-prior.result
+</code></pre></div>
+<p>This subprogram will produce result files and plots (by default) in the directory out/prs-combine_TARGET_BASE. </p>
+<h3 id="prs-port">prs-port</h3>
+<p>Optionally, if gwas summary statistics are not available for the target population, the results from the base population can be ported directly to estimate 
+the target GWAS.  </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>bridgePRS prs-port run -o out --model_file out/build-model_BASE/brige.base.build-model.result  --config_file TARGET.config --phenotype height
+</code></pre></div>
+<p>To run this step in the pipeline the flag --port can be added. </p>
+<h2 id="axillary-tools">Axillary Tools</h2>
+<p>BridgePRS contains a suite of tools that can be used to reformat files, create config files, and validate file types.  These 
+programs can be called using the command: </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>bridgePRS tools
+</code></pre></div>
+<h3 id="check-requirements">check-requirements</h3>
+<p>To check if your system settings are compatible with bridgePRS, please type the command: </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>bridgePRS tools check-requirements
+</code></pre></div>
+<h3 id="check-pop">check-pop</h3>
+<p>To validate inputs and create a single population configuration file, a command similar to the following can be run: </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>bridgePRS tools check-pop --sumstats_prefix TARGET.SUMSTATS.txt --genotype_prefix TARGET_GENOTYPES.txt --phenotype_file TARGET_PHENOTYPES.txt --sumstats_size 100000
+</code></pre></div>
+<p>This program will produce a new config file that can be used for this population. </p>
+<h3 id="check-pops">check-pops</h3>
+<p>To validate inputs for two populations (base and target) and create two population configuration files, a command similar to the following can be run: </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>bridgePRS tools check-pops --sumstats_prefix BASE.SUMsTATS.txt TARGET.SUMSTATS.txt --genotype_prefix BASE_GENOTYPES.txt TARGET_GENOTYPES.txt --phenotype_file TARGET_PHENOTYPES.txt --sumstats_size 100000
+</code></pre></div>
+<p>This program will produce two config files for later use. </p>
+<h3 id="reformat-sumstats">reformat-sumstats</h3>
+<p>Sumstats files are not standardized and often omit information like ref/alt alleles.  For this reason bridgePRS allows you to reformat a sumstats file using 
+genotype data to confirm/add information, using the following command: </p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>bridgePRS tools reformat-sumstats --sumstats_prefix TARGET.SUMSTATS.txt --genotype_prefix TARGET_GENOTYPES.txt
+</code></pre></div>
+<p>This program will produce a new sumstats file for this population. </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../guide_background/" class="btn btn-neutral float-left" title="Background"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../guide_input/" class="btn btn-neutral float-right" title="Input Data">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/tadesouaiaia/BridgePRS-website" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../guide_background/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../guide_input/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      <script src="../javascripts/details.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

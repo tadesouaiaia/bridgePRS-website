@@ -48,7 +48,7 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Software</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#r">R</a>
+    <li class="toctree-l2"><a class="reference internal" href="#r-packages">R packages</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#plink">Plink</a>
     </li>
@@ -56,27 +56,27 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#bash">Bash</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bridgeprs-check">BridgePRS check</a>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../req_mac/">Mac Specific</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Quick Start Tutorial</span></p>
+              <p class="caption"><span class="caption-text">Quick start tutorial</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_data/">Toy Data</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_demo/">Example Run</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_demo/">Demo</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_result/">Results</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_result/">Output directories</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Guide</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../guide_background/">Background</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../guide_input/">Input Data</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_commands/">Commands</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../guide_pipeline/">Pipeline</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_input/">Input Data</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../guide_output/">Output Data</a>
                   </li>
@@ -125,9 +125,9 @@
               
                 <p><img alt="Screenshot" src="../img/slim/req_logo2.png" /></p>
 <h1 id="requirements">Requirements</h1>
-<p>BridgePRS depends on R, plink, and runs using a Python3 wrapper. </p>
-<h2 id="r">R</h2>
-<p>BridgePRS requires the following <strong>R</strong> [<strong>version 3.6.3+</strong>] (<a href="https://www.r-project.org/">Download</a>) packages: <br />
+<p>BridgePRS uses <a href="https://www.r-project.org/"><code>R</code></a> (<span class="arithmatex">\(\geq\)</span> 3.6.3), <code>plink</code>, and runs using a <code>python3</code> wrapper. </p>
+<h2 id="r-packages">R packages</h2>
+<p>BridgePRS requires the following <code>R</code> packages: <br />
 <strong>BEDMatrix, boot, data.table, doMC, glmnet, MASS, optparse, parallel, and R.utils</strong></p>
 <div class="admonition tips">
 <p class="admonition-title">R Packages</p>
@@ -137,9 +137,11 @@ install.packages(c(&quot;BEDMatrix&quot;,&quot;boot&quot;,&quot;data.table&quot;
 </code></pre></div></p>
 </div>
 <h2 id="plink">Plink</h2>
-<p>BridgePRS requires a version of plink compatible with your machine. (<a href="https://www.cog-genomics.org/plink/">download</a>)</p>
-<p>By default BridgePRS includes versions of plink for Linux and MacOs and will attempt to locate the correct version. 
-To override this behavior and use a specific version of plink please use the flag <code>--plinkPath</code> $PLINKPATH to direct BridgePRS 
+<p>Plink documentation and downlaod can be found <a href="https://www.cog-genomics.org/plink/">here</a>.</p>
+<p>The BridgePRS downlaod includes plink for Linux and MacOs and
+the software will attempt to locate the correct version.  To override
+this behaviour and use a specific version please use the flag
+<code>--plinkPath</code> $PLINKPATH to direct BridgePRS
 to the file location.  </p>
 <div class="admonition warning">
 <p class="admonition-title">Extra MacOs Security:</p>
@@ -148,27 +150,26 @@ You may have to change your settings to allow Plink to be called<br />
 For instructions on how to do so, please click <a href="../req_mac/">here</a>.   </p>
 </div>
 <h2 id="python">Python</h2>
-<p>The BridgePRS wrapper requires python3+ (<a href="https://www.python.org/downloads/">download</a>) and the matplotlib 
-library (<a href="https://matplotlib.org/stable/users/installing/index.html">download</a>) is required to create plots (options). </p>
+<p>Python3+ can be downloaded 
+<a href="https://www.python.org/downloads/">here</a>. Optional plots are created using
+the python library [<code>matplotlib</code>]
+(https://matplotlib.org/stable/users/installing/index.html)).</p>
 <h2 id="bash">Bash</h2>
-<p>BridgePRS can also be run using a shell script as described <a href="https://github.com/clivehoggart/BridgePRS">here</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">BridgePRS check requirements</p>
-<p>If BridgePRS has been downloaded and made executable (as described <a href="../req_system/">previousely</a>) 
-then the following command can be used to allow bridgePRS to check system compatibility and prompt you to 
-install missing software:  </p>
-<div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">./bridgePRS check requirements</label><div class="tabbed-content"></div>
-</div>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>BridgePRS Begins at Sat Sep 30 23:45:46 2023 
-Bridge Command-Line:  ../bridgePRS check requirements
+<p>BridgePRS can also be run using a shell script as described
+<a href="https://github.com/clivehoggart/BridgePRS">here</a>. Shell scripts that
+run the example data are provided with the download.</p>
+<h2 id="bridgeprs-check">BridgePRS check</h2>
+<p>Once BridgePRS has been downloaded and made executable the
+following command will check system compatibility and prompt you
+to install missing software:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>./bridgePRS check requirements
 Checking Requirements:
-           System:  platform=linux,  cores(available)=8,          cores(used)=1       (TIP: Using More Than One Core Will Improve Performace (e.g. ---cores 7))
-            Plink:  found=true,      path=/home/tade/Bin/plink
-                R:  found=true,      path=/usr/bin/R,             version=3.6.3       (packages=up to date)                                            
-          Python3:  found=true,      path=/usr/bin/python3,     matplotlib=true
-Complete
+System:  platform=linux,  cores(available)=8,          cores(used)=1       (TIP: Using More Than One Core Will Improve Performace (e.g. ---cores 7))
+Plink:  found=true,      path=/home/tade/Bin/plink
+R:  found=true,      path=/usr/bin/R,             version=3.6.3       (packages=up to date)                                            
+Python3:  found=true,      path=/usr/bin/python3,     matplotlib=true
+    Complete
 </code></pre></div>
-</div>
               
             </div>
           </div><footer>

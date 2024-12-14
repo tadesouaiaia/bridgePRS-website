@@ -51,26 +51,22 @@
                   <li class="toctree-l1"><a class="reference internal" href="../req_mac/">Mac Specific</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Quick Start Tutorial</span></p>
+              <p class="caption"><span class="caption-text">Quick start tutorial</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_data/">Toy Data</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_demo/">Example Run</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_demo/">Demo</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_result/">Results</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_result/">Output directories</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Guide</span></p>
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Background</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#cross-population-analysis">Cross Population Analysis</a>
-    </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../guide_input/">Input Data</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_commands/">Commands</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../guide_pipeline/">Pipeline</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../guide_input/">Input Data</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../guide_output/">Output Data</a>
                   </li>
@@ -123,24 +119,19 @@ risk score analysis in under-represented target populations by
 combining summary statistics from under-represented target populations
 (e.g. Africans) with those from a powerful GWAS (e.g. Europeans).</p>
 <h1 id="background">Background</h1>
-<p>PRS require as input summary statistics from genome wide association
-studies. If you are unfamiliar with GWAS or need a refresher consider reading
+<p>PRS methods require as input summary statistics from genome wide association
+studies. If unfamiliar with GWAS or in need of a refresher consider reading
 <a href="https://www.ncbi.nlm.nih.gov/pubmed/29484742">this paper</a>.</p>
 <ul>
 <li>Genome-wide association studies (GWAS) involve analyzing the genomes
-  of a large group of individuals.  This involves testing
-millions of genetic variants (SNP) for association with a particular trait.  </li>
+  of a large group of individuals.  </li>
 <li>For a binary trait (like blue or brown eyes) this involves comparing
 the frequency of genetic variations in each group to produce an
 odds-ratio (measure of association) and a p-value to measure the
 signficance of the realtionship at each SNP.</li>
-<li>
-<p>For continuous measures (like height) this results in an effect size (measure of continuous association) and p-value that measure the significance of our relationship.   </p>
-</li>
-<li>
-<p>GWAS results can be summarized in a sumstats file which looks like
-  this:</p>
-</li>
+<li>For continuous measures (like height) this results in an effect size (measure of continuous association) 
+  and p-value that measure the significance of our relationship.   </li>
+<li>GWAS results can be summarized in a sumstats file which looks like this:</li>
 </ul>
 <table>
 <thead>
@@ -192,17 +183,15 @@ signficance of the realtionship at each SNP.</li>
 </tr>
 </tbody>
 </table>
-<p><strong>PRS basics</strong></p>
+<h1 id="prs-basics">PRS basics</h1>
 <ul>
-<li>Creating individual polygenic scores involves combine information
-  across many genetic variants.  A score is calculated by summing the
-  genetic association values (beta-weights) for each allele in an
-  individual, therefore, variants with stronger associations have
-  a larger impact on the overall score.</li>
-<li>PRS software use different statistical methods to select variants
-  and estimate their effect sizes beta for use in the PRS.</li>
+<li>Polygenic scores involves combining information across many genetic variants by 
+  summing the strength of genetic assocation across many variants to produce 
+  to produce individual scores that have aggregate assocation with phenotype.   </li>
+<li>Different PRS methods use different statistical methods to select variants
+  and estimate their effect sizes for use in the PRS.</li>
 <li>BridgePRS, like many other PRS methods, require genotype and
-  phenotype data from  individuals (several hundred samples) in
+  phenotype data from individuals (several hundred samples) in
   addition to GWAS summary statistics to estimate the PRS. </li>
 <li>The predictive power of PRS is assessed in genotype and phenotype
   data from unseen samples. BridgePRS reports PRS accuracy by the
@@ -210,7 +199,7 @@ signficance of the realtionship at each SNP.</li>
   explained by the non-genetic covariates included in the model). For
   binary traits Nagelkerke <span class="arithmatex">\(R^2\)</span> is used.</li>
 </ul>
-<h2 id="cross-population-analysis">Cross Population Analysis</h2>
+<h1 id="cross-population-analysis">Cross Population Analysis</h1>
 <p><strong>The PRS Portability Problem</strong></p>
 <ul>
 <li>Often when a PRS trained using data from one population,
@@ -227,22 +216,38 @@ signficance of the realtionship at each SNP.</li>
 </ul>
 <p><strong>The BridgePRS Solution</strong></p>
 <ul>
-<li>BridgePRS solves this problem by combining GWAS summary statistics
-  from two populations, typically a large well powered GWAS from a
-  "base" population, e.g. European, and a smaller GWAS from the target
-  population, eg African. This is implemented by estimating a PRS in
-  the target population sing a prior effect-size distribution
-  estimated from the base GWAS summary statistics. To capture ancestry
-  specific effects in the target population a BridgePRS also estimates
-  a PRS using only the target population.</li>
-<li>BridgePRS combines these models to produce a single weighted PRS solution. </li>
+<li>The BridgePRS solution that is shown in detail in Figure 1 of our 
+  <a href="https://www.nature.com/articles/s41588-023-01583-9">Nature Genetics Paper</a> involves 
+  combining GWAS summary statistics from two populations, typically a 
+  large well powered GWAS from a "base" population (e.g. European) 
+  and a smaller GWAS from the target population (e.g. African).  </li>
+<li>This is accomplished in multiple stages: <ul>
+<li>In Stage 1, single population analysis is carried out to produce 
+  two sets of SNP weights.  These models reflects the scenario where the 
+  target population GWAS is sufficiently informative and cross-ancestry 
+  information provides no additional information. </li>
+<li>In Stage 2, the snp weights calculated in the base population 
+  are used as a prior effect-size distribution to produce a prior informed 
+  set of snp-weights for the target population.  This model, reflects the scenario
+  where the target population GWAS is only informative in conjugtion with the base 
+  population GWAS.</li>
+<li>BridgePRS then combines these models M1 and M2 to produce a third 
+  model (M3) that reflects the scenario where both the base and 
+  target population GWAS contribute independent information.</li>
+</ul>
+</li>
+<li>Since we do not know apriori which of the three scenarios (M1, M2, or M3) are 
+   true, BridgePRS weights and sums all three models to produce and evaluate a 
+   single target population PRS.  BridgePRS also reports SNP weights and PRS R2 values 
+   in the target population for each of the three other models (M1, M2, or M3), enabling 
+   the user to use any of the four models. </li>
 </ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../quikstart_result/" class="btn btn-neutral float-left" title="Results"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../guide_input/" class="btn btn-neutral float-right" title="Input Data">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../quikstart_result/" class="btn btn-neutral float-left" title="Output directories"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../guide_commands/" class="btn btn-neutral float-right" title="Commands">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -272,7 +277,7 @@ signficance of the realtionship at each SNP.</li>
       <span><a href="../quikstart_result/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../guide_input/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../guide_commands/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
