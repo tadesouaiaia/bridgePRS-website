@@ -8,9 +8,9 @@ analysis. Final model results are written to the directory
 
 File|Contents|
 :------------------------|:------------------------|
- `AFR_weighted_combined_var_explained.txt` | $R^2$ of the four models estimated by BridgePRS  and contribution (weights) of models M1-3 to the final weighted model see [pipeline](guide_background.md)|
+ `AFR_weighted_combined_var_explained.txt` | $R^2$ in validation samples of the four models estimated by BridgePRS and contribution (weights) of models M1-3 to the final weighted model, see [pipeline](guide_background.md)|
  `AFR_weighted_combined_preds.dat` | Individual PRS of the four model in validation samples |
- `AFR_weighted_combined_snp_weights.dat` | SNP weights for the weighted model |
+ `AFR_weighted_combined_snp_weights.dat` | SNP weights of the weighted model |
 
 
 

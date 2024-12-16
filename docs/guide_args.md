@@ -36,13 +36,9 @@ This page contains all command available in BridgePRS.
 
 - `-o`  Output folder for BridgePRS 
 
-
-
 - `--platform`  Force platform (Linux or MacOS) 
 
-
 - `--verbose`  Toggle Verbose Mode On   
-
 
 - `--noPlots`  Skip Post-Pipeline Analysis (Plotting) 
 
@@ -52,7 +48,8 @@ This page contains all command available in BridgePRS.
 ## Parameter Arguments 
 
 
-- `--fst` fst between populations analysed
+- `--fst` fst between populations analysed, e.g. 0.15 for Africans v
+  Europeans and 0.11 for East Asians v Europeans
 
 - `--strand_check` Logical to check whether summary statistics and reference data
 	input files are on the same strand. If true/1 only unambiguous SNPs are
@@ -61,12 +58,14 @@ This page contains all command available in BridgePRS.
 	checked and flipped where necessary. If a matching pair of alleles is not
 	found variants are removed (default 0)
 
-- `--max_clump_size`
-     Max Size for Clumping      
+- `--max_clump_size` Maximum number SNPs allowed in a clump. Very
+     large clumps, eg more than 1,000 variants, can occur in regions
+     of high LD such as the HLA region when using imputed data and
+     considerably slow the algorithm. Must be used in conjunction with
+     `--thinned_snplist`, see below
 
-- `--thinned_snplist`
-     Thinned snp list to use for clumps that exceed
-     `--max_clump_size`, e.g. HapMap variants
+- `--thinned_snplist` Thinned snp list to use for clumps that exceed
+     `--max_clump_size`, list of HapMap variants would be suitable
 
 ## Internal File Arguments 
 
