@@ -169,7 +169,8 @@ it will have a prefix of the file name. For example, <code>--base-info</code> ap
 <h2 id="parameter-arguments">Parameter Arguments</h2>
 <ul>
 <li>
-<p><code>--fst</code> fst between populations analysed</p>
+<p><code>--fst</code> fst between populations analysed, e.g. 0.15 for Africans v
+  Europeans and 0.11 for East Asians v Europeans</p>
 </li>
 <li>
 <p><code>--strand_check</code> Logical to check whether summary statistics and reference data
@@ -180,13 +181,15 @@ it will have a prefix of the file name. For example, <code>--base-info</code> ap
     found variants are removed (default 0)</p>
 </li>
 <li>
-<p><code>--max_clump_size</code>
-     Max Size for Clumping      </p>
+<p><code>--max_clump_size</code> Maximum number SNPs allowed in a clump. Very
+     large clumps, eg more than 1,000 variants, can occur in regions
+     of high LD such as the HLA region when using imputed data and
+     considerably slow the algorithm. Must be used in conjunction with
+     <code>--thinned_snplist</code>, see below</p>
 </li>
 <li>
-<p><code>--thinned_snplist</code>
-     Thinned snp list to use for clumps that exceed
-     <code>--max_clump_size</code>, e.g. HapMap variants</p>
+<p><code>--thinned_snplist</code> Thinned snp list to use for clumps that exceed
+     <code>--max_clump_size</code>, list of HapMap variants would be suitable</p>
 </li>
 </ul>
 <h2 id="internal-file-arguments">Internal File Arguments</h2>

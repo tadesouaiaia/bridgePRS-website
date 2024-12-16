@@ -129,15 +129,16 @@ files. The pipeline runs multiple subprograms that are described
 below.</p>
 <h1 id="modelling-overview">Modelling overview</h1>
 <p>Figure 1 of our Nature Genetics paper provides an overview of the
-modelling implemented by BridgePRS. The BridgePRS pipeline consists
-of five related subprograms which correspond to Stage 1 and Stage 2
-analyses described in Figure 1. Stage 1 analysis is a single
-population analysis. Stage 2 uses the output from a Stage 1 analysis
-of the base population as a prior for the target population, this
-analysis produces model M1 in Figure 1. Stage 1 analysis of the
-target population produces model M2. Model M3 combines PRS from both
-Stage 1 and Stage 2 analyses. The final BridgePRS model is a weighted
-sum of models M1, M2 and M3.</p>
+modelling implemented by BridgePRS. BridgePRS uses two prior
+distributions to estimate PRS which we describe as Stage 1 and
+Stage 2. Stage 1 analysis is a single population analysis and applies
+zero centred Gaussian prior distributions to SNP effect sizes within
+clumps. Stage 2 uses the output from a Stage 1 analysis of the base
+population as the prior for the target population, this analysis
+produces model M1 in Figure 1. Stage 1 analysis of the target
+population produces model M2. Model M3 combines PRS from both Stage 1
+and Stage 2 analyses. The final BridgePRS model is a weighted sum of
+models M1, M2 and M3.</p>
 <p>Stage 2 only model (M1) reflects the belief that the target population
 GWAS is only informative in conjugtion with the base population GWAS.</p>
 <p>Stage 1 only model (M2) reflects the belief that the target population
