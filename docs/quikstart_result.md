@@ -1,16 +1,31 @@
+
 ![Screenshot](img/slim/quikstart_logo3.png)
 
-# Interpreting results 
+# Result Summary 
 
-The pipeline command used on the previous page runs the entire bridgePRS multi-ancestry 
-analysis. Final model results are written to the directory
-`prs-combined_AFR-EUR/`, the important files are:
+For each bridgePRS run, verify that summary figures `out1/bridgeSummary.png` (shown below) and 
+`out2/bridgeSummary.png` have been created. 
 
-File|Contents|
-:------------------------|:------------------------|
- `AFR_weighted_combined_var_explained.txt` | $R^2$ in validation samples of the four models estimated by BridgePRS and contribution (weights) of models M1-3 to the final weighted model, see [pipeline](guide_background.md)|
- `AFR_weighted_combined_preds.dat` | Individual PRS of the four model in validation samples |
- `AFR_weighted_combined_snp_weights.dat` | SNP weights of the weighted model |
+Moving clockwise the summary figure displays basic summary statistics (top left), 
+the model performance (in terms of $R^2$) for each step in the pipeline, a scatterplot (continuous variables) 
+or boxplot (binary variables) for the final (weighted) model, and a manhattan plot for the GWAS file(s) used. 
+
+    
+![Screenshot](img/combo1.png)
+
+
+
+
+# Detailed Result
+
+The bridgePRS pipeline also creates detailed files that describe the SNPS weights, trait predictions (PRS values), and the 
+performance at each stage in the model.  For the continuous demo run the final versions of these file(s) can be found 
+with the output prefix `out1/prs-combined_AFR-EUR/AFR_weighted_combined`.  For description of each output filetype please see 
+the [output section](guide_output.md) of the guide. 
+
+
+
+
 
 
 

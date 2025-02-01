@@ -10,8 +10,8 @@ nav:
         - Mac Specific:        req_mac.md
 
     - Quick start tutorial:
-        - Example Run:        quikstart_demo.md 
-        - Output directories: quikstart_result.md 
+        - Demo Run:        quikstart_demo.md 
+        - Demo Result:     quikstart_result.md 
 
     - Guide:
         - Background:           guide_background.md

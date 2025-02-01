@@ -105,7 +105,7 @@ any of the five 1000G super-populations:
   the first stage of the modelling for clumping and thresholding (all
   markers within clumps are retained for analysis).
   For more information on installing dependencies, please refer to [Requirements](req_software.md). 
-- To get BridgePRS running using toy data see our [Quick Start Tutorial.](quikstart_data.md).
+- To get BridgePRS running using toy data see our [Quick Start Tutorial.](quikstart_demo.md).
 - Following the Quick Start, the full guide provides more [realistic examples](guide_usecases.md) to help you get started with your own data. 
 
 
@@ -124,7 +124,7 @@ any of the five 1000G super-populations:
 ## Contact 
 For questions about the methodology, this website, or our manuscript
 please contact [Dr Clive Hoggart](http://www.pauloreilly.info/), [Dr
-Tade Souaiaia](http://www.pauloreilly.info/), or [Dr Paul
+Tade Souaiaia](mailto:tade.souaiaia@gmail.com), or [Dr Paul
 O'Reilly](http://www.pauloreilly.info/).  For source code and coding
 issues please visit the bridgePRS github
 [here](https://github.com/clivehoggart/BridgePRS).

@@ -6,7 +6,7 @@
 
 BridgePRS requires representative genotype data in PLINK binary (bed)
 format to estimate LD.  A thinned LD reference panel (19734 SNPs)
-for use with the [quick start tutorial](quikstart_data.md) is included 
+for use with the [quick start tutorial](quikstart_demo.md) is included 
 in the BridgePRS download (**data/1000G_sample**). Three full-size 1000 Genomes panels 
 covering **AFR**, **EUR**, **EAS**, **SAS**, and **AMR** super-populations with 
 different SNP sets are available for download: 

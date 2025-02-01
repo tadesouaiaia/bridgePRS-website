@@ -23,20 +23,17 @@ To analyses the continuous trait (y)
 ./bridgePRS pipeline go -o out1 --config_files data/afr.config data/eur.config --phenotype y 
 ```
 
+After this runs successfully, you can analyze the binary phenotype "y.binary" with the following command: 
 
-Verify that the summary figure `out1/bridgeSummary.png` shown below is
-created. To analyse the binary phenotype "y.binary" 
 ```
 ./bridgePRS pipeline go -o out2 --config_files data/afr.config data/eur.config --phenotype y.binary
 ```
 
 ## Results:
 
-If BridgePRS runs successfully on the toy data, go to the next
-page for information on interpretation of the output result directories.
+Please see the next page for interpretation of the result on the toy data. 
 
-    
-![Screenshot](img/combo1.png)
+
 
 
 

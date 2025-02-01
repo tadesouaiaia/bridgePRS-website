@@ -3,7 +3,7 @@
 
 ## Training
 
-In the two [toy-data examples](quikstart_data.md) the target
+In the two [toy-data examples](quikstart_demo.md) the target
 population was African (**AFR**) and the base population was European
 (**EUR**).  In these examples each population had a corresponding:
 
