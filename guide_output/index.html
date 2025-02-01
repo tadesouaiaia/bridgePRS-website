@@ -53,9 +53,9 @@
               </ul>
               <p class="caption"><span class="caption-text">Quick start tutorial</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_demo/">Example Run</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_demo/">Demo Run</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_result/">Output directories</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_result/">Demo Result</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Guide</span></p>
@@ -116,30 +116,31 @@
                 <p><img alt="Screenshot" src="../img/slim/guide_logo5.png" /> </p>
 <h1 id="output-data">Output Data</h1>
 <p>For every PRS invocation of BridgePRS (single, port, and prior) BridgePRS produces the following 
-output files.  Weighted combined versions of each files of also produced by BridgePRS. </p>
+output files.  Weighted combined versions of each files of also produced by BridgePRS in the folder 
+<code>prs-combined_POP1-POP2</code>.  These files are: </p>
 <table>
 <thead>
 <tr>
 <th style="text-align: center;">Name</th>
 <th style="text-align: center;">file extension</th>
-<th style="text-align: center;">Brief Description</th>
+<th style="text-align: center;">Contents</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">SNP Weights</td>
 <td style="text-align: center;">.snp_weights.dat</td>
-<td style="text-align: center;">Snp weights</td>
+<td style="text-align: center;">SNP weights for this model stage of BridgePRS</td>
+</tr>
+<tr>
+<td style="text-align: center;">Performance Result</td>
+<td style="text-align: center;">.var_explained.txt</td>
+<td style="text-align: center;"><span class="arithmatex">\(R^2\)</span> in validation samples for the models at this stage of BridgePRS</td>
 </tr>
 <tr>
 <td style="text-align: center;">PRS Values</td>
 <td style="text-align: center;">.preds.dat</td>
-<td style="text-align: center;">Predicted Phenotypes</td>
-</tr>
-<tr>
-<td style="text-align: center;">Summary Result</td>
-<td style="text-align: center;">.var_explained.txt</td>
-<td style="text-align: center;">Performance Summary</td>
+<td style="text-align: center;">Predicted Continuous Phenotype Values or Risk Scores (PRS)</td>
 </tr>
 <tr>
 <td style="text-align: center;">Progress Plot</td>

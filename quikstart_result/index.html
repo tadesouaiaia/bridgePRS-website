@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tade Souaiaia" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Output directories - BridgePRS</title>
+    <title>Demo Result - BridgePRS</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link href="../css/extra.css" rel="stylesheet" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Output directories";
+        var mkdocs_page_name = "Demo Result";
         var mkdocs_page_input_path = "quikstart_result.md";
         var mkdocs_page_url = null;
       </script>
@@ -53,9 +53,9 @@
               </ul>
               <p class="caption"><span class="caption-text">Quick start tutorial</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_demo/">Example Run</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_demo/">Demo Run</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Output directories</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Demo Result</a>
     <ul class="current">
     </ul>
                   </li>
@@ -103,7 +103,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Quick start tutorial</li>
-      <li class="breadcrumb-item active">Output directories</li>
+      <li class="breadcrumb-item active">Demo Result</li>
     <li class="wy-breadcrumbs-aside">
           <a href="https://github.com/tadesouaiaia/BridgePRS-website/edit/master/docs/quikstart_result.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
@@ -114,37 +114,23 @@
             <div class="section" itemprop="articleBody">
               
                 <p><img alt="Screenshot" src="../img/slim/quikstart_logo3.png" /></p>
-<h1 id="interpreting-results">Interpreting results</h1>
-<p>The pipeline command used on the previous page runs the entire bridgePRS multi-ancestry 
-analysis. Final model results are written to the directory
-<code>prs-combined_AFR-EUR/</code>, the important files are:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">File</th>
-<th style="text-align: left;">Contents</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>AFR_weighted_combined_var_explained.txt</code></td>
-<td style="text-align: left;"><span class="arithmatex">\(R^2\)</span> in validation samples of the four models estimated by BridgePRS and contribution (weights) of models M1-3 to the final weighted model, see <a href="../guide_background/">pipeline</a></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>AFR_weighted_combined_preds.dat</code></td>
-<td style="text-align: left;">Individual PRS of the four model in validation samples</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>AFR_weighted_combined_snp_weights.dat</code></td>
-<td style="text-align: left;">SNP weights of the weighted model</td>
-</tr>
-</tbody>
-</table>
+<h1 id="result-summary">Result Summary</h1>
+<p>For each bridgePRS run, verify that summary figures <code>out1/bridgeSummary.png</code> (shown below) and 
+<code>out2/bridgeSummary.png</code> have been created. </p>
+<p>Moving clockwise the summary figure displays basic summary statistics (top left), 
+the model performance (in terms of <span class="arithmatex">\(R^2\)</span>) for each step in the pipeline, a scatterplot (continuous variables) 
+or boxplot (binary variables) for the final (weighted) model, and a manhattan plot for the GWAS file(s) used. </p>
+<p><img alt="Screenshot" src="../img/combo1.png" /></p>
+<h1 id="detailed-result">Detailed Result</h1>
+<p>The bridgePRS pipeline also creates detailed files that describe the SNPS weights, trait predictions (PRS values), and the 
+performance at each stage in the model.  For the continuous demo run the final versions of these file(s) can be found 
+with the output prefix <code>out1/prs-combined_AFR-EUR/AFR_weighted_combined</code>.  For description of each output filetype please see 
+the <a href="../guide_output/">output section</a> of the guide. </p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../quikstart_demo/" class="btn btn-neutral float-left" title="Example Run"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../quikstart_demo/" class="btn btn-neutral float-left" title="Demo Run"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../guide_background/" class="btn btn-neutral float-right" title="Background">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 

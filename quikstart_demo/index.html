@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tade Souaiaia" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Example Run - BridgePRS</title>
+    <title>Demo Run - BridgePRS</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link href="../css/extra.css" rel="stylesheet" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Example Run";
+        var mkdocs_page_name = "Demo Run";
         var mkdocs_page_input_path = "quikstart_demo.md";
         var mkdocs_page_url = null;
       </script>
@@ -53,11 +53,11 @@
               </ul>
               <p class="caption"><span class="caption-text">Quick start tutorial</span></p>
               <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Example Run</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Demo Run</a>
     <ul class="current">
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_result/">Output directories</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../quikstart_result/">Demo Result</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Guide</span></p>
@@ -103,7 +103,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Quick start tutorial</li>
-      <li class="breadcrumb-item active">Example Run</li>
+      <li class="breadcrumb-item active">Demo Run</li>
     <li class="wy-breadcrumbs-aside">
           <a href="https://github.com/tadesouaiaia/BridgePRS-website/edit/master/docs/quikstart_demo.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
@@ -131,20 +131,17 @@ example configuations files are provided, one for each population:
 <p>To analyses the continuous trait (y)
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>./bridgePRS pipeline go -o out1 --config_files data/afr.config data/eur.config --phenotype y 
 </code></pre></div></p>
-<p>Verify that the summary figure <code>out1/bridgeSummary.png</code> shown below is
-created. To analyse the binary phenotype "y.binary" 
+<p>After this runs successfully, you can analyze the binary phenotype "y.binary" with the following command: </p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>./bridgePRS pipeline go -o out2 --config_files data/afr.config data/eur.config --phenotype y.binary
-</code></pre></div></p>
+</code></pre></div>
 <h2 id="results">Results:</h2>
-<p>If BridgePRS runs successfully on the toy data, go to the next
-page for information on interpretation of the output result directories.</p>
-<p><img alt="Screenshot" src="../img/combo1.png" /></p>
+<p>Please see the next page for interpretation of the result on the toy data. </p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../req_mac/" class="btn btn-neutral float-left" title="Mac Specific"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../quikstart_result/" class="btn btn-neutral float-right" title="Output directories">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../quikstart_result/" class="btn btn-neutral float-right" title="Demo Result">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
